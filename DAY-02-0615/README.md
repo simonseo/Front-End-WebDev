@@ -25,7 +25,7 @@ It'll be used as my blog/website/resume
 
 
 ####Auto indent
-in HTML (and perhaps other languages) in Sublime Text 3
+1. in HTML (and perhaps other languages) in Sublime Text 3
 1. Command Palette (ctrl+shift+P) > Indentation: Reindent Lines
 1. Edit > Line > Reindent
 
@@ -208,12 +208,12 @@ instead of
 1. Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv)
 1. Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
 1. [See](http://naradesign.net/wp/2007/03/27/118/) which are actually Standard Mode or Quirk Mode
-1. What is DTD?
+1. What is DTD? &#10003;
 1. difference between URI and URL?
-1. Install GitHub preview
-1. Install Korean Ipsum
+1. Install GitHub preview &#10003;
+1. Install Korean Ipsum &#10003;
 1. Read about [MIME Type](en.wikipedia.org/wiki/MIME)
 1. What is Browser Hack in CSS?
-1. Review: 상대/절대 주소
-1. difference between anchor and link
+1. Review: 상대/절대 주소 &#10003;
+1. difference between anchor and link &#10003;
 1. Read about color profiels
