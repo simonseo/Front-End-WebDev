@@ -20,7 +20,7 @@
 #Day 1 Review
 
 ####My own and first ever GitHub blog
-See it [here](simonseo.github.io).
+See it [here](http://simonseo.github.io).
 It'll be used as my blog/website/resume
 
 
