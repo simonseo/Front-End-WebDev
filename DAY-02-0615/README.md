@@ -1,37 +1,177 @@
 ###### Front-End Development School
 
-# TIL Day 1 복습
+1. [Day 1 Review](#day-1-review)
+1. [Day 2 TIL](#day-2-til)
+1. [To Do](#to-do)
 
-*Set up my own GitHub blog*
-See it [here](simonseo.github.io)
+#Day 1 Review
+
+#####My own and first ever GitHub blog
+See it [here](simonseo.github.io).
 It'll be used as my blog/website/resume
 
-*Auto indent HTML (and perhaps other languages) in Sublime Text 3*
+
+#####Auto indent HTML (and perhaps other languages) in Sublime Text 3
 1. Command Palette (ctrl+shift+P) > Indentation: Reindent Lines
 1. Edit > Line > Reindent
 
-*Only <head> and <body> can be children elements of <html>* comments are chil
+- Only `<head>` and `<body>` can be children elements of `<html>`. Comments are children nodes.
+- See that IE _actually_ has compatibility issues with/without certain tags. Use F12 key to see console/etc.
+- `!!!4t` which gives 
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+``` 
+is rendered standard. Check wether a webpage is in standard mode by opening console window and type in `document.compatMode`. By the way, Comment above DTD (Doctype Definition) is ALWAYS quirk in IE. However, this is not always the case in other browsers. 
 
-*See that IE _actually_ has compatibility issues with/without certain tags*
+`lang="ko-KR"` can be placed in any element tag.
 
-*!!!4t* which gives ```<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">``` is rendered standard. Check by opening console window and type in `document.compatMode`
-
-*Comment above DTD (Doctype?)* is ALWAYS quirk in IE. Not always in other browsers. 
-
-`lang="ko-KR"` can be placed in any element.
-
-*Render with newest engine in IE* `meta:compat => <meta http-equiv="X-UA-Compatible" content="IE=Edge">`
-
-*[viewport](http://aboooks.tistory.com/352)* ```<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- if you have a wing of size 40px and the 본문 is 1200px, and you want to show the wings, then you should not set width as device-width(which is by default 960?) but instead write 1240px -->```
-
-*keyword* element is not considered by Google's search engine algorithm. It is however used by other websites.
-
-*link element* always has to be inside head. *NOT BODY*
+####Meta elements
+1. You can render with newest engine in IE by typing `meta:compat`, which becomes`<meta http-equiv="X-UA-Compatible" content="IE=Edge">` with Emmet.
+1. **[viewport](http://aboooks.tistory.com/352)**
+```<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- if you have a wing of size 40px and the 본문 is 1200px, and you want to show the wings, then you should not set width as device-width(which is by default 960?) but instead write 1240px```
+1. **keyword** element is not considered by Google's search engine algorithm. It is however used by other websites.
+1. **link element** always has to be inside head. NOT BODY
 
 
+#Day 2 TIL
+Downloaded [Node.js](nodejs.org) LTS v4.4.5 includes [npm](www.npmjs.com) (nodejs project manager) v2.14.12. `node --version` in `cmd.exe` (node command with option --version). We will use nodejs more later on.
+
+```sh
+$ node --version #4.4.5
+$ npm --version #2.14.12
+```
+
+```sh
+$ npm install --global http-server #installs "server". Only execute this code once. (I think)
+```
+
+```sh
+$ http-server -o #activate local computer as server. 
+```
+The folder in which you were at becomes the root folder. At the instantiation of cmd.exe, you can write "cd" and drag the target folder to cmd.
+
+###Formatting Tags
+```
+<b>bold</b>
+<i>italic,oblique</i>
+```
+these (as well as `<big>` and `<small>`) are standard in HTML5, however, you should leave these functions to CSS, not HTML. HTML is for structuring, not formatting. You can validate your HTML at validator.w3.org. Otherwise, you can use the [Chrome extension](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?utm_source=chrome-ntp-icon). Instead of these elements, there are other tags that give meaning. From the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i):
+
+Use this element only when there is not a more appropriate semantic element. For example:
+- Use `<em>` to indicate emphasis or stress.
+- Use `<strong>` to indicate importance.
+- Use `<mark>` to indicate relevance.
+- Use `<cite>` to mark the name of a work, such as a book, play, or song.
+- Use `<dfn>` to mark the defining instance of a term.
+*and superscript `<sup>` and subscript `<sub>`
+
+- Heading 1~6: h1, h2, ... h6. The standard used to be "only use h1 once" because each webpage was considered one page. Now, a single webpage can show several pages, for exampl, different news sections.
+- `<br>` is used to break lines inside paragraphs. It has no closing tag. It is the same as pressing shift+enter in photoshop. Using enter in photoshop is synonymous to wrapping a line with a separate heading tag, paragraph tag, etc.
+- `<hr>` 수평선 Horizontal Rule. If you go to [Naver](naver.com) and go to Web Developer Tool > CSS > Disable all styles, you can see that they too use this dividing line.
+- You can use `<div></div>` to mark the start/end of an arbitrary section.
+
+`.page-main|c` with emmet gives:
+```sh
+<div class="page-main"></div>
+<!-- /.page-main -->
+```
+This is the normal way to set sytles. 
+```
+<style>
+	body {
+		/*정상*/
+		background: #333;
+		color: #fff;
+		}
+	</style>
+```
+Browser hack in CSS is not standard. Some browsers support this bug/hack.
+```
+<style>
+	body {
+		/*브라우저 핵: 키워드 앞에 언더스코어*/
+		_background: red;
+		_color: yellow;
+		}
+	</style>
+```
+####MS IE 조건부 주석문
+IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
+```
+<!--[if IE]>
+<p>IE에서만 해석되는 구문</p>
+<![endif]-->
+```
+아래는 IE 9 이하에서만 실행
+```
+<!--[if lte IE 9]>
+<p>IE에서만 해석되는 구문</p>
+<![endif]-->
+```
+아래는 모든 표준 브라우져 Emmet: `cc:noie`
+```
+<!--[if !IE]><!-->
+<p>Blahblahbalbha</p>
+<!--<![endif]-->
+```
+####Creating Snippets
+1. select what you want and copy.
+1. Go to Tools > Developer > New Snippet
+1. Replace everything inside brackets after CDATA with your text.
+1. Uncomment tabtrigger and write your keyword
+1. Uncomment scope and write text.html or whatever file you're working in. You can find out the scope by right clicking?
+
+####HTML entity
+For texts, it is better to use html entity codes rather than actual symbols because the browser may decode these symbols as code, not text.
+Por ejemplo, &lt; for <, &copy; for copyright
+You can do this a bit easier using Emmet on classes 
+
+`h1.brand{title}|c` (c for "code"; it also inserts start & finish lines) gives
+```
+<h1 class="brand">title</h1>
+<!-- /.brand -->
+```
+
+`h1.brand{title}|e` (e for "encoding") gives
+```
+&lt;h1 class="brand"&gt;title&lt;/h1&gt;
+```
+
+`h1>h2+h3+h4` gives
+```
+<h1>
+	<h2></h2>
+	<h3></h3>
+	<h4></h4>
+</h1>
+```
+
+`h1>h2+h3+h4|e` gives
+```
+&lt;h1&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;/h1&gt;
+```
+You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you don't have the `<pre>` tag, you have to manually insert `<br>`.
+
+- You can increase page speed score by 'minifying' codes: unify different files, delete whitespace, delete comments, change variable names at the build level (YUI Compressor)
+- In Brackets, you can edit CSS for an in-HTML selected tag very easily using right-click > quick edit or `ctrl+E`
+- inside `<head>`, there are `<meta>`, `<title>`, `<link>`
+- You can make your own favicon (Favorite Icon) by typing `link:favicon` with Emmet and doing the same thing as linking css
+- Use anchor to create hyperlinks? Yes.
+- To copy and paste a whole line in Sublime Text, use ctrl+ins -> shift+ins
 
 # TO DO
-Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv)
-Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
-[See](http://naradesign.net/wp/2007/03/27/118/) which are actually Standard Mode or Quirk Mode
-What is DTD?
+1. Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv)
+1. Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
+1. [See](http://naradesign.net/wp/2007/03/27/118/) which are actually Standard Mode or Quirk Mode
+1. What is DTD?
+1. difference between URI and URL?
+1. Install GitHub preview
+1. Install Korean Ipsum
+1. Read about [MIME Type](en.wikipedia.org/wiki/MIME)
+1. What is Browser Hack in CSS?
+1. Review: 상대/절대 주소
+1. difference between anchor and link

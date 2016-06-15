@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<!--[if !IE]><!--><html lang="ko-KR"><!--<![endif]-->
+<!-- If class name has space in between, it consideres them as several names. This is useful for appyling the same style at the same time-->
+<!--[if IE 6]><html lang="ko-kr" class="lt-ie10 lt-ie9 lt-ie8 lt-ie7 ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko-kr" class="lt-ie10 lt-ie9 lt-ie8 ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko-kr" class="lt-ie10 lt-ie9 ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko-kr" class="lt-ie10 ie9"><![endif]-->
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- if you have a wing of size 40px and the 본문 is 1200px, and you want to show the wings, then you should not set width as device-width(which is by default 960?) but instead write 1240px -->
 	<meta name="description" content="this is the description of this website">
 	<meta>
-
+	<!-- MIME Type -->
+	<!-- <style type="text/css"> -->
+	<style>
+		/*Period "." gives separate styles for a class. The html element in this document has class names ie6~9 if the browser is s*/
+		.ie7 body { background: #ffff00 }
+		.ie8 body { background: #00ffff }
+		.ie9 body { background: #ff00ff }
+		body {
+			/*정상*/
+			background: #333;
+			color: #fff;
+			/*브라우저 핵*/
+			/*_background: red;
+			_color: yellow;*/
+		}
+	</style>
 </head>
 <body>
-	
+<strong>Lorem ipsum dolor</strong> sit amet, <em>Lorem ipsum dolor sit amet.</em> consectetur adipisicing elit. At, suscipit quam, doloribus ducimus inventore quisquam esse dolores tenetur eos <dfn>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, dolore?</dfn> facere rem assumenda quasi labore harum totam laboriosam cumque. Assumenda veniam voluptatem natus doloribus tenetur temporibus. Accusantium repudiandae <mark>사이먼 멋쟁이 사자.</mark> fugiat provident aperiam. Aliquam eos consequuntur possimus officia tenetur repellendus voluptate incidunt natus soluta, modi cum asperiores vel suscipit architecto quasi reprehenderit dolorem id provident dicta odit porro numquam impedit? Perferendis fuga eos asperiores optio cumque doloremque eaque ab, ratione eligendi quis unde, mollitia tenetur, voluptate laboriosam! Totam, in. Necessitatibus ducimus nisi, dolorem quidem fuga modi, laboriosam accusantium in enim id expedita perspiciatis?
+<hr>
+<h1>사이먼</h1>사이먼 멋쟁이 사자 먹는 개발자, 돼지. 설레는, 그러므로, 나에게. 우리는 너에게 몸짓에 사막이다. 같지 동력은 그들에게 하나의 전에는 지나지 그들의, 눈짓이 노년에게서 밝은 않는 곧 힘차게, 꾸며 운<br>다. 반짝이는 스며들어 나는 현저하게 너는 우리들은 <br>거선의 바이며, 설레는 그는 사람은! 착목한는, 같지 봄바람을 싶다. 뜨고<br>, 설레는 봄바람이다., <br> 꾸며 이름을 것이, 피부가 노년에게서 튼튼하며, 들어, 바이며, 황금시대의 반짝이는! 아름다우냐? 속에 곧 피부가 그들에게 물방아 길지, 얼음과 사막이다. 물방아 밝은, 운다. 장식하는, 모<br>두 되고 평화스러운. 봄바람이다. 것이다. 사막이다. 밝은 물방아 것이 하나의, 평화스러운 얼마나 풍부하<br>게 있는 너에게, 스며들어 하나의 같지 길지 우리는 않았다. 장식하는, 싹이 약동하다. 두기 힘차게 그는 산야에 쓸쓸한 이상을! 힘차게.
+<!-- [if IE]>
+	<p>IE에서만 해석되는 구문</p>
+<![endif]-->
 </body>
 </html>
