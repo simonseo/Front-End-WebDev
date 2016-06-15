@@ -1,5 +1,6 @@
 ###### Front-End Development School
 
+####Table of Contents
 1. [Day 1 Review](#day-1-review)
 	1. [My own and first ever GitHub blog](#My-own-and-first-ever-GitHub-blog)
 	1. [Auto indent](#Auto-indent)
@@ -18,12 +19,12 @@
 
 #Day 1 Review
 
-#####My own and first ever GitHub blog
+####My own and first ever GitHub blog
 See it [here](simonseo.github.io).
 It'll be used as my blog/website/resume
 
 
-#####Auto indent
+####Auto indent
 in HTML (and perhaps other languages) in Sublime Text 3
 1. Command Palette (ctrl+shift+P) > Indentation: Reindent Lines
 1. Edit > Line > Reindent
