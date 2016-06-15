@@ -1,7 +1,19 @@
 ###### Front-End Development School
 
 1. [Day 1 Review](#day-1-review)
+	1. [My own and first ever GitHub blog](#My-own-and-first-ever-GitHub-blog)
+	1. [Auto indent](#Auto-indent)
+	1. [Doctype and compatibility](#Doctype-and-compatibility)
+	1. [Meta elements](#Meta-elements)
 1. [Day 2 TIL](#day-2-til)
+	1. [Node.js](#nodejs)
+	1. [Formatting Tags](#Formatting-Tags)
+	1. [MS IE 조건부 주석문](#MS-IE-조건부-주석문)
+	1. [Creating Snippets](#Creating-Snippets)
+	1. [HTML entity and Emmet](#HTML-entity-and-Emmet)
+	1. [Etcetera](#Etcetera)
+	1. [Jump](#Jump)
+	1. [Image](#Image)
 1. [To Do](#to-do)
 
 #Day 1 Review
@@ -11,7 +23,8 @@ See it [here](simonseo.github.io).
 It'll be used as my blog/website/resume
 
 
-#####Auto indent HTML (and perhaps other languages) in Sublime Text 3
+#####Auto indent
+in HTML (and perhaps other languages) in Sublime Text 3
 1. Command Palette (ctrl+shift+P) > Indentation: Reindent Lines
 1. Edit > Line > Reindent
 
@@ -52,7 +65,7 @@ $ http-server -o #activate local computer as server.
 ```
 The folder in which you were at becomes the root folder. At the instantiation of cmd.exe, you can write "cd" and drag the target folder to cmd.
 
-###Formatting Tags
+####Formatting Tags
 ```
 <b>bold</b>
 <i>italic,oblique</i>
@@ -123,7 +136,7 @@ IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
 1. Uncomment tabtrigger and write your keyword
 1. Uncomment scope and write text.html or whatever file you're working in. You can find out the scope by right clicking?
 
-####HTML entity
+####HTML entity and Emmet
 For texts, it is better to use html entity codes rather than actual symbols because the browser may decode these symbols as code, not text.
 Por ejemplo, &lt; for <, &copy; for copyright
 You can do this a bit easier using Emmet on classes 
@@ -158,6 +171,7 @@ You can do this a bit easier using Emmet on classes
 ```
 You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you don't have the `<pre>` tag, you have to manually insert `<br>`.
 
+####Etcetera
 - You can increase page speed score by 'minifying' codes: unify different files, delete whitespace, delete comments, change variable names at the build level (YUI Compressor)
 - In Brackets, you can edit CSS for an in-HTML selected tag very easily using right-click > quick edit or `ctrl+E`
 - inside `<head>`, there are `<meta>`, `<title>`, `<link>`
@@ -165,11 +179,11 @@ You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you d
 - Use anchor to create hyperlinks? Yes.
 - To copy and paste a whole line in Sublime Text, use ctrl+ins -> shift+ins
 
-####즉시실행 함수
+####Jump
 - use id like so: `<h3 id="agenda">Table of Contents</h3>`
 - you can jump back to a specific place by using anchor: `<a href="#agenda">Go to agenda</a>`
 
-####이미지
+####image
 - `<img src="img/image.jpg" alt="http://imgur.com/jej3Q.jpg">` gives:
 - <img src="img/image.jpg" alt="http://imgur.com/jej3Q.jpg">
 - 이미지 사이즈는 96ppi 이런거에 영향받지 않음
@@ -187,8 +201,6 @@ instead of
 `![Hold](http://placehold.it/300x200/000/fff/?text=Hold)` or simply `![alternative text](image src)` is the syntax for using images in markdown
 
 ![Hold](http://placehold.it/300x200/000/fff/?text=Hold)
-
-
 
 
 # TO DO
