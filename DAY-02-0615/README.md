@@ -15,6 +15,7 @@ It'll be used as my blog/website/resume
 1. Command Palette (ctrl+shift+P) > Indentation: Reindent Lines
 1. Edit > Line > Reindent
 
+####Doctype and compatibility
 - Only `<head>` and `<body>` can be children elements of `<html>`. Comments are children nodes.
 - See that IE _actually_ has compatibility issues with/without certain tags. Use F12 key to see console/etc.
 - `!!!4t` which gives 
@@ -34,6 +35,7 @@ is rendered standard. Check wether a webpage is in standard mode by opening cons
 
 
 #Day 2 TIL
+####Node.js
 Downloaded [Node.js](nodejs.org) LTS v4.4.5 includes [npm](www.npmjs.com) (nodejs project manager) v2.14.12. `node --version` in `cmd.exe` (node command with option --version). We will use nodejs more later on.
 
 ```sh
@@ -163,6 +165,32 @@ You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you d
 - Use anchor to create hyperlinks? Yes.
 - To copy and paste a whole line in Sublime Text, use ctrl+ins -> shift+ins
 
+####즉시실행 함수
+- use id like so: `<h3 id="agenda">Table of Contents</h3>`
+- you can jump back to a specific place by using anchor: `<a href="#agenda">Go to agenda</a>`
+
+####이미지
+- `<img src="img/image.jpg" alt="http://imgur.com/jej3Q.jpg">` gives:
+- <img src="img/image.jpg" alt="http://imgur.com/jej3Q.jpg">
+- 이미지 사이즈는 96ppi 이런거에 영향받지 않음
+- 파일크기는 100KB 이하가 괜찮음. 
+- If not working with photographers who work with AdobeRGB or ProPhotoRGB, sRGB is okay. If so, Don't convert to sRGB. Remember to embed color profile. Color profile is very important! refer to 김환 교수 
+- [Placeholder](placehold.it)
+- in snippet, writing the code below
+```
+<img src="http://placehold.it/${1:600}x${2:400}/${3:000}/${4:fff}/?text=${5:Hold}" alt="${5:Hold">
+```
+instead of 
+```
+<img src="http://placehold.it/600x400/000/fff/?text=Hold" alt="Hold">
+```
+`![Hold](http://placehold.it/300x200/000/fff/?text=Hold)` or simply `![alternative text](image src)` is the syntax for using images in markdown
+
+![Hold](http://placehold.it/300x200/000/fff/?text=Hold)
+
+
+
+
 # TO DO
 1. Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv)
 1. Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
@@ -175,3 +203,4 @@ You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you d
 1. What is Browser Hack in CSS?
 1. Review: 상대/절대 주소
 1. difference between anchor and link
+1. Read about color profiels
