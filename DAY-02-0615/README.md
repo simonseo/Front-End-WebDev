@@ -1,6 +1,6 @@
 ###### Front-End Development School
 
-####Table of Contents
+#####Table of Contents
 1. [Day 1 Review](#day-1-review)
 	1. [My own and first ever GitHub blog](#my-own-and-first-ever-github-blog)
 	1. [Auto indent](#auto-indent)
@@ -19,17 +19,17 @@
 
 #Day 1 Review
 
-####My own and first ever GitHub blog
+#####My own and first ever GitHub blog
 See it [here](http://simonseo.github.io).
 It'll be used as my blog/website/resume
 
 
-####Auto indent
+#####Auto indent
 1. in HTML (and perhaps other languages) in Sublime Text 3
 1. Command Palette (ctrl+shift+P) > Indentation: Reindent Lines
 1. Edit > Line > Reindent
 
-####Doctype and compatibility
+#####Doctype and compatibility
 - Only `<head>` and `<body>` can be children elements of `<html>`. Comments are children nodes.
 - See that IE _actually_ has compatibility issues with/without certain tags. Use F12 key to see console/etc.
 - `!!!4t` which gives 
@@ -40,7 +40,7 @@ is rendered standard. Check wether a webpage is in standard mode by opening cons
 
 `lang="ko-KR"` can be placed in any element tag.
 
-####Meta elements
+#####Meta elements
 1. You can render with newest engine in IE by typing `meta:compat`, which becomes`<meta http-equiv="X-UA-Compatible" content="IE=Edge">` with Emmet.
 1. **[viewport](http://aboooks.tistory.com/352)**
 ```<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- if you have a wing of size 40px and the 본문 is 1200px, and you want to show the wings, then you should not set width as device-width(which is by default 960?) but instead write 1240px```
@@ -49,7 +49,7 @@ is rendered standard. Check wether a webpage is in standard mode by opening cons
 
 
 #Day 2 TIL
-####Node.js
+#####Node.js
 Downloaded [Node.js](nodejs.org) LTS v4.4.5 includes [npm](www.npmjs.com) (nodejs project manager) v2.14.12. `node --version` in `cmd.exe` (node command with option --version). We will use nodejs more later on.
 
 ```sh
@@ -66,7 +66,7 @@ $ http-server -o #activate local computer as server.
 ```
 The folder in which you were at becomes the root folder. At the instantiation of cmd.exe, you can write "cd" and drag the target folder to cmd.
 
-####Formatting Tags
+#####Formatting Tags
 ```
 <b>bold</b>
 <i>italic,oblique</i>
@@ -111,7 +111,7 @@ Browser hack in CSS is not standard. Some browsers support this bug/hack.
 		}
 	</style>
 ```
-####MS IE 조건부 주석문
+#####MS IE 조건부 주석문
 IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
 ```
 <!--[if IE]>
@@ -130,14 +130,14 @@ IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
 <p>Blahblahbalbha</p>
 <!--<![endif]-->
 ```
-####Creating Snippets
+#####Creating Snippets
 1. select what you want and copy.
 1. Go to Tools > Developer > New Snippet
 1. Replace everything inside brackets after CDATA with your text.
 1. Uncomment tabtrigger and write your keyword
 1. Uncomment scope and write text.html or whatever file you're working in. You can find out the scope by right clicking?
 
-####HTML entity and Emmet
+#####HTML entity and Emmet
 For texts, it is better to use html entity codes rather than actual symbols because the browser may decode these symbols as code, not text.
 Por ejemplo, &lt; for <, &copy; for copyright
 You can do this a bit easier using Emmet on classes 
@@ -172,7 +172,7 @@ You can do this a bit easier using Emmet on classes
 ```
 You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you don't have the `<pre>` tag, you have to manually insert `<br>`.
 
-####Etcetera
+#####Etcetera
 - You can increase page speed score by 'minifying' codes: unify different files, delete whitespace, delete comments, change variable names at the build level (YUI Compressor)
 - In Brackets, you can edit CSS for an in-HTML selected tag very easily using right-click > quick edit or `ctrl+E`
 - inside `<head>`, there are `<meta>`, `<title>`, `<link>`
@@ -180,11 +180,11 @@ You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you d
 - Use anchor to create hyperlinks? Yes.
 - To copy and paste a whole line in Sublime Text, use ctrl+ins -> shift+ins
 
-####Jump
+#####Jump
 - use id like so: `<h3 id="agenda">Table of Contents</h3>`
 - you can jump back to a specific place by using anchor: `<a href="#agenda">Go to agenda</a>`
 
-####image
+#####image
 - `<img src="img/image.jpg" alt="http://imgur.com/jej3Q.jpg">` gives:
 - <img src="img/image.jpg" alt="http://imgur.com/jej3Q.jpg">
 - 이미지 사이즈는 96ppi 이런거에 영향받지 않음
@@ -199,6 +199,7 @@ instead of
 ```
 <img src="http://placehold.it/600x400/000/fff/?text=Hold" alt="Hold">
 ```
+will let you press tab to change desired variables.
 `![Hold](http://placehold.it/300x200/000/fff/?text=Hold)` or simply `![alternative text](image src)` is the syntax for using images in markdown
 
 ![Hold](http://placehold.it/300x200/000/fff/?text=Hold)
