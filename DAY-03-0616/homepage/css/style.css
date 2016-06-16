@@ -1,0 +1,22 @@
+h1 {
+	text-align: center;
+	font-family: Helvetica;
+	font-weight: lighter;
+	font-size: 48pt;
+}
+h3 {
+	text-align: center;
+	font-family: Helvetica;
+}
+p {
+	font-size: 14pt;
+	font-family: Arial;
+}
+#menubar {
+	text-align: center;
+	font-family: Helvetica;
+}
+.photo {
+	text-align: center;
+	font-size: 12pt;
+}
