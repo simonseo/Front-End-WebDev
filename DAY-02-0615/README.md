@@ -101,18 +101,18 @@ This is the normal way to set sytles.
 		}
 	</style>
 ```
-Browser hack in CSS is not standard. Some browsers support this bug/hack.
+Browser hack is intended to fix some bugs that appear in some browsers. Thus some browsers support this bug/hack, some don't.
 ```
 <style>
 	body {
-		/*브라우저 핵: 키워드 앞에 언더스코어*/
+		/*브라우저 핵 예시: 키워드 앞에 언더스코어*/
 		_background: red;
 		_color: yellow;
 		}
 	</style>
 ```
 #####MS IE 조건부 주석문
-IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
+Instead of using browser hacks to fix bugs, we can differentiate the code for different browsers, by applying classes to the body element using IE's conditional comments. IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
 ```
 <!--[if IE]>
 <p>IE에서만 해석되는 구문</p>
@@ -129,6 +129,14 @@ IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
 <!--[if !IE]><!-->
 <p>Blahblahbalbha</p>
 <!--<![endif]-->
+```
+아래는 조건부 주석문을 사용해서 html 엘리먼트가 브라우저 환경마다 다르게 작동할 수 있도록 클래스로 태그한 것.
+```
+<!--[if !IE]><!--><html lang="ko-KR"><!--<![endif]-->
+<!--[if IE 6]><html lang="ko-kr" class="ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko-kr" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko-kr" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko-kr" class="ie9"><![endif]-->
 ```
 #####Creating Snippets
 1. select what you want and copy.
