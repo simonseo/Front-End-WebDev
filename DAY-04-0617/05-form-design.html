@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Design</title>
+</head>
+<body>
+	<h2>폼 디자인: 사용자 정보 등록</h2>
+
+	
+	<!-- action은 데이터 전송 목적지로 보통 서버가 필요함.  -->
+	<!-- get 방식은 정보 노출 있기 때문에 민감한 정보는 post를 사용함. -->
+	<!-- name은 비표준화되었지만 폼에서는 아직 사용함. 식별자로, 전송할 때 필요함.-->
+	<form
+	name="register_form"
+	action="./register.php"
+	method="post">
+	
+	<!-- enctype: 인코딩타입으로 없으면 다른 방식이 기본. 이미지 등 바이너리 데이터가 있을 때만 multipart를 사용함. -->
+	<!-- <form action="access.cgi" method="post" enctype="multipart/form-data"></form> -->
+
+	<p>
+		<!-- if type attribute is not specified, it's considered to be text -->
+		<!-- 편집창을 눌러서 키보드가  스크린리더가 "편집창"이라고 말해줌. 하지만 어떤 편집창? 레이블이 필요함 -->
+		<!-- input 요소 암묵적 레이블: 일부 스크린리더는 ID:편집창 이라고 읽어주지 않음 -->
+		<label>ID: <input type="text"></label>
+		<!-- input 요소 명시적 레이블: 레이블과 input id가 같다. name은 전송할 때 필요하다. -->
+		<label for="user_id">ID: 
+			<input 
+			id="user_id" 
+			name="user_id" 
+			type="text">
+		</label>
+	</p>
+	<p>
+		<!-- type="password"라고 하면 글자가 안 보임. password가 너무 길어서 화면에 pass라고만 쓰고 싶으면 aria-label="password"하면 읽히는 건 password로 aria-label이 우선적으로 읽힌다. -->
+		<label for="user_password">PASS: 
+			<input
+			id="user_password"
+			name="user_password"
+			type="password"
+			aria-label="password" >
+		</label>
+	</p>
+	<p>
+		<label for="user_email">EMAIL: 
+			<input 
+			type="email"
+			id="user_email"
+			name="user_email">
+		</label>
+	</p>
+	<button type="submit" >SUBMIT</button> 
+	<button type="reset">[RESET]</button>
+</form>
+
+
+
+
+</body>
+</html>
