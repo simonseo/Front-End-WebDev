@@ -2,6 +2,7 @@
 
 # Day 3 TIL
 ##### 참여 기업 특강: DONUS
+GOTO 참여기업특강 폴더
 
 ##### Git 특강
 [야곰](yagomsoft@gmail.com)
@@ -65,7 +66,7 @@ You can branch or merge to cooperate effectively.
 1. Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
 1. difference between URI and URL?
 1. Read about [MIME Type](en.wikipedia.org/wiki/MIME)
-1. What is Browser Hack in CSS?
+1. What is Browser Hack in CSS? &#10003;
 1. Read about color profiles
-1. Make my website
+1. Make my website &#10003;
 1. Difference between merge and checkout?
