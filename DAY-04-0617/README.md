@@ -147,7 +147,7 @@ URL 주소에 `&`가 들어가면 `&amp;`로 바꿔줘야 한다
 
 ####Elements
 #####Meta tags
-1. (메타태그 정리)[http://cafe.naver.com/webstandardproject/603]
+1. [메타태그 정리](http://cafe.naver.com/webstandardproject/603)
 1. `<base href="[root 주소]">` 가 있으면 anchor element마다 주소를 전부 적어줄 필요 없음. root 주소 이후만 적어주면 됨.
 
 #####inline and block (and list elements and none)
@@ -163,19 +163,27 @@ URL 주소에 `&`가 들어가면 `&amp;`로 바꿔줘야 한다
 - ctrl+shift+g add tag
 - ctrl+d edit points with same content (consecutive)
 - Translate what this means in Sublime+Emmet: 
+
 ```
 ul>li[title=$#]*>{$#}+img[alt=$#]|t
 ```
 
+> it means that you take a chunk of information that has repeated levels. You get rid of the numberings with `|t`. Inside ul, for each line (`*`), you create an `li` element with title equal to the original line, and inside the `li` element is the original line and an image.
+
 # TO DO
-1. Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv)
+1. Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv) &10003;
 1. Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
-1. difference between URI and URL?
-1. Read about [MIME Type](en.wikipedia.org/wiki/MIME)
+1. difference between [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) and URL? &10003;
+1. Read about [MIME Type](https://en.wikipedia.org/wiki/Media_type) &10003;
+1. [GET](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) vs [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) Methods
 1. Read about color profiles
-1. Difference between merge and checkout?
 1. Sublime Text 강의 모르는 것 주말동안 모두 듣기
 1. Emmet, Markdown cheatsheet 한번 읽어보기
 1. 집 가는 길에 [Frontend Developer Handbook](http://www.frontendhandbook.com/) 읽어보기
 1. [React.js](http://blog.coderifleman.com/post/122232296024/reactjs%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8B%A41)가 뭔지 읽어보기
-1. 질문: pre 엘리먼트는 스타일 적용이 안 되는가?
+1. 질문: [pre 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)는 스타일 적용이 안 되는가?
+1. [WAI-ARIA(Web Accessibility Initiative - Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ)
+
+# Questions
+1. Difference between merge and checkout?
+1. We use `table, tr, th, td` to mean that we want some styling to apply for all four elements. What about styles that we want to apply to those that are all four, not just any of the four?

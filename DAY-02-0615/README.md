@@ -217,7 +217,7 @@ will let you press tab to change desired variables.
 1. Read about http-equiv (https://www.w3.org/TR/html5/document-metadata.html#attr-meta-http-equiv)
 1. Read about UTF-8 [Wiki](https://ko.wikipedia.org/wiki/UTF-8)
 1. difference between URI and URL?
-1. Read about [MIME Type](en.wikipedia.org/wiki/MIME)
+1. Read about [MIME Type](https://en.wikipedia.org/wiki/Media_type)
 1. What is Browser Hack in CSS?
 1. Read about color profiles
 1. [See](http://naradesign.net/wp/2007/03/27/118/) which are actually Standard Mode or Quirk Mode &#10003;
