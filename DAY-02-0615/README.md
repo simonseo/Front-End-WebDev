@@ -92,7 +92,7 @@ Use this element only when there is not a more appropriate semantic element. For
 <!-- /.page-main -->
 ```
 This is the normal way to set sytles. 
-```
+```HTML
 <style>
 	body {
 		/*정상*/
@@ -102,7 +102,7 @@ This is the normal way to set sytles.
 	</style>
 ```
 Browser hack is intended to fix some bugs that appear in some browsers. Thus some browsers support this bug/hack, some don't.
-```
+```HTML
 <style>
 	body {
 		/*브라우저 핵 예시: 키워드 앞에 언더스코어*/
@@ -113,25 +113,25 @@ Browser hack is intended to fix some bugs that appear in some browsers. Thus som
 ```
 #####MS IE 조건부 주석문
 Instead of using browser hacks to fix bugs, we can differentiate the code for different browsers, by applying classes to the body element using IE's conditional comments. IE 6~9까지는 주석이 아니라 코드문으로 해석됨. Emmet: `cc:ie`
-```
+```HTML
 <!--[if IE]>
 <p>IE에서만 해석되는 구문</p>
 <![endif]-->
 ```
 아래는 IE 9 이하에서만 실행
-```
+```HTML
 <!--[if lte IE 9]>
 <p>IE에서만 해석되는 구문</p>
 <![endif]-->
 ```
 아래는 모든 표준 브라우져 Emmet: `cc:noie`
-```
+```HTML
 <!--[if !IE]><!-->
 <p>Blahblahbalbha</p>
 <!--<![endif]-->
 ```
 아래는 조건부 주석문을 사용해서 html 엘리먼트가 브라우저 환경마다 다르게 작동할 수 있도록 클래스로 태그한 것.
-```
+```HTML
 <!--[if !IE]><!--><html lang="ko-KR"><!--<![endif]-->
 <!--[if IE 6]><html lang="ko-kr" class="ie6"><![endif]-->
 <!--[if IE 7]><html lang="ko-kr" class="ie7"><![endif]-->
@@ -151,18 +151,18 @@ Por ejemplo, &lt; for <, &copy; for copyright
 You can do this a bit easier using Emmet on classes 
 
 `h1.brand{title}|c` (c for "code"; it also inserts start & finish lines) gives
-```
+```HTML
 <h1 class="brand">title</h1>
 <!-- /.brand -->
 ```
 
 `h1.brand{title}|e` (e for "encoding") gives
-```
+```HTML
 &lt;h1 class="brand"&gt;title&lt;/h1&gt;
 ```
 
 `h1>h2+h3+h4` gives
-```
+```HTML
 <h1>
 	<h2></h2>
 	<h3></h3>
@@ -171,7 +171,7 @@ You can do this a bit easier using Emmet on classes
 ```
 
 `h1>h2+h3+h4|e` gives
-```
+```HTML
 &lt;h1&gt;
 &lt;h2&gt;&lt;/h2&gt;
 &lt;h3&gt;&lt;/h3&gt;
@@ -200,11 +200,11 @@ You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you d
 - If not working with photographers who work with AdobeRGB or ProPhotoRGB, sRGB is okay. If so, Don't convert to sRGB. Remember to embed color profile. Color profile is very important! refer to 김환 교수 
 - [Placeholder](placehold.it)
 - in snippet, writing the code below
-```
+```HTML
 <img src="http://placehold.it/${1:600}x${2:400}/${3:000}/${4:fff}/?text=${5:Hold}" alt="${5:Hold">
 ```
 instead of 
-```
+```HTML
 <img src="http://placehold.it/600x400/000/fff/?text=Hold" alt="Hold">
 ```
 will let you press tab to change desired variables.
