@@ -185,8 +185,10 @@ You can add `<pre></pre>` (pre for "preserve") to maintain whitespaces. If you d
 - In Brackets, you can edit CSS for an in-HTML selected tag very easily using right-click > quick edit or `ctrl+E`
 - inside `<head>`, there are `<meta>`, `<title>`, `<link>`
 - You can make your own favicon (Favorite Icon) by typing `link:favicon` with Emmet and doing the same thing as linking css
+	
+	![favicon support](https://camo.githubusercontent.com/f32895bf52a60a04ccdfb9f079c16ffdbabfc5a5/687474703a2f2f692e737461636b2e696d6775722e636f6d2f45723868732e706e67)
 - Use anchor to create hyperlinks? Yes.
-- To copy and paste a whole line in Sublime Text, use ctrl+ins -> shift+ins
+- To copy and paste a whole line in Sublime Text, use ctrl+ins -> shift+ins or ctrl+shift+d
 
 #####Jump
 - use id like so: `<h3 id="agenda">Table of Contents</h3>`
