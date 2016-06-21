@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Script</title>
+<!-- 	<style></style>은 head에서만 사용 간으?
+	<script></script>는 head나 body 안 아무데서나 ㄱㅊ. 하지만 head에서 해주는게 좋다. -->
+	<!-- 예전에는 <script type="text/javascript">라고 써줌. -->
+	<!-- 그 전에는 <script language="JAVASCRIPT"> 라고 써줌. -->
+	<script>
+		// 동적으로 제목 변경. useful for notifications?
+		// document.title="blahbalhablh"
+
+		// 사용자에게 정보 요구. 요즘은 잘 안 씀
+		// window.prompt('나니나니니?','소데스.')
+
+		// 경고창
+		// window.alert('조심!조심!불조심!')
+
+	</script>
+	<!-- replace with <script src="js/skdjflasj.js"></script> or smth -->
+</head>
+<body>
+	<script>
+	if (window.navigator.onLine) {
+		document.write('YOU ARE OFFLINE!')
+	}
+
+	document.write('현재 온라인입니까?', window.navigator.onLine ? 'yeah' : 'no')
+
+						setTimeout(function() {
+							document.write('<h1>this is JavaScript!</h1>')
+						},
+						3000)
+	</script>
+
+	<noscript>
+		<p>자바스크립트가 안되네용ㅋㅋㅋ</p>
+		<style>
+			body {
+				background: #ff0;
+				font-size: 100px;
+			}
+
+		</style>
+	</noscript>
+</body>
+</html>
+

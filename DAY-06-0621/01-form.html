@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="" method="POST">
+		<!-- 암묵적 방식: 국내 스크린리더 중 일부는 읽어주지 못함 -->
+		
+		<div>
+			<label>ID<input type="text" value="simon" placeholder="your name"></label>
+			<!-- `value` in text input leaves default text. disabled makes the input disabled. placeholder sets a guideline for what to input-->
+		</div>
+		<!-- 명시적 방식 -->
+		<div>
+			<label for="register_password">Password</label>
+			<input id="register_password" type="password" maxlength="11">
+			<!-- maxlength sets the maximum number of characters.  -->
+		</div>
+	</form>
+
+	<form action="" method="POST">
+		<input type="text" role="heading"> 아무것도 삽입 못함. 하지만 이제는 어차피 배경이미지를 넣을 수 있어서 별 차이 없음. role은 기본적으로 type box이런건데 role을 바꾸는 건 옳지 않지만 상황에 맞게 써야함. 
+		<button type="submit"><img src="" alt="">이미지 등 삽입 가능</button>
+		<div>
+			<label for="register-gender-case-one"></label>
+			<input name="register-gender-case-one" type="radio" value="Male"> Male
+			<input name="register-gender-case-one" type="radio"> Female
+			<input name="register-gender-case-one" type="radio"> Other
+			name이 같아야지 둘중에 하나만 선택하는 거임. 노인이 저 쬐끄만 동그라미를 선택할 수 있을까?
+			<hr>
+		</div>
+	</form>
+
+	<form name="register_form" action="#" method="GET" enctype="">
+	<!-- what's #? underscore is easier for javascript, hyphen is for css -->
+
+		<fieldset>
+		<legend>필수 입력 (제목이 아님! 그저 구분!)</legend>
+			<div>
+				<h3>
+					<label for="register-gender">Gender</label>
+					<!-- label for 에는 id가 올 수도 있고 name이 올수도 있다. 상황에 따라~-->
+				</h3>
+				<input type="radio" id="register-gender-male" name="register-gender" value="1" checked><label for="register-gender-male">Male</label>
+				<input type="radio" id="register-gender-female" name="register-gender" value="2"><label for="register-gender-female">Female</label>
+				<label><input type="radio" name="register-gender">Other</label>
+			</div>
+			<div>
+				<h3>Hobby</h3>
+				<!-- 목록을 사용해서 수평이라 아니라 수직 선택으로 만듬. <br>사용해도 괜찮고 pre...가 되는지 시험해보겠음. 되긴 되는데 포맷팅이 조금 달라진다. -->
+				<ul>
+					<li><label><input type="checkbox" name="checkbox" id="" value="read">read</label></li>
+					<li><label><input type="checkbox" name="checkbox" id="" value="surf">surfing</label></li>
+					<li><label><input type="checkbox" name="checkbox" id="" value="watch" checked>watching</label></li>
+					<li><label><input type="checkbox" name="checkbox" id="" value="play">playing</label></li>
+					<!-- checked라고 명시되어있으면 초기 상태가 선택상태. xhtml에서는 checked="checked"라고 써야 함. -->
+				</ul>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>선택요소</legend>	``
+			<div>
+				<label for="file-upload">file</label>
+				<input multiple type="file" name="file-upload" id="" >
+				<!-- multiple 이라고 쓰면 여러 파일 동시 선택 가능 -->
+				<!-- file이 들어가면 인코딩을 multipart/form-data로 바꿔줘야함. -->
+			</div>
+			<div><input type="textarea" cols="30" rows="10" placeholder="자기소개 부탁드립니다."></div>
+			<!-- textarea의 cols, rows는 스타일 요소가 아니다. -->
+			
+			<!-- 클릭하면 수정되는 블록. form으로 전송되게 할 수 있을까?-->
+			<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque molestiae, accusantium. Corrupti dolorum, placeat neque, a rerum magni consequatur veniam necessitatibus vero ea autem deserunt repudiandae sunt nesciunt. Inventore, deserunt.</p>
+			
+			<!-- combobox/dropdown/select/optionmenu -->
+			<div>
+				<h3>Occupation</h3>
+				<select name="job" id="">
+					<option value="">Select your job</option>
+					<optgroup label="stud">
+						<option value="student">Student</option>
+						<option value="ugd-student">Udergraduate Student</option>
+						<option value="gd-student">Graduate Student</option>
+					</optgroup>
+					<option value="teacher">Instructor</option>
+					<option value="doctor">Doctor</option></select>
+			</div>
+		</fieldset>
+		
+		<div>
+		<br>
+		<input type="submit" value="제출"">
+		<button type="reset">reset</button>
+		</div>
+		
+
+	</form>
+</body>
+</html>
+<hr>	
+
+<!-- 
+button types
+	submit - form 안에서만
+	reset - form 안에서만
+	button
+input types <input type="button" value="okay"> 타입만 지정해주면 브라우저마다 조금씩 다르게 보임. Value도 같이 지정해주어야 통일되게 보임. 
+	button
+	image
+	text
+	email
+	color
+	checkbox
+	file
+	radio - nani?!
+	hidden: not for users. is this suitable for ajax?
+	textarea
+ -->
