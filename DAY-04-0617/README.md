@@ -149,6 +149,8 @@ URL 주소에 `&`가 들어가면 `&amp;`로 바꿔줘야 한다
 #####Meta tags
 1. [메타태그 정리](http://cafe.naver.com/webstandardproject/603)
 1. `<base href="[root 주소]">` 가 있으면 anchor element마다 주소를 전부 적어줄 필요 없음. root 주소 이후만 적어주면 됨.
+1. Facebook 의 preview text에 들어갈 내용은 `<meta name="sailthru.rubric" content="America’s most successful cities, states and firms are leaving the rest behind">`
+1. Twitter 는 `<meta name="twitter:image" content="https://cdn.static-economist.com/sites/default/files/images/2016/03/articles/main/20160312_USP502.jpg">`
 
 #####inline and block (and list elements and none)
 1. block's height defined by its children, its width defined by parents
