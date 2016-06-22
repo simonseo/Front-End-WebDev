@@ -113,8 +113,8 @@ form>(fieldset>legend+(div>label+input)*3)*2+input:submit
 	- radio: choose one of several
 	- file: upload file, you can do multiple
 	- hidden: not for users. ex) is this suitable for ajax?
-	- textarea: large text area
-	- select/combobox/dropdown/optionmenu. structure: `div>(label>h3)+select[name=""]>(optgroup[label="$$"]>option[value="$$"]*3)*4`
+	
+	
 	- checkbox: multiple checkboxes. Requires different `<value>` attribute for each choices. You can mark this as a list if you want to show it vertically listed. `ul>li*>label[for="$#"]>input[id="check-$#"]+{$#}` gives:
 		<pre>&lt;ul&gt;
 			&lt;li&gt;&lt;label for="read"&gt;&lt;input type="text" id="check-read"&gt;read&lt;/label&gt;&lt;/li&gt;
@@ -123,6 +123,8 @@ form>(fieldset>legend+(div>label+input)*3)*2+input:submit
 			&lt;li&gt;&lt;label for="watch"&gt;&lt;input type="text" id="check-watch"&gt;watch&lt;/label&gt;&lt;/li&gt;
 		&lt;/ul&gt;</pre>
 - `contenteditable="true"` makes content editable by clicking it. attribute for any elements?
+- textarea: large text area
+- select/combobox/dropdown/optionmenu. structure: `div>(label>h3)+select[name=""]>(optgroup[label="$$"]>option[value="$$"]*3)*4`
 
 
 ===
@@ -149,8 +151,18 @@ script랑 style은 head나 body 에서 사용하는 것마다 사용법이 다�
 `<noscript></noscript>` 를 사용하면 자바스크립트가 지원되지 않는 환경에서 실행되는 코드를 넣을 수 있지만, 최근에는  Modernizr 라이브러리를 사용하여 html class를 'js' 'no-js' 이런 식으로 지정해주면 noscript 없이도 브라우저 환경을 식별할 수 있다.
 
 #To Do
+- 웹호스팅 & FTP 설치
+- 퀴즈 문항 5개 만들기
+- 집 가는 길에 [Frontend Developer Handbook](http://www.frontendhandbook.com/) 읽어보기
+- [React.js](http://blog.coderifleman.com/post/122232296024/reactjs%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8B%A41)가 뭔지 읽어보기
+- [WAI-ARIA(Web Accessibility Initiative - Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ)
 
 #Questions
+- script랑 style은 head나 body 에서 사용하는 것마다 사용법이 다른 듯?
+	
+	이미 로드된 부분에 대해서만 applicable하다.
+	그렇기 때문에 스타일이 로드된 후에 부르는 게 좋다.
+	
 - difference between name and id
 	<blockquote>
 		<p>

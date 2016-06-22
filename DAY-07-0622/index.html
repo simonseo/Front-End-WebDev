@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Home | Expedia</title>
+</head><!-- 
+header+main>section*3+footer
+section>ul>(li>ul>li*3)*4
+주석 남기기
+문법,접근성, 구조화, 최적화(div/span 남용) -->
+<body>
+	<nav>
+		<a href="index.html"><img src="" alt="Expedia Logo"></a>
+		<a href="index.html">홈</a>
+		<a href="">항공</a>
+		<a href="">호텔</a>
+		<a href="">특가상품</a>
+		<a href="">렌트카</a>
+		<a href="">쿠폰</a>
+
+	</nav>
+
+	<select name="language" id="language">
+		<option value="english"><a href="index.html">English</a></option>
+		<option value="korean"><a href="/ko/index.html">Korean</a></option>
+	</select>
+
+	<select name="customer-service" id="">
+		<option value=""></option>
+	</select>
+
+
+	<div>
+		<h3>간편한 예약으로 특별한 여행을 시작하세요</h3>
+		<form name="search-options" action="#" method="GET" enctype="xxx-something">
+			<div>
+				<label for="one-way-or-return">항공편</label> 
+				<input type="radio" name="one-way-or-return" value="return" checked>왕복
+				<input type="radio" name="one-way-or-return" value="one-way" >편도
+			</div>
+			<div>
+				<label for="departure-city">출발</label>
+				<input type="text" placeholder="도시명 또는 공항명">
+			</div>
+			<div>
+				<label for="departure-city">도착</label>
+				<input type="text" placeholder="도시명 또는 공항명">
+			</div>
+			<div>
+				<input type="checkbox" name="non-stop">
+				<label for="non-stop">직항노선만 검색하기</label>
+			</div>
+			<div>
+				<label for="travel-date">일정</label>
+				<input type="date" name="travel-date" id="departure-date" placeholder="출국일">
+				<input type="date" name="travel-date" id="return-date" placeholder="귀국일">
+			</div>
+			
+			<div>
+				<label for="peope-count">인원</label>
+				<select name="people-count">
+					<optgroup label="성인">
+						<option value=""></option>
+					</optgroup>
+				</select>
+			</div>
+			<a href="">상세조건검색</a>
+			<button type="submit">항공편 검색</button>
+		</form>
+	</div>
+
+	<h3>전세계 500,000개 이상의 호텔 및 리조트 190개 국가의 숙소와 항공편을 검색해보세요</h3>
+	<p>
+		<div>
+			<h4>싱가포르</h4>
+			<h6>싱가포르</h6>
+		</div>
+
+	</p>
+</body>
+</html>
