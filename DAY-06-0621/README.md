@@ -112,8 +112,18 @@ form>(fieldset>legend+(div>label+input)*3)*2+input:submit
 	- color
 	- radio: choose one of several
 	- file: upload file, you can do multiple
-	- hidden: not for users. ex) is this suitable for ajax?
-	
+	- hidden: not for users. ex) is this suitable for ajax?	
+- Web 2.0
+	- email
+	- url
+	- number
+	- search
+	- range
+	- data pickers
+	- color
+	- datalist
+	- keygen
+	- output
 	
 	- checkbox: multiple checkboxes. Requires different `<value>` attribute for each choices. You can mark this as a list if you want to show it vertically listed. `ul>li*>label[for="$#"]>input[id="check-$#"]+{$#}` gives:
 		<pre>&lt;ul&gt;
@@ -137,6 +147,7 @@ types <input type="button" value="okay"> 타입만 지정해주면 브라우저�
 - `id="useful for radio"` because several choices can have the same name and a common label, like gender, but they have separate labels, like male and female.
 - `value="text"` in text input leaves default text. If assigned and selected(for dropdown/radio/checkbox), this information is what is sent through the url in GET method.
 - `disabled` makes the input disabled
+- `required`
 - `placeholder="text"` sets a guideline for what to input
 - `maxlength="integer"` sets the maximum number of characters in password, text
 - `checked` checked라고 명시되어있으면 초기 상태가 선택상태. xhtml에서는 checked="checked"라고 써야 함
@@ -159,8 +170,8 @@ script랑 style은 head나 body 에서 사용하는 것마다 사용법이 다�
 
 #Questions
 - script랑 style은 head나 body 에서 사용하는 것마다 사용법이 다른 듯?
-	
-	이미 로드된 부분에 대해서만 applicable하다.
+	style은 헤드에서만 사용해야 하낟.
+	스크립트는 이미 로드된 부분에 대해서만 applicable하다.
 	그렇기 때문에 스타일이 로드된 후에 부르는 게 좋다.
 	
 - difference between name and id

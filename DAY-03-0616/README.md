@@ -70,3 +70,5 @@ You can branch or merge to cooperate effectively.
 1. Read about color profiles
 1. Make my website &#10003;
 1. Difference between merge and checkout?
+
+	> Merge merges files from same branch in the local repo, checkout replaces working file with files from different branch in the local repo.

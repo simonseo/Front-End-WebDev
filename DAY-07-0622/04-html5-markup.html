@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>(X)HTML vs HTML5</title>
+	<script>
+	// type="number"를 지원하는 
+		var my_num_input = document.createElement('input');
+		my_num_input.setAttribute('type', 'number');
+		if (my_num_input.getAttribute('type') == 'text') {
+			console.log('number 지원되지 안흥ㅁ');
+		}
+		else {
+			console.log('number is supported.');
+		}
+	</script>
+</head>
+<body>
+	<!-- HTML4.01 or XHTML 1.0 Markup -->
+	<!-- #header+#gnb+#main+#sidebar+#footer -->
+	<div id="header"></div>
+	<div id="gnb"></div>
+	<div id="main"></div>
+	<div id="sidebar"></div>
+	<div id="footer"></div>
+
+	<!-- HTML5 Markup -->
+	<!-- header+nav+main+aside+footer -->
+	these are all section elements
+	id is used for ARIA. 
+	<header></header>
+	<nav></nav>
+	<section>
+		<article></article>
+	</section>
+	<main>
+		<input type="number">
+	</main> 
+	<!-- main can be used only once in a page -->
+	<aside></aside>
+	<footer></footer>
+</body>
+</html>

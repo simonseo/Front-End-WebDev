@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*스타일 모듈 파일 로드*/
+/*병합 안해줌. 쓰면 안됨. 나니니ㅏ니니ㅏㄴ? 느려서?*/
+@import "layout.css";
+@import "old-ie.css";
+@import "print.css";
+@import url("colors.css");
+@import url("common.css");
+@import url("grid.css");
+
+body {
+	margin: 0;
+}
+
+article {
+	border: 1px solid #ffff00;
+}
+
+article h2 {
+	color: #A8A7A2;
+	font-family: 나눔고딕;
+	font-weight: 200;
+}
+
+article img {
+	margin-top: 40;
+	margin-bottom: 20;
+}
+
+article p {
+	line-height: 30px;
+}
+
+/*
+
+*/
