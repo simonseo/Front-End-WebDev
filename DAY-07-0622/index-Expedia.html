@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>Home | Expedia</title>
-</head><!--
-header+main>section*3+footer
-section>ul>(li>ul>li*3)*4
-주석 남기기
-문법,접근성, 구조화, 최적화(div/span 남용) -->
+</head>
 <body>
 	<!-- Header Menu Start -->
 	<header>
 		<nav>
-			<a href="#"><img src="http://placehold.it/100x45/eee/00345E/?text=Expedia" alt="Expedia Logo"></a>
-			<a href="#">홈</a>
-			<a href="#">항공</a>
-			<a href="#">호텔</a>
-			<a href="#">특가상품</a>
-			<a href="#">렌트카</a>
-			<a href="#">쿠폰</a>
+			<ul>
+				<li>
+					<a href="#"><img src="https://placehold.it/100x45/eee/00345E/?text=Expedia" alt="Expedia Logo"></a>
+				</li>
+				<li>
+					<a href="#">홈</a>
+				</li>
+				<li>
+					<a href="#">항공</a>
+				</li>
+				<li>
+					<a href="#">호텔</a>
+				</li>
+				<li>
+					<a href="#">특가상품</a>
+				</li>
+				<li>
+					<a href="#">렌트카</a>
+				</li>
+				<li>
+					<a href="#">쿠폰</a>
+				</li>
+			</ul>
 		</nav>
 		
 		<select name="language" id="language">
@@ -31,7 +43,7 @@ section>ul>(li>ul>li*3)*4
 			<option value="as">고객센터</option>
 		</select>
 		<a href="#">로그인</a>
-		<a href="#"><img src="http://placehold.it/20x15/eee/00f/?text=Flag" alt="Korean"></a>
+		<a href="#"><img src="https://placehold.it/20x15/eee/00f/?text=Flag" alt="접속 위치 대한민국"></a>
 	</header>
 	<!-- Header Menu finish -->
 	<!-- Main section start -->
@@ -39,11 +51,11 @@ section>ul>(li>ul>li*3)*4
 		<!-- search section start -->
 		<section id="search">
 			<h3>간편한 예약으로 특별한 여행을 시작하세요</h3>
-			<form name="search-options" action="#" method="GET" enctype="x-www-form-urlencoded">
+			<form name="search-options" action="#" method="GET" enctype="application/x-www-form-urlencoded">
 				<div>
 					<label for="one-way-or-return">항공편</label>
 					<input type="radio" name="one-way-or-return" id="one-way-or-return" value="return" checked>왕복
-					<input type="radio" name="one-way-or-return" id="one-way-or-return" value="one-way" >편도
+					<input type="radio" name="one-way-or-return" value="one-way" >편도
 				</div>
 				<div>
 					<label for="departure-city">출발</label>
@@ -59,11 +71,12 @@ section>ul>(li>ul>li*3)*4
 				</div>
 				<div>
 					<label for="travel-date">일정</label>
-					<label for="departure-date">출국일<input type="date" name="travel-date" id="departure-date"></label>
-					<label for="return-date">귀국일<input type="date" name="travel-date" id="return-date"></label>
+					<label>출국일<input type="date" name="travel-date" id="travel-date" class="travel-date"></label>
+					<label>귀국일<input type="date" name="travel-date" class="travel-date"></label>
+					
 				</div>
 				<div>
-					<label for="peope-count">인원</label>
+					<label for="people-count">인원</label>
 					<select name="people-count" id="people-count">
 						<optgroup label="성인">
 							<option value="1">성인 1명</option>
@@ -84,8 +97,8 @@ section>ul>(li>ul>li*3)*4
 				<li>
 					<a href="#">
 						<div>
-							<p class="readable-hidden">매진임박</p>
-							<img src="http://placehold.it/250x150/000/fff/?text=Marina Bay Sands" alt="Singapore Marina Bay Sands Hotel">
+							<!-- 점수, 가격, 항공편 등은 중요한 정보고 동적으로 수정하기 쉽도록 em 요소를 사용함 -->
+							<img src="https://placehold.it/250x150/000/fff/?text=Marina+Bay+Sands" alt="Singapore Marina Bay Sands Hotel">
 							<h4>싱가포르</h4>
 							<h6>싱가포르</h6>
 							<span><em class="score">3.9</em>/5</span>
@@ -98,8 +111,7 @@ section>ul>(li>ul>li*3)*4
 				<li>
 					<a href="#">
 						<div>
-							<p class="readable-hidden">매진임박</p>
-							<img src="http://placehold.it/250x150/000/fff/?text=Familia Sagrada" alt="Barcelona Familia Sagrada">
+							<img src="https://placehold.it/250x150/000/fff/?text=Familia+Sagrada" alt="Barcelona Familia Sagrada">
 							<h4>바르셀로나</h4>
 							<h6>스페인</h6>
 							<span><em class="score">4.1</em>/5</span>
@@ -112,8 +124,9 @@ section>ul>(li>ul>li*3)*4
 				<li>
 					<a href="#">
 						<div class="almost-sold-out sale-five-percent">
+							<!-- 매진임박 및 세일 정보는 평소에 숨겨져있다가 상품이 부족해지면 보이는 부분 -->
 							<p class="readable-hidden">매진임박</p>
-							<img src="http://placehold.it/250x150/000/fff/?text=Rome Colloseum" alt="Rome Colloseum">
+							<img src="https://placehold.it/250x150/000/fff/?text=Rome+Colloseum" alt="Rome Colloseum">
 							<h4>로마</h4>
 							<h6>이탈리아</h6>
 							<span><em class="score">4.5</em>/5</span>
@@ -131,22 +144,14 @@ section>ul>(li>ul>li*3)*4
 			<h3>가고 싶은 곳 지금 바로 알아보세요</h3>
 			<p>나라마다 차별화된 할인률! 오직 익스피디아에서만!</p>
 			<ul>
-				<li>
-					<ul>
-						<li class="recommend"><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=Las Vegas" alt="Las Vegas"></a></li>
-						<li class="recommend"><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=Seattle" alt="Seattle"></a></li>
-						<li><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=London Vegas" alt="London Vegas"></a></li>
-						<li><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=Melbourne" alt="Melbourne"></a></li>
-					</ul>
-				</li>
-				<li>
-					<ul>
-						<li><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=New York" alt="New York"></a></li>
-						<li><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=Honolulu" alt="Honolulu"></a></li>
-						<li><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=Belgium" alt="Belgium"></a></li>
-						<li><span class="readable-hidden">추천</span><a href="#"><img src="http://placehold.it/200x100/000/fff/?text=More" alt="More"></a></li>
-					</ul>
-				</li>
+				<li class="recommend"><span class="readable-hidden">추천</span><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=Las+Vegas" alt="Las Vegas"></a></li>
+				<li class="recommend"><span class="readable-hidden">추천</span><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=Seattle" alt="Seattle"></a></li>
+				<li><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=London" alt="London"></a></li>
+				<li><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=Melbourne" alt="Melbourne"></a></li>
+				<li><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=New+York" alt="New+York"></a></li>
+				<li><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=Honolulu" alt="Honolulu"></a></li>
+				<li><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=Belgium" alt="Belgium"></a></li>
+				<li><a href="#"><img src="https://placehold.it/200x100/000/fff/?text=More" alt="More"></a></li>
 			</ul>
 		</section>
 		<!-- Suggestion Section Finish -->
@@ -154,7 +159,7 @@ section>ul>(li>ul>li*3)*4
 	<!-- Footer Menu Start -->
 	<footer>
 		<div>
-			<img src="http://placehold.it/100x50/00355F/99AEBF/?text=Expedia" alt="Expedia Logo">
+			<img src="https://placehold.it/100x50/00355F/99AEBF/?text=Expedia" alt="Expedia Logo">
 		</div>
 		<div>
 			<h6>제휴 서비스</h6>
@@ -164,32 +169,31 @@ section>ul>(li>ul>li*3)*4
 			<h6>패밀리 사이트</h6>
 			<p><a href="#">AirAsia</a> | <a href="#">AirAsiaGo</a> | <a href="#">Triviago</a></p>
 		</div>
-		<ul>
-			<li>
-				<ul>
-					<li><a href="#">호텔</a></li>
-					<li><a href="#">항공편</a></li>
-					<li><a href="#">에어텔</a></li>
-					<li><a href="#">최저가격보장</a></li>
-				</ul>
-			</li>
-			<li>
-				<ul>
-					<li><a href="#">회사소개</a></li>
-					<li><a href="#">이용약관</a></li>
-					<li><a href="#">개인정보 취급 방침</a></li>
-				</ul>
-			</li>
-		</ul>
-		<div id="sns">
-			<a href="#"><img src="http://placehold.it/20x20/000/fff/?text=P" alt="Pinterest"></a>
-			<a href="#"><img src="http://placehold.it/20x20/000/fff/?text=T" alt="Twitter"></a>
-			<a href="#"><img src="http://placehold.it/20x20/000/fff/?text=F" alt="Facebook"></a>
-			<a href="#"><img src="http://placehold.it/20x20/000/fff/?text=G" alt="Google Plus"></a>
+		<div>
+			<h6>회사방침</h6>
+			<ul>
+				<li><a href="#">호텔</a></li>
+				<li><a href="#">항공편</a></li>
+				<li><a href="#">에어텔</a></li>
+				<li><a href="#">최저가격보장</a></li>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보 취급 방침</a></li>
+			</ul>
 		</div>
-		<select name="locale-lang">
-			<option value="korea">Korea(한국어)</option>
-		</select>
+		<div>
+			<h6>SNS</h6>
+			<a href="#"><img src="https://placehold.it/20x20/000/fff/?text=P" alt="Pinterest"></a>
+			<a href="#"><img src="https://placehold.it/20x20/000/fff/?text=T" alt="Twitter"></a>
+			<a href="#"><img src="https://placehold.it/20x20/000/fff/?text=F" alt="Facebook"></a>
+			<a href="#"><img src="https://placehold.it/20x20/000/fff/?text=G" alt="Google Plus"></a>
+		</div>
+		<div>
+			<h6>언어선택</h6>
+			<select name="locale-lang">
+				<option value="korea">Korea(한국어)</option>
+			</select>
+		</div>
 	</footer>
 	<!-- Footer Menu finish -->
 </body>
