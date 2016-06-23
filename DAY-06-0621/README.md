@@ -96,6 +96,7 @@ form>(fieldset>legend+(div>label+input)*3)*2+input:submit
 #####Label
 - 암묵적 방식: `label>input`; doesn't require `for=""` in label nor `name=""` and `id=""` in input; some screenreaders cannot recognize this method properly.
 - 명시적 방식: `label+input`; requires `for=""` in label and `name=""` and/or `id=""` in input;
+- if there is a for, there needs to be an id.
 
 ===
 #####Different types of button and input
@@ -186,6 +187,8 @@ script랑 style은 head나 body 에서 사용하는 것마다 사용법이 다�
 - Grid & framework design = adaptive?
 - 스큐어모피즘이 뭐니?
 - difference between code and pre
+	- code means this is code
+	- pre means the whitespace is important
 - Why use multipart/form-data for binary data?
 - What is binary data?
 - HTML element: [pre 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)는 스타일 적용이 안 되는가?
