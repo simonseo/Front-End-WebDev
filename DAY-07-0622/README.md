@@ -12,6 +12,7 @@ IE (Deprecated) <acronym title="Extensible HTML">XHTML</acronym> 은 HTML5에서
 
 웹 정보
 <address></address> for web addresses / email / phone. You can't use a block element inside address. Nowadays, it's not very used; you can use p instead. 
+Block 이지만 안에 다른 block 요소가 들어갈 수 없다.
 
 인용
 긴 인용 <blockquote><p></p><cite></cite></blockquote>
@@ -77,18 +78,19 @@ there can be several navs
 using class is better than using id 
 
 Block elements
-div, table, form, h1~6, ul, ol, li, p, pre, bq
+div, table, form, h1~6, ul, ol, li, p, pre, bq, address
 If you haven't designated a specific style, width is as big as the parent element's.
 The height is independent of the parent element, but dependent on the children.
 You can set height and with
 Blocks can have inlines
+some blocks can't have blocks (p, address)
 
 inline
 a, em, img, input, label, span, strong
 its width and height is dependent only on the children elements
 you cannot set width and height
 inlines, with the exception of <a>, cannot have blocks inside. <a> cannot have another clickable component.
-with the exception of img, margin, padding 속성의 상 하 설정이 불가능하다.
+With the exception of img, width, height, margin, padding 등 속성의 상 하 설정이 불가능하다.
 
 inline block (img)
 basically acts like inline but you can control width and height like block

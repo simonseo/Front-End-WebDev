@@ -103,3 +103,7 @@ HTML을 만만하게 봤다
 - What is a Grid System
 - 인터넷 속도를 물어보고, 그에 따라 다른 이미지 퀄리티를 불러줄 수 없을까?
 - HTML5에서는 <a> 요소가 블록 테그 요소를 감쌀 수 있다. 그러나 요소 내부에 '어떤 컴포넌트'가 있다면 문법 오류가 생긴다. 그 어떤 컴포넌트는 무엇인가?
+- what's needed/recommended in tables: caption, title, etc.
+- Grid & framework design = adaptive?
+- Why use multipart/form-data for binary data?
+- What is binary data?

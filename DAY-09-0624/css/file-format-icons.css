@@ -1,0 +1,73 @@
+.reset-list {
+	/*제일 자주 사용됨*/
+	/*yamoo sets layout code on the top, text styles in the bottom*/
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.lecture a {
+	/*fonst-size: 38px;*/
+	font-size: 2.38em;
+	text-decoration: none;
+	display: block;
+	color: chocolate;
+	background-repeat: no-repeat;
+}
+
+a[href$=".ai"] {
+	/*MUST USE DOUBLE QUOTATION FOR CSS*/
+	background-image: url("../images/ai.png");
+	background-size: 26px 27px;
+	background-position: 0 10px;
+	text-indent: 30px;
+}
+a[href$=".jpg"] {
+	/*MUST USE DOUBLE QUOTATION FOR CSS*/
+	background-image: url("../images/jpg.png");
+	background-size: 26px 27.5px;
+	background-position: 0 10px;
+	text-indent: 30px;
+}
+a[href$=".doc"] {
+	/*MUST USE DOUBLE QUOTATION FOR CSS*/
+	background-image: url("../images/doc.png");
+	background-size: 25px 32px;
+	background-position: 0 6px;
+	text-indent: 30px;
+	color: #067FCB;
+}
+a[href$=".js"] {
+	/*MUST USE DOUBLE QUOTATION FOR CSS*/
+	background-image: url("../images/js.png");
+	background-size: 25px 32px;
+	background-position: 0 6px;
+	text-indent: 30px;
+	color: #58BF1A;
+}
+a[href$=".pdf"] {
+	/*MUST USE DOUBLE QUOTATION FOR CSS*/
+	background-image: url("../images/pdf.png");
+	background-size: 25px 32px;
+	background-position: 0 6px;
+	text-indent: 30px;
+	color: #CB0606;
+
+}
+a[href$=".psd"] {
+	/*MUST USE DOUBLE QUOTATION FOR CSS*/
+	background-image: url("../images/psd.png");
+	background-size: 25px 32px;
+	background-position: 0 6px;
+	color: #192257;
+	text-indent: 30px;
+}
+
+a[href^="http://"], a[href^="https://"] {
+	background-image: url(../images/external_link.png);
+	background-size: 25px 25px;
+	text-indent: 30px;
+	color: #067FCB;
+	background-position: 0 10px;
+}
