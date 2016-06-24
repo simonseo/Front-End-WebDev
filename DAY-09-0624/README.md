@@ -80,12 +80,14 @@ remote color
 	/*font-size: 1.25em;*/
 	/*폰트를 상대값으로 하려면 20/16 꼴로 나타낸 후 ctrl+shift+y 해주면 알아서 계산해줌 20px 이라고 쓰는 것과 같음*/
 
-`lst+mt0+mb0+pl0+tab` : 
+엄청 자주 쓰임 `lst+mt0+mb0+pl0+tab` : 
 ```
-list-style-type: ;
+.reset-list {
+	list-style-type: ;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0;
+}
 ```
 코드가 반복되면 같은 클래스로 묶어주면 좋다! 클래스가 너무 많아도 안 좋으니 반복되면 써라.
 #TO DO
