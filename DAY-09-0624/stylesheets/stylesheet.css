@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+.reset-list {
+	list-style-type: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+ul a {
+	background-position: 0 0.16em;
+	background-repeat: no-repeat;
+	background-size: 0.75em 1em;
+	display: block;
+	font-size: 32px;
+	line-height: 1.25em;
+	text-indent: 0.81em;
+}
+
+a[href$=".aac"] {
+	background-image: url(../icons/1466971981_aacs.png);
+}
+a[href$=".ai"] {
+	background-image: url(../icons/1466971952_aibs.png);
+}
+a[href$=".avi"] {
+	background-image: url(../icons/1466971949_avibs.png);
+}
+a[href$=".doc"] {
+	background-image: url(../icons/1466971934_docs.png);
+}
+a[href$=".flac"] {
+	background-image: url(../icons/1466971982_flacs.png);
+}
+a[href$=".gif"] {
+	background-image: url(../icons/1466971947_gifs.png);
+}
+a[href$=".html"] {
+	background-image: url(../icons/1466971940_htmls.png);
+}
+a[href$=".jpg"] {
+	background-image: url(../icons/1466971937_jpgs.png);
+}
+a[href$=".js"] {
+	background-image: url(../icons/1466971984_jss.png);
+}
+a[href$=".mov"] {
+	background-image: url(../icons/1466971948_movs.png);
+}
+a[href$=".mp3"] {
+	background-image: url(../icons/1466971942_mp3s.png);
+}
+a[href$=".mp4"] {
+	background-image: url(../icons/1466971938_mp4s.png);
+}
+a[href$=".pdf"] {
+	background-image: url(../icons/1466971929_pdfs.png);
+}
+a[href$=".png"] {
+	background-image: url(../icons/1466971945_pngs.png);
+}
+a[href$=".psd"] {
+	background-image: url(../icons/1466971941_psds.png);
+}
+a[href$=".tiff"] {
+	background-image: url(../icons/1466971951_tiffs.png);
+}
+a[href$=".txt"] {
+	background-image: url(../icons/1466971936_txts.png);
+}
+a[href$=".xls"] {
+	background-image: url(../icons/1466971935_xlss.png);
+}

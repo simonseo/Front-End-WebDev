@@ -128,10 +128,10 @@ form>(fieldset>legend+(div>label+input)*3)*2+input:submit
 	
 	- checkbox: multiple checkboxes. Requires different `<value>` attribute for each choices. You can mark this as a list if you want to show it vertically listed. `ul>li*>label[for="$#"]>input[id="check-$#"]+{$#}` gives:
 		<pre>&lt;ul&gt;
-			&lt;li&gt;&lt;label for="read"&gt;&lt;input type="text" id="check-read"&gt;read&lt;/label&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;label for="surf"&gt;&lt;input type="text" id="check-surf"&gt;surf&lt;/label&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;label for="play"&gt;&lt;input type="text" id="check-play"&gt;play&lt;/label&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;label for="watch"&gt;&lt;input type="text" id="check-watch"&gt;watch&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label for="read"&gt;&lt;input type="checkbox" id="check-read"&gt;read&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label for="surf"&gt;&lt;input type="checkbox" id="check-surf"&gt;surf&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label for="play"&gt;&lt;input type="checkbox" id="check-play"&gt;play&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label for="watch"&gt;&lt;input type="checkbox" id="check-watch"&gt;watch&lt;/label&gt;&lt;/li&gt;
 		&lt;/ul&gt;</pre>
 - `contenteditable="true"` makes content editable by clicking it. attribute for any elements?
 - textarea: large text area
