@@ -11,7 +11,7 @@ ul a {
 	background-position: 0 0.16em;
 	background-repeat: no-repeat;
 	background-size: 0.75em 1em;
-	display: block;
+	display: inline-block;
 	font-size: 32px;
 	line-height: 1.25em;
 	text-indent: 0.81em;
