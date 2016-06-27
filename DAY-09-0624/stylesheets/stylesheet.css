@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+.i {
+    position: relative;
+}
+ 
+/*replace the content value with the
+corresponding value from the list below*/
+ 
+.i {
+    content: "\f000";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #ddbdff;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+i:before {
+	content: "\f11b";
+}
+
 .reset-list {
 	list-style-type: none;
 	margin-bottom: 0;
@@ -19,6 +45,8 @@ ul a {
 
 a[href$=".aac"] {
 	background-image: url(../icons/1466971981_aacs.png);
+
+
 }
 a[href$=".ai"] {
 	background-image: url(../icons/1466971952_aibs.png);

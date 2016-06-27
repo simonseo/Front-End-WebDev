@@ -122,7 +122,7 @@ div > ul > li {
 	background-color: red;
 }
 
-div > ul > .middle + * {
+div > ul > .middle ~ * {
 	background-color: blue;
 }
 
