@@ -41,10 +41,10 @@ FDS_TEST__2016/06/27
 
 
 1. 다음 중 CSS 문서의 최 상단에 위치해야 하는 규칙은? 
-	- `@import`
+	- `@import` char보다 아래
 	- `@charset` &10003;
-	- `@media`
-	- `/*! license-comment.css */`
+	- `@media` 어디에나
+	- `/*! license-comment.css */` char보다 아래
 	- 답이 없다.
 
 1. HTML 구조(↓ 이미지)를 참고하여 적절한 선택자를 작성하시오. 
@@ -55,7 +55,7 @@ class 속성 이름이 child 여야 하고, 단락의 의미를 가진 요소 �
 
 1. HTML 구조(↑ 이미지)를 참고하여 적절한 선택자를 작성하시오. 
 `id="parent"`인 요소의 자식 중 `class="child"` 인 요소를 찾아, 그 중 1번째를 제외한 나머지 형제 요소들을 찾는 선택자.
-`#parent > .child ~ *`
+`#parent > .child ~ .child`
 
 
 1. 다음 두 선택자를 비교하여 차이점을 명확하게 기술 하시오. 
@@ -69,7 +69,7 @@ class 속성 이름이 child 여야 하고, 단락의 의미를 가진 요소 �
 	- a[href="http://"][title]
 	- a[href="http://"][title="_blank"]
 	- 답이 없다. &10003;
-		- `target="_blank"`
+		- `target="_blank"`, 그리고 `[href^="http://"]`
 
 1. 스타일 코드를 모듈화(Modularization)하는 이유는? 
 	간편한 비쥬얼, 효율적인 관리, 리팩토링

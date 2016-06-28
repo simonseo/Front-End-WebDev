@@ -9,7 +9,7 @@ DONUS has three main solutions, applied for different situations. More important
 
 They are currently looking for consultants and software engineers. In terms of software engineers, they are looking for people to work on and maintatin the "Donus Fundraising" product and for people to experimentally develop their new SaaS product. They say they require people who have experience with developing and managing OOP programs. They prefer people eager to solve engineering problems.
 
-###[KORBIT 코빗](https://www.korbit.co.kr/)
+###[KORBIT 코빗](https://www.korbit.co.kr/) (2016.06.21)
 - CEO: Tony Lyu
 
 - 회사에 미국계 자본 많음. 요인들 중에 미국 유학한 사람이 많다. 코빗은 개발자 직군을 굳이 안 나눔. 1-2개월만 배워도 할 수 있는 간단한 일?! 
@@ -23,3 +23,5 @@ They are currently looking for consultants and software engineers. In terms of s
 - 아마존 람다 - 無서버. Similar to Ethereum?
 
 - 실리콘밸리에는 페이팔에 연결된 창업가 투자자가 많음. 유튜브 링크드인 일론머스크 등등. 하지만 금융계로 다시 한 사람은 딱 한명. 그만큼 리스크가 크다.
+
+###[SENTBE 센트비](https://www.sentbe.com/#?locale=en) (2016.06.28)

@@ -1,0 +1,141 @@
+@charset "utf-8";
+/*@import url(common.css);*/
+/*use link instead*/
+
+body {
+	margin: 20%;
+	font-size: 18;
+}
+
+/* [class~="container"] {
+	border: 1px dashed #DDE5EF;
+	padding: 1em;
+}
+
+[lang|="en"] {
+	text-decoration: underline;
+}
+
+p {
+	color: #9E9E9E;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0.88em;
+	background: #808080;
+}
+
+p:hover {
+	color: #000;
+}
+
+p:active {
+	background-color: rgba(255, 216, 0, 0.5019607843137255);
+}
+ */
+/*기본상태. aka a:link*/
+a {
+	display: inline-block;
+	text-decoration: none;
+	/*color: #363633;
+	/*background-color: #ffff00; /*색만*/
+	/*background: #000; 전부다 쓸 수 있음*/  
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	padding-bottom: 3px;
+/*	background-image: url(../images/noun_250415_cc.png);
+	background-size: 30px 30px;
+	background-position: 10px 10px*/
+	/*outline: none;*/
+}
+
+a:hover {
+	/*padding-bottom: 0.13em;
+	border-bottom: 0.06em solid;*/
+	text-decoration: underline;
+	text-underline-position: below;
+}
+
+/*a:visited {
+	display: inline-block;
+	text-indent: 1.88em;
+	color: #bfbfba;
+	background: #ff0000;
+	
+}*/
+
+a:focus:hover {
+	outline: 5px solid #000;
+	outline-offset: 10px;
+}
+/*border와 outline의 차이점: border는 축이 움직인다.*/
+
+.box {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background: #eee;
+	margin-bottom: 20px;
+}
+
+.box:hover {
+	outline: 5px dotted #bc1339;
+	/*border: 5px dotted #bc1339;*/
+}
+
+.round-box {
+	background: #aaa;
+	width: 200px;
+}
+
+/*.round-box:first-child {
+	
+}
+*/
+.dropcap-demo {
+	color: #5dbede;
+}
+
+.dropcap::first-letter {
+	color: #e52325;
+	font-size: 2em;
+}
+
+.dropcap::first-line {
+	color: #e52325;
+	font-size: 1em;
+}
+
+.msg::before {
+	content: "This is background lol";
+	color: #5d00ff
+}
+
+.msg::after {
+	content: "Oh yeah!";
+	color: #5d00ff
+}
+
+p::before {
+	color: #838b75;
+	content: "Ohooh ";
+}
+
+::selection {
+	background: #E2F3FA;
+	/*color: #fff;*/
+	text-shadow: 0 0 0 #000; /* x y blur color */
+
+}
+::-moz-selection {
+	background: #5DBEE2;
+}
+/*모질라에서는 */
+
+@media print {
+	a::after {
+		content: ' (' attr(href) ')';
+	}
+	abbr::after {
+		content: ' (' attr(title) ')';
+	}
+}

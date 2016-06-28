@@ -3,7 +3,7 @@
 ##Git 재특강!
 #####in order to collaborate with teammates...
 [Git in CLI](http://learngitbranching.js.org/)
-be ware... pull and then push.
+be aware... pull and then push.
 don't mistakenly merge a remote branch into a local branch of a different name!
 
 ##TIL
