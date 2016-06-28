@@ -25,3 +25,10 @@ They are currently looking for consultants and software engineers. In terms of s
 - 실리콘밸리에는 페이팔에 연결된 창업가 투자자가 많음. 유튜브 링크드인 일론머스크 등등. 하지만 금융계로 다시 한 사람은 딱 한명. 그만큼 리스크가 크다.
 
 ###[SENTBE 센트비](https://www.sentbe.com/#?locale=en) (2016.06.28)
+- 발표자: 정상용 제품팀 팀장 sj@sentbe.com, sangyong.jung@gmail.com
+- 회사가 하는 일 ~ Korbit: bitcoin + ppn 중에 pooling (한꺼번에 처리?) 
+- 필리핀 사업이 제일 큰 이유: 파트너십 중요함. 우리나라에서는 동남아 지역으로의 송금이 제일 많음. 
+- Marketing strategy: CMO knows migrant workers well; 현지 팀원도 있음
+- They are looking for :새로운 프레임워크에 대한 개방성, UI/UX에 대한 집착
+- 공동창업자 중 한명이 미국에서 재택 근무중. 따라서 회사에 재택 근무 환경이 잘 잡힘.
+
