@@ -19,6 +19,7 @@ body {
 	border-left: 5px solid black;
 	/*line-height: 0;*/
 	/*min-height: 0;*/
+	vertical-align: top;
 }
 h1 {
 	font-weight: bolder;

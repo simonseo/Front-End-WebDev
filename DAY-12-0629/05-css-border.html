@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>CSS Border</title>
+	<style>
+		.box {
+			height: 200px;
+			width: 200px;
+			background: #fff;
+			color: orange;
+			border: 1px solid;
+			text-align: center;
+			/*doesn't work on blocks. work on table-cells*/
+			/*display: table-cell;
+			vertical-align: middle; */
+
+			/*doesn't work on multiple lines.
+			line-height: 200px;*/
+
+		}
+		.border-double {
+			border: 15px double red;
+			background-color: #FFBD4A;
+		}
+		.border-inset {
+			background-color: lightblue;
+			border: 15px inset blue;
+		}
+
+		.border-outset {
+			background-color: pink;
+
+			border: 15px dotted purple;
+		}
+		.thumbnail {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			overflow: hidden;
+		}
+		.thumbnail img {
+			left: 0;
+			top: 0;
+			width: 180%;
+			height: auto;
+			position: relative;
+			z-index: 0;
+		}
+		img[alt="layer"] {
+			width: 200px;
+			height: 200px;
+			position: relative;
+			/*top: -200px;*/
+			/*left: 0px;*/
+			transform: translate(0,-100%);
+		}
+		.second {
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box border-double">double</div>
+	<div class="box border-inset">inset</div>
+	<div class="box border-outset">outset</div>
+	<div class="thumbnail first">
+		<!-- <img src="images/DSC04018-1200x800.jpg" alt="pic1"> -->
+	</div>
+	<img src="images/layer.png" alt="layer">
+	<div class="thumbnail second">
+		<!-- <img src="images/DSC04028-1200x800.jpg" alt="pic2"> -->
+	</div>
+	<img src="images/layer.png" alt="layer">
+	<div class="thumbnail third">
+		<!-- <img src="images/DSC04042-1200x800.jpg" alt="pic3"> -->
+	</div><img src="images/layer.png" alt="layer">
+</body>
+</html>

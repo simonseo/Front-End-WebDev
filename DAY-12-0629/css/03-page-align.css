@@ -1,0 +1,47 @@
+.page {
+	background: #f80;
+	/*width: auto; */
+	/*디폴트*/
+	width: 40%;
+	/*width: 80vw;*/
+	margin: 20vh auto;
+	/*margin-left:auto;	 */
+	/*margin-left:auto with nothing else means bring everything to the left*/
+	height: 40vh; /*viewport height*/
+	/*padding: 1.25rem;*/
+}
+
+.page::before {
+	display: block;
+	content: attr(class);
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+
+.inner-page {
+	margin: 25%;
+	width: 50%;
+	height: 50%;
+	background-color: #373A8B;
+}
+
+.inner-page::before {
+	display: block;
+	content: attr(class);
+	color: white;
+}
+
+.parent {
+	background-color: #a369af;
+	height: 20em;
+	line-height: 20em;
+}
+.child {
+	display: block;
+	margin: 25% 25% 25% 25%;
+	/*margin-top: 10px;*/
+	padding: 5%;
+	background-color: #bab3b2;
+	height: 13em;
+}
