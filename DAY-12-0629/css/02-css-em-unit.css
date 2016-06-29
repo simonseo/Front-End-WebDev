@@ -1,0 +1,61 @@
+div {
+	width: 70%;
+	margin-left: 10%;
+	margin-top: 2%;
+	padding:10%;
+	border: 0.13rem dashed #fff;
+}
+
+.wrapper-parent {
+	background: #FF4800;
+	font-size: 2.5rem;
+}
+
+.parent {
+	background-color: #FF7640;
+	font-size: 1.88rem;
+}
+
+.child {
+	background-color: #FFA480;
+	font-size: 1.25rem;
+}
+
+.inner-child {
+	background-color: #FFD1BF;
+	font-size: 0.63rem;
+}
+
+@media only screen and (max-width: 600px) {
+	body::before {
+		content: 'screen < 600px'
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+	body::before {
+		content: '600px < screen size < 1000px'
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	body::before {
+		content: '1000px < screen'
+	}
+}
+
+
+/*
+중단점 설계 Breakpoint design
+--- 1번 시안 --- 600 breakpoint --- 2번 시안 --- 1000 breakpoint ---
+mobile first 추천: mobile이 시장 더 큼, 더 쉬움.
+
+@media only screen
+이 형식으로 쓰면 only를 해석 가능한 최신 브라우저에서만 적용됨?
+*/
+
+
+
+
+##QnA
+- only: 이 형식으로 쓰면 only를 해석 가능한 최신 브라우저에서만 적용됨?

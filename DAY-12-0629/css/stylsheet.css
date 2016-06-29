@@ -1,0 +1,54 @@
+body {
+	margin: 20% 10%;
+/*	1개 쓰면 상하좌우 전체
+	2개 쓰면 상하 좌우
+	3개 쓰면 상 좌우 하
+	4개 쓰면 상 우 하 좌*/
+}
+.box {
+	/*질문
+	1. 왜 div는 top bottom collapse가 일어나지 않는가?
+	2. 왜 글씨가 들어가는 div는 튀어오르는가?*/
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	margin: 30px;
+	background-color: red;
+	border-spacing: 10px;
+	border-top: 20px solid grey;
+	border-left: 5px solid black;
+	/*line-height: 0;*/
+	/*min-height: 0;*/
+}
+h1 {
+	font-weight: bolder;
+	font-weight: 900;
+	font-size: 32px;
+	font-size: 2rem;
+	/*속성이 2번 들어간 이유? 하위호환을 위해*/
+	margin: 2em;
+}
+
+p {
+	font-size: 16px;
+	margin: 2em;
+/*	the margin of h1 and p are both 2em 
+	but they are each based on their own font-size, 
+	so they are not actually the same size.
+	Using position propery might be better. */
+}
+
+p a {
+	/*inline elements can't have top or bottom margins*/
+	margin-left: 10px;
+	background: #000;
+	color: #fff;
+	margin-bottom: 10px;
+
+}
+
+p span {
+	margin-right: 10px;
+	background: #f00;
+	color: #ff0;
+}

@@ -1,0 +1,26 @@
+/* for commonly used styles*/
+
+/*for resetting list styles*/
+.reset-list ul,
+.reset-list ol,
+ul.reset-list,
+ol.reset-list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+abbr {
+	cursor: help;
+	text-decoration: underline;
+}
+
+@media print {
+	a::after {
+		content: ' (' attr(href) ')';
+	}
+	abbr::after {
+		content: ' (' attr(title) ')';
+	}
+}
