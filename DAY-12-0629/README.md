@@ -1,7 +1,8 @@
-###### Web Dev
+###### Front End Web Development School
 
+#Day 12
 ####Team Activity 2
-홈페이지 특징 - [삼성서울병원 홈페이지 마크업](http://www.samsunghospital.com/home/main/index.do)
+#####홈페이지 특징 - [삼성서울병원 홈페이지](http://www.samsunghospital.com/home/main/index.do)
 - 네비게이션 메뉴가 엄청 복잡하다
 - 글로벌 네비는 3중 목록, 추가적인 링크도 많다.
 - 유틸메뉴도 3중 목록
@@ -12,7 +13,7 @@
 - 컨텐츠는 카드 모양으로 정리가 되어있는데, 3개의 단으로 나누어져있다. 화면 크기에 따라 셋 모두 디자인이 다를 때도 - 있고, 두번째 세번째 단의 디자인이 같을 때도 있다.
 - 푸터에는 특징적으로 부서홈페이지, 패밀리사이트, Language 메뉴가 있는데 공통적으로 클릭하면 더 큰 목록이 펼쳐진다.
 
-논의 내용 - [Activity 2 : 삼성서울병원 홈페이지 마크업 리뷰 로그](https://docs.google.com/document/d/1scLdJOZ2OWT_CU7WezqFqRUPDPKwr0Ryc_U72UjUhCw/edit)
+#####논의 내용 - [삼성서울병원 홈페이지 마크업 리뷰 로그](https://docs.google.com/document/d/1scLdJOZ2OWT_CU7WezqFqRUPDPKwr0Ryc_U72UjUhCw/edit)
 - Header가 무엇이며 어디까지가 헤더인지. `header>img.logo+nav*2`
 - Table은 데이터를 쓸 때 사용.
 - <nav>는 한 문서에 세 개정도면 적당하다고 판단 :  gnb, lnb, utility menu

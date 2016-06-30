@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vertical Alignment Sandbox page</title>
+	<style>
+		.text,
+		.image,
+		.block
+		{
+			width: 14em;
+			height: 8em;
+			margin: 0.5em;
+			border: thick solid;
+			background: #fff;
+		}
+		
+		.text {
+			border-color: #99f;
+		}
+		/* pastel blue border */
+		.experiment {
+			background-color: #eee;
+		}
+
+		.using-line-height .text {
+			line-height: 8em;
+		}
+		.using-line-height .text span {
+			line-height: normal;
+		}
+
+		.using-table-cell .text {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.using-inline-block .text div { 
+			display:inline;
+			display:inline-table;
+			display:inline-block; 
+			vertical-align:middle; 
+		}
+	</style>
+</head>
+
+<body>
+	<div class="using-line-height experiment">
+		<div class="text">
+			Lorem ipsum dolor sit.<span>Some Text</span> Lorem ipsum dolor.
+		</div>
+		<div class="text">
+			<span>觟シじ グァ坨䛤廤䤦 こ谧ㄨ荤大 ほじょ こ谧ㄨ荤大. 叧にゃゝ, 㨣䩎は窯せ, ゆ䪦.</span>
+		</div>
+		<div class="text">
+			<span>Some Text</span>
+		</div>
+
+	</div>
+
+	<div class="using-table-cell experiment">
+		<div class="text">
+			<span>Some Text</span>
+		</div>
+		<div class="text">
+			<span>Some Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ipsam odio eius dolorum quaerat non in cum sint, suscipit perspiciatis illum, laborum, inventore dolore amet eum aspernatur. Dolore assumenda iste consequuntur sed iusto in rem, optio qui voluptate doloribus, architecto voluptatem iure excepturi laboriosam, fugit ipsam dolor earum corrupti ullam alias asperiores. Veritatis animi doloremque itaque aut quasi! Qui, perspiciatis.</span>
+		</div>
+		<div class="text">
+			<span>Some Text</span>
+		</div>
+
+	</div>
+
+	<div class="using-inline-block">
+		<div class="text">
+			<span>Some Text</span>
+		</div>
+		<div class="text">
+			<span>Some Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, fuga aperiam at, eius dicta expedita sit explicabo dolorem consequatur quisquam!</span>
+		</div>
+		<div class="text">
+			<span>Some Text</span>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
