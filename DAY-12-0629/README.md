@@ -1,9 +1,27 @@
 ###### Web Dev
 
-####Team Activity
-[Activity 2 : 삼성서울병원 홈페이지 마크업](http://www.samsunghospital.com/home/main/index.do)
+####Team Activity 2
+홈페이지 특징 - [삼성서울병원 홈페이지 마크업](http://www.samsunghospital.com/home/main/index.do)
+- 네비게이션 메뉴가 엄청 복잡하다
+- 글로벌 네비는 3중 목록, 추가적인 링크도 많다.
+- 유틸메뉴도 3중 목록
+- Quick Menu라는 이름으로 따라다니는 네비가 있다
+- 배너에는 이미지 몇 개에 글이 적혀있고 바로 밑에 작은 기능 6개가 있다.
+- 알림판 4가지는 각각 글제목을 2개씩 프리뷰시켜준다. “+” 모양의 더보기 버튼이 있다.
+- 로그인/회원가입 유도 섹션이 있다. 
+- 컨텐츠는 카드 모양으로 정리가 되어있는데, 3개의 단으로 나누어져있다. 화면 크기에 따라 셋 모두 디자인이 다를 때도 - 있고, 두번째 세번째 단의 디자인이 같을 때도 있다.
+- 푸터에는 특징적으로 부서홈페이지, 패밀리사이트, Language 메뉴가 있는데 공통적으로 클릭하면 더 큰 목록이 펼쳐진다.
 
-[Activity 2 : 삼성서울병원 홈페이지 마크업 리뷰 로그](https://docs.google.com/document/d/1scLdJOZ2OWT_CU7WezqFqRUPDPKwr0Ryc_U72UjUhCw/edit)
+논의 내용 - [Activity 2 : 삼성서울병원 홈페이지 마크업 리뷰 로그](https://docs.google.com/document/d/1scLdJOZ2OWT_CU7WezqFqRUPDPKwr0Ryc_U72UjUhCw/edit)
+- Header가 무엇이며 어디까지가 헤더인지. `header>img.logo+nav*2`
+- Table은 데이터를 쓸 때 사용.
+- <nav>는 한 문서에 세 개정도면 적당하다고 판단 :  gnb, lnb, utility menu
+- quick menu는 header 바로 밑 nav로 놓는 것도 좋을 것
+- 배경색 기준으로 section을 나누나
+- 3단의 카드는 각각을 서로 다른 섹션으로 나누나? div로 나누나? 3개의 단은 의미적으로 뭐가 다른가?
+- 팝업은 어떻게 마크업 하는가? 자바스크립트인가? 
+
+
 
 ===
 
@@ -80,7 +98,7 @@ Text: paragraph (typography designer)
 - 앞에 있는게 있으면 사용하고 , 없으면 다음 것이 있는지 봄. 웹폰트를 넣어도 됨. 띄어쓰기가 있으면 쌍따옴표
 
 ##TIL
-- div에 내용이 있는 것과 없는 것이 공존하는 경우 배치가 이상해질 수 있다. 이것은 `vertical-align = baseline` 이 기본이기 때문에 
+- div에 내용이 있는 것과 없는 것이 공존하는 경우 배치가 이상해질 수 있다. 이것은 `vertical-align = baseline` 이 기본이기 때문에. 다른 값을 주면 괜찮아진다.
 - 신기술
 	- flexbox
 	- grid
