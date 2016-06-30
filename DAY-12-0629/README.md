@@ -48,6 +48,11 @@
 syntax:
 ```css
 @media 환경 and 조건1 and 조건2
+@media only screen and (max-width: 600px) {
+	body::before {
+		content: 'screen < 600px'
+	}
+}
 ```
 중단점 설계 Breakpoint design
 --- 1번 시안 --- 600 breakpoint --- 2번 시안 --- 1000 breakpoint ---
@@ -74,7 +79,7 @@ mobile first 추천: mobile이 시장 더 큼, 더 쉬움.
 ===
 
 ####border
-- style: solid, dshed, dotted, double, inset, outset...
+- style: solid, dashed, dotted, double, inset, outset...
 - width
 - color
 
@@ -91,7 +96,7 @@ Text: paragraph (typography designer)
 - RGB: rgb(rr%, gg%, bb%) 잘 안 씀. 색 유추하기 어려움.
 - RGBA: rgba(rr%, gg%, bb%, 0.aa) opacity alpha value
 - HSL: 색상환(hue in degrees), saturation, lightness. a bit different from HSB(brightness)
-- HSR
+- HSR  ???
 - CMYK: 감산 혼합에서는 이론적으로는 삼원색을 합치면 검정색이 나와야 하지만 현실에서는 검정색이 안 나오고 회색이 나옴.
 
 #####font
