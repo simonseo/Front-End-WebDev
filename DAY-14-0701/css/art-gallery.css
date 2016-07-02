@@ -1,0 +1,39 @@
+/*main {
+	background-image: url(../images/gallery-background.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}*/
+
+section {
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+.top {
+	background-image: url(../images/Gallery-top.png);
+	width: 100vw;
+	height: 22vw;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	/*float: left;*/
+}
+
+.middle {
+	background-image: url(../images/2px-line.png);
+}
+
+.bottom {
+	background-image: url(../images/Gallery-bottom.png);
+	width: 100vw;
+	height: 31vw;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.image-and-caption {
+	margin-top: -10rem;
+	/*float: left;*/
+}
