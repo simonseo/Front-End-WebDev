@@ -1,4 +1,4 @@
-###### Fast Campus Front End Web Development
+###### Front End Web Development School
 
 I'll explain what I learned during my first 12 weeks with Front End.
 
@@ -7,3 +7,5 @@ I'll explain what I learned during my first 12 weeks with Front End.
 2. dogs
 3. hamsters
 4. cats
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam possimus suscipit optio saepe explicabo sequi reprehenderit facere unde architecto mollitia esse totam delectus vitae, fugiat distinctio, voluptates eos nesciunt temporibus.

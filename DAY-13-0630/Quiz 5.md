@@ -11,6 +11,7 @@
 1. em 단위 속성에 관한 설명 중 옳은 것은? *
 	- em은 Emphasize(강조)의 의미를 가진다.
 	- em은 `<html>` 요소의 font-size 크기에 상대적인 단위 값을 말한다.
+		- 이건 rem
 	- px과 em 단위의 차이점은 다양한 기기(Device)마다 다르게 작동한다는 점이다. 
 		- 이걸 골랐는데!!!!! 다르게 작동하는 건 그 단위가 아니라 내 코드겠구나.
 	- px 단위를 em으로 변경하는 방법은 px 단위를 제곱한 다음 다시 px로 나누어 주면 된다.
@@ -22,13 +23,14 @@
 
 1. normal 두께와 동등한 font-weight 속성 값은? *
 	- 100
-	- 200
+	- 200 ~ light
 	- 300
 	- 400 &10003;
 	- 500
 	- 600
-	- 700
+	- 700 ~ bold
 	- 800
+	- 900
 	- 답이 없다.
 
 1. 다음 미디어쿼리 구문 중, IE6-8에서 처리 가능성이 있는 구문은? *
@@ -48,6 +50,7 @@ item-3, content-1 내용을 포함한 `<a>` 요소들을 선택하려면?
 	>```
 	>#parent > .child:first-child .reset-list li:last-child a, 
 	>#parent > .child:nth-child(2) .reset-list li:first-child a
+	> /* 실무에서는 최대한 간겨랗게 클래스 등을 써주는 게 좋다 */
 	>```
 
 ![image](https://lh6.googleusercontent.com/JkGLaWbQN0OTxfz1iaHx5fLeytoZN76n4cZ-JKAymsF8moR19d2-2RLjP5TJQb_6yg6WSXTOZw)
@@ -55,14 +58,17 @@ item-3, content-1 내용을 포함한 `<a>` 요소들을 선택하려면?
 1. HTML 구조(↑ 이미지)를 참고하여 적절한 선택자를 작성하시오. *
 id="parent"인 요소의 2번째 직계 자식을 찾은 후, 해당 자식의 자손들 중 `<li>` 요소를 제외한 나머지 요소를 모두 선택하려면?
 	- `.parent > > * :not(li)`
-		- 하아... 문제라도 제대로 읽을걸...
+		- 하아... 문제라도 제대로 읽을걸... 직계 자손은 헷갈린거지만 id="parent"인데ㅠㅠ
 
 	> `#parent > :nth-child(2) :not(li)`
+	> not은 jQuery에도 있다.
+	> universal selector 생략하지 않는게 좋다. 
 
 1. 다음 중 Viewport를 고려해 새롭게 추가된 단위가 아닌 것은? *
 	- vw
 	- vh
 	- vmin
+		- min-width랑 조금 다르다.
 	- vnow &10003;
 	- 답이 없다.
 

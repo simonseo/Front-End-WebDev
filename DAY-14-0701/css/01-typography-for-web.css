@@ -1,0 +1,74 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+	background-image: url(../images/leading-24px.png);
+	width: 80vmax;
+	margin: 0 auto;
+}
+
+p {
+	padding-bottom: 1.5rem;
+}
+
+.spoqa {
+	font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+	font-weight: 400;
+	wor
+}
+
+img {
+	/*vertical-align: bottom;*/
+	margin-left: calc(40vmax - 600px);
+}
+
+div {
+	/*vertical-align: bottom;*/	
+	width: 80vmax;
+	height: 7.5rem;
+	overflow: hidden;
+	/*margin: 1.5rem auto;*/
+	/*padding-bottom: 1.5rem;*/
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+.small-caps {
+	font-variant: small-caps;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+	/*font: cursive;*/
+}
+
+	/*.small-caps+.uppercase+.lowercase+.capitalize*/
+
+.brand-tweetle {
+	width: 128px;
+	height: 128px;
+	background-image: url(https://cdn0.iconfinder.com/data/icons/beach/6144/27-128.png);
+	overflow: hidden;
+}
+
+.brand-tweetle a {
+	display: block;
+
+}
+
+.ir {
+	text-indent: -999px;
+}

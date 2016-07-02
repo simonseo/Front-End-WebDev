@@ -54,6 +54,7 @@ syntax:
 	}
 }
 ```
+only와 not은 구형 브라우저를 걸러내는 필터로 쓸 수 있다.
 중단점 설계 Breakpoint design
 --- 1번 시안 --- 600 breakpoint --- 2번 시안 --- 1000 breakpoint ---
 mobile first 추천: mobile이 시장 더 큼, 더 쉬움.
@@ -67,8 +68,8 @@ mobile first 추천: mobile이 시장 더 큼, 더 쉬움.
 - auto는 남는걸 알아서 계산해줌
 - 파폭에서는 rem이 오류가 조금 있음. 파폭 고려하려면 em 써주는게 좋음.
 - IE quirksmode에서는 margin이 잘 안될 수 있음. text-align 써야 함.
-- max/min- width (ie6 doesn't recognize min-width)
-- 부모 요소가 padding/border가 없을 경우에는 자식의 margin이 뛰쳐나가서 마치 부모의 margin인 듯이 행동한다. padding/border가 있으면 자식 요소의 margin을 속박한다. border: transparent하면 아무도 모르게 자식을 구속할 수 있음.
+- max/min-width (ie6 doesn't recognize min-width)
+- 부모 요소가 padding/border가 없을 경우에는 자식의 margin이 뛰쳐나가서 마치 부모의 margin인 듯이 행동한다. padding/border가 있으면 자식 요소의 margin을 속박한다. border: transparent하면 아무도 모르게 자식을 구속할 수 있음. [참고](https://css-tricks.com/what-you-should-know-about-collapsing-margins/)
 - inline은 양옆으로만 margin 설정 가능하다. inline-block은 상하좌우 다 되고, collapse가 일어나지 않는다. 
 
 ===
@@ -87,6 +88,17 @@ mobile first 추천: mobile이 시장 더 큼, 더 쉬움.
 
 ####Font/Text
 Font: character (font designer)
+
+	> normal
+	> 보통 폰트 가중치. 400 과 같음.
+	> bold
+	> 굵은 폰트 가중치. 700 과 같음.
+	> lighter
+	> (가능한 폰트 가중치 중) 부모 요소(element) 보다 얇은 폰트 가중치.
+	> bolder
+	> (가능한 폰트 가중치 중) 부모 요소 보다 굵은 폰트 가중치.
+	> 100, 200, 300, 400, 500, 600, 700, 800, 900
+	> normal 과 bold 이외를 제공하는 폰트를 위한 숫자형(numeric) 폰트 가중치.
 
 Text: paragraph (typography designer)
 
@@ -112,16 +124,16 @@ Text: paragraph (typography designer)
 
 
 ##QnA
-- only: 이 형식으로 쓰면 only를 해석 가능한 최신 브라우저에서만 적용됨? ㅇㅇ 애플이 처음 씀. 왜냐하면 구형 브라우저는 뒤에 있는 조건을 그냥 무시하고 screen이기만 하면 적용을 해버리기 때문에.
+- only/not: 이 형식으로 쓰면 only/not를 해석 가능한 최신 브라우저에서만 적용됨? ㅇㅇ 애플이 처음 씀. 왜냐하면 구형 브라우저는 뒤에 있는 조건을 그냥 무시하고 screen이기만 하면 적용을 해버리기 때문에.
 - media, type, query 합쳐져서 media query!
 
 
 ##To Do
 - make cmt snippet
 - make new file relative to current view key binding
-- vertical align 읽어보기
-- horizontal & vertical align 코드 짜보기
-- 리팩토링
-- 시험문제 20문항 출제
-- 웹서비스 와이어프레임 제작
+- vertical align 읽어보기 &10003;
+- horizontal & vertical align 코드 짜보기 &10003;
+- 리팩토링 &10003;
+- 시험문제 20문항 출제 &10003;
+- 웹서비스 와이어프레임 제작 &10003;
 - learngitbranching.js.org 공부하기

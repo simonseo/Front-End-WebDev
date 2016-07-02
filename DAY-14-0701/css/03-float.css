@@ -1,0 +1,32 @@
+.parent-box {
+	width: 40vmax;
+	margin: 0 auto;
+	height: 10vmax;
+	border: red solid 1px;
+}
+
+.parent-box.visible {
+	overflow: visible;
+}
+
+.parent-box.hidden {
+	overflow: hidden;
+}
+
+.parent-box.auto {
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+.parent-box.scroll {
+	overflow: scroll;
+}
+
+img {
+	float: left;
+	margin: 0.5rem;
+}
+
+.align-right img {
+	float: right;
+}
