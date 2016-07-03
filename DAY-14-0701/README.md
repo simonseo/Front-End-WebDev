@@ -108,7 +108,7 @@ box 1 height > 2=3 이면 box3은 1 바로 밑이 아니라 2 밑으로 떨어�
 
 ###IR Technique (image replacement)
 중요한 건 text-indent를 안드로메다로 보내버리는 거
-
+https://css-tricks.com/css-image-replacement/
 
 ##Questions
 - cache levels: What is this??
