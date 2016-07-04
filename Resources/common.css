@@ -11,11 +11,18 @@ ol.reset-list {
 	list-style-type: none;
 }
 
+/*마우스를 올리면 뜻이 나오도록 유도*/
 abbr {
 	cursor: help;
 	text-decoration: underline;
 }
 
+/*이미지 하단의 공백을 없애줌*/
+img {
+	vertical-align: bottom;
+}
+
+/*인쇄환경에서 링크나 줄인말을 명시적으로 표시해줌*/
 @media print {
 	a::after {
 		content: ' (' attr(href) ')';

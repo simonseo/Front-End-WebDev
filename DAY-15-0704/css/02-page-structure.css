@@ -1,0 +1,48 @@
+/*
+#57068C NYU violet
+#008DA9 Oasis
+#EF8B21 Desert Sun
+#F4CD30 Sunshine
+#6F9A48 Avocdado (digital only)
+#7FBEC6 Turquoise Sea
+#4198D3 Sea Port 
+#DA4B39 Sunset (print only)
+#8967A0 Amethyst (digital only)
+*/
+
+::-webkit-scrollbar {
+	display: none; 
+}
+
+
+[class*=page] {
+	height: 25vh;
+	line-height: 25vh;
+	text-align: center;
+	overflow: ;
+}
+
+[class*=page]::before {
+	content: 'this is "' attr(class) '" section';
+	font: 2.5em Helvetica;
+	color: white;
+}
+
+.page-header { background-color: #57068C; }
+
+.page-navigation { background-color: #008DA9; }
+
+.page-main { 
+	background-color: #EF8B21; 
+	float: left;
+	width: 75%;
+}
+
+.page-sidebar { 
+	background-color: #F4CD30; 
+}
+
+.page-footer { 
+	background-color: #6F9A48; 
+	clear: both;
+}
