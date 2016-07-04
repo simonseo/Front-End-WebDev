@@ -1,0 +1,95 @@
+.image-container {
+	float: left;
+	height: 225px;
+	width: 450px;
+}
+
+.image-container.top {
+	width: 900px;
+}
+
+.image-container:hover {
+	background-color: #FFF1E2;
+	float: left;
+}
+
+
+.float-left .image-container img {
+	float: left;
+}
+.float-right .image-container img {
+	float: right;
+}
+
+.wrapper {
+	width: 225px;
+	text-align: center;
+	line-height: 225px;
+	display: table-cell;
+	vertical-align: middle;
+
+}
+
+.float-right .wrapper {
+	float: left;
+}
+.float-left .wrapper {
+	float: right;
+}
+
+.top .wrapper{
+	width: 450px;
+}
+
+.text-box {
+	display: inline-block;
+	line-height: 1;
+}
+
+a {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	text-align: center;
+	text-indent: 112px;
+}
+.brand-twitter {
+	background-image: url(../images/brand-twitter-inactive.svg);
+	background-size: 16px 16px;
+}
+
+.brand-twitter:hover {
+	/*fill: blue;*/
+	/*background-image: url(../images/brand-twitter-inactive.svg);*/
+	background-image: url(../images/brand-twitter-active.svg);
+	background-size: 16px 16px;
+}
+
+h6 {
+	font-family: Montserrat;
+	font-size: 19px;
+	line-height: 1.1;
+	color: #464646;
+	margin-top: 10%;
+	margin-bottom: 18px;
+	text-align: center;	
+}
+
+p {
+	font-family: 'Open Sans';
+	font-size: 12px;
+	line-height: 1.5;
+	color: #464646;
+	text-align: center;
+	margin-bottom: 13px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+hr {
+	border: 0;
+	background-color: #464646;
+	width: 30px;
+	height: 1px;
+	margin-bottom: 15px;
+}
