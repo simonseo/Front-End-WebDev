@@ -2,19 +2,38 @@ body {
 	font-family: 돋움, Dotum, Sans-serif;
 }
 
+/*li*/
+.template li {
+	border: 1px solid #ECECEC;
+	float: left;
+}
+.corner-item {
+	background-color: #FBFBFB;
+}
 
+/*a*/
+.template a {
+	text-decoration: none;
+}
+
+
+/*title*/
 .item-title {
-	#262626
+	color: #262626;
 }
 .corner-item .item-title{
-	#454545
+	color: #454545;
 }
+
+/*preview*/
 .item-preview {
-	#757474
+	color: #757474;
 }
-.item-authour-name {
-	#00A0B6
+
+/*author name*/
+.item-author-name {
+	color: #00A0B6;
 }
-.default-item .item-authour-name {
-	#959595
+.default-item .item-author-name {
+	color: #959595;
 }
