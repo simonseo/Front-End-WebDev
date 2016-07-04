@@ -15,7 +15,7 @@
 - photoshop > info panel > efficiency shows how efficient your setting is?
 - text tool > strong/none/windows lcd / windows(crt) 해당 환경 에뮬레이트
 - view > proof to check how things look in different environments
-- (gamma 2.2 (window, now standard, currnet mac) / 1.8 (legacy mac) gamma의 차이
+- (gamma 2.2 (window, now standard, current mac) / 1.8 (legacy mac) gamma의 차이
 
 ######Why do we use 96ppi (marked screen resolution in photoshop preferences)?
 - pxvalue=ptvalue*(96/72)
