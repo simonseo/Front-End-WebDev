@@ -1,0 +1,30 @@
+body {
+	margin: 2rem 20%;
+}
+
+.image-container {
+	border: 4px solid blue;
+	padding: 1rem;
+	width: 555px;
+}
+
+.image-container p {
+	margin-bottom: 1rem;
+	color: #699;
+}
+
+.image-container img {
+	float: left;
+	margin-right: 8px;
+
+	/*clear: none;*/
+	margin-bottom: auto;
+}
+
+.text {
+	/*float: right;*/
+	/*overflow: hidden;*/
+-moz-column-width: 100px;
+-webkit-column-width: 100px;
+column-width: auto;
+}

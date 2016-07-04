@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* for commonly used styles*/
 
 /*for resetting list styles*/
@@ -11,11 +12,18 @@ ol.reset-list {
 	list-style-type: none;
 }
 
+/*마우스를 올리면 뜻이 보임*/
 abbr {
 	cursor: help;
 	text-decoration: underline;
 }
 
+/*이미지 하단의 공백을 없애줌*/
+img {
+	vertical-align: bottom;
+}
+
+/*인쇄환경에서 링크나 줄인말을 명시적으로 표시해줌*/
 @media print {
 	a::after {
 		content: ' (' attr(href) ')';
@@ -24,3 +32,40 @@ abbr {
 		content: ' (' attr(title) ')';
 	}
 }
+
+/*
+For fixing the issue of "if child element is floated, parent element doens't wrap it properly." Adds a line at the end that the parent has to wrap. 
+Type 1
+.clearfix::after {
+	content: 'pseudo element';
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+}*/
+
+/*Type 2*/
+.clearfix::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+/*
+Type 3 - good for Opera
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+}
+
+clearfix::after {
+	clear: both;
+}*/
+
+/*
+for IE - use with filtering method
+.lt-ie8 .clearfix {
+	zoom: 1;
+}
+*/

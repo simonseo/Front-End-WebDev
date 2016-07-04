@@ -65,7 +65,10 @@ normal, italic, oblique, inherit
 http://creativepro.com/typetalk-italic-vs-oblique/
 
 ######font-variant:
-small-caps (small capitals) lowercase uppercase capitalize etc
+font-variant: normal|small-caps|initial|inherit;
+
+######text-transform
+text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
 
 ######font shorthand
 font: size/line-height family; 필수
@@ -74,41 +77,48 @@ font: weight style size/line-height family; 선택
 'font'
 	> Value:  	[ [ <'font-style'> || <'font-variant'> || <'font-weight'> ]? <'font-size'> [ / <'line-height'> ]? <'font-family'> ] | caption | icon | menu | message-box | small-caption | status-bar | inherit
 
-자간의 단위: 대략 em 한 글자를 1000개로 나눈 것과 비슷함. . 
-######word-spacing: 0.05rem;
+자간의 단위: 대략 em 한 글자를 1000개로 나눈 것과 비슷함. 
+word-spacing: 0.05rem;
 
 ######white-space values:
-nowrap 줄바꿈 안함
-pre whitespace 유지 pre요소랑 비슷함
-pre-wrap
+- `nowrap` 줄바꿈 안함
+- `pre whitespace` 유지 pre요소랑 비슷함
+- `pre-wrap`
 
 ######vertical-align
-px em %도 사용 간으
+- top
+- middle
+- bottom
+- baseline 
+- px em %도 사용 가능
 
 ######text-decoration
-none underline overline strikethrough
+- none
+- underline
+- overline
+- strikethrough
 
 ######display:
-none, block, inline, inline-block, list-element, table-cell etc., etc.
-none || width height 0 은 스크린 리더가 안 읽어줌
+`none, block, inline, inline-block, list-element, table-cell etc., etc.`
 
-display: none vs visibility: hidden :visibility just makes it invisible, not erase.
+`display: none;` + `width: 0` + `height: 0` 은 스크린 리더가 안 읽어줌
+
+`display: none;` vs `visibility: hidden;` :visibility just makes it invisible, not erase.
 
 ######overflow:
-visible 넘치는 것도 다 보임
-hidden 넘치는 건 안 보이게 함
-scroll 넘치든 안 넘친든 스크롤 있음
-auto 넘치면 스크롤해서 볼 수 있음
+- visible 넘치는 것도 다 보임
+- hidden 넘치는 건 안 보이게 함
+- scroll 넘치든 안 넘친든 스크롤 있음
+- auto 넘치면 스크롤해서 볼 수 있음
 
 ######float
-left, right, none
-float가 있으면 한 단계 뒤로 흘러가는 것. box1,2,3가 순서대로 있을 때 box1에 float:left를 주면 2,3가 위로 올라오고 2는 1 뒤로 숨는 것처럼 보인다. 하지만 텍스트의 경우 숨지 않고 옆을 감싼다. 전부 float:right를 주면 왼쪽부터 3,2,1이 된다. 
+`left, right, none` float가 있으면 한 단계 뒤로 흘러가는 것. box1,2,3가 순서대로 있을 때 box1에 float:left를 주면 2,3가 위로 올라오고 2는 1 뒤로 숨는 것처럼 보인다. 하지만 텍스트의 경우 숨지 않고 옆을 감싼다. 전부 float:right를 주면 왼쪽부터 3,2,1이 된다. 
 box 1 height > 2=3 이면 box3은 1 바로 밑이 아니라 2 밑으로 떨어진다.
 
 
 ###IR Technique (image replacement)
 중요한 건 text-indent를 안드로메다로 보내버리는 거
-
+https://css-tricks.com/css-image-replacement/
 
 ##Questions
 - cache levels: What is this??

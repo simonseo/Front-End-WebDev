@@ -1,0 +1,79 @@
+body {
+	width: 900px;
+}
+
+.wrapper {
+	width: 225px;
+	height: 225px;
+	float: left;
+}
+.wrapper.top {
+	width: 450px;
+}
+
+.inside-wrapper {
+	position: relative;
+	height: 225px;
+}
+
+img {
+	width: 225px;
+	height: 225px;
+}
+
+.top img {
+	width: 450px;
+}
+
+.text-box {
+	position: absolute;
+	top: 112px;
+	transform: translateY(-50%);
+}
+
+.inside-wrapper:hover {
+	background-color: #FFF1E2;
+}
+
+.brand-twitter, .brand-twitter:hover {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0 auto;
+	background-image: url(../images/brand-twitter-inactive.svg);
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+}
+
+.brand-twitter:hover {
+	background-image: url(../images/brand-twitter-active.svg);
+}
+
+h6 {
+	font-family: Montserrat;
+	font-size: 19px;
+	line-height: 1.1;
+	color: #464646;
+	margin-top: 10%;
+	margin-bottom: 18px;
+	text-align: center;	
+}
+
+p {
+	font-family: 'Open Sans';
+	font-size: 12px;
+	line-height: 1.5;
+	color: #464646;
+	text-align: center;
+	margin-bottom: 13px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+hr {
+	border: 0;
+	background-color: #464646;
+	width: 30px;
+	height: 1px;
+	margin-bottom: 15px;
+}
