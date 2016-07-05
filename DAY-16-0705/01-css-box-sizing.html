@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>CSS Box Sizing</title>
+	<style>
+		body {
+			margin: 5% 15%;
+			font: 1rem/1.5 Verdana;
+			color: #555;
+		}
+
+		[class$="box"] {
+			outline: 4px dotted #444;
+			border: 5px solid red;
+			margin-bottom: 1rem;
+			width: 240px;
+			text-align: center;
+			padding: 0.45rem 20px 0 0;
+		}
+
+		.content-box {
+			box-sizing: content-box;
+			background-color: #ff748c;
+		}
+		.border-box {
+			box-sizing: border-box;
+			background-color: #f08c78;
+		}
+	</style>
+</head>
+<body>
+	<div class="content-box">content-box</div>
+	<div class="border-box">border-box</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">column</div>
+			<div class="col">column</div>
+			<div class="col">column</div>
+		</div>
+	</div>
+</body>
+</html>

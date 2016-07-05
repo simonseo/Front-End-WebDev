@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>New Tab &#124; Momentum Theme</title>
+	<link rel="stylesheet" href="../Resources/reset.css">
+	<link rel="stylesheet" href="../Resources/common.css">
+	<style>
+		body {
+			background-image: url(momentum_sample.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position:center;
+			color: white;
+			font-family: Helvetica, Arial, Sans-serif;
+			width: 100vw;
+			height: 100vh;
+		}
+		.top.left {
+			position: absolute;
+			top: 1rem;
+			left: 1rem;
+		}
+		.top.right {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+		}
+		.bottom.left {
+			position: absolute;
+			bottom: 1rem;
+			left: 1rem;
+		}
+		.bottom.right {
+			position: absolute;
+			bottom: 1rem;
+			right: 1rem;
+		}
+		.center {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.center.middle {
+			font-size: 3em;
+			width: 13em;
+			text-align: center;
+			text-shadow: 1px 1px 10px #aaa;
+			position: relative;
+			top: 30%;
+		}
+		.center.bottom {
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 50%;
+			transform: translateX(-50%);
+		}
+		.custom-button {
+			text-decoration: none !important;
+			color: rgba(255,255,255,0.65);
+			font-weight: 600;
+		}
+		input {
+			background-color: transparent;
+			border: 0;
+			border-bottom: 2px solid white;
+			color: white;
+		}
+		h2 {
+			font-size: 3.3em;
+			font-weight: 500;
+		}
+		#search-bar-type {
+			position: relative;
+			bottom: 2.5em;
+			left: 6em;
+			text-align: right;
+		}
+		.custom-button:hover {
+			color: rgba(255,255,255,0.85);
+		}
+		.temperature {
+			font-size: 1.7em;
+		}
+		.city-name {
+			position: absolute;
+			top: 1.7em;
+			right: 0.1em;
+			text-align: right;
+		}
+		.uppercase {
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<section class="top left">
+		<a href="#" class="custom-button">Links</a>
+		<form name="search-bar" action="#" method="GET" enctype="application/x-www-form-urlencoded">
+			<label for="search-bar-type" class="ir icon-magnifying-glass">search</label>
+			<input id="search-bar-type" type="text" placeholder="Search">
+		</form>
+	</section>
+	<section class="top right">
+		<h6 class="uppercase city-name">Seoul</h6>
+		<p class="temperature icon-storm">23&deg;</p>
+	</section>
+	<section class="middle center">
+		<h2 class="time">4&colon;36</h2>
+		<p class="greeting">
+			Good <span class="time-period">afternoon</span>, <span class="name">Simon</span>
+		</p>
+	</section>
+	<section class="bottom left">
+		<a href="#" class="ir custom-button icon-gear">options</a>
+		<span class="photo-location">Rio de Janeiro, Brazil</span>
+		<div class="hidden">
+			<span class="photographer-id">Photo by airpiano</span>
+			<button class="like-photo icon-heart">like photo</button>
+		</div>
+	</section>
+	<section class="bottom center">
+		<q>A goal without a plan is only a wish.</q>
+		<div class="hidden">
+			<span class="quote-cite">Unknown</span>
+			<button class="like-photo icon-heart">like photo</button>
+			<a href="#" class="ir icon-twitter">Share on Twitter</a>
+				</section>
+		</div>
+	<section class="bottom right">
+		<a href="#" class="custom-button">Todo</a>
+	</section>
+</body>
+</html>
