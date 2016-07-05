@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* for commonly used styles*/
 
 /*for resetting list styles*/
@@ -69,3 +69,60 @@ for IE - use with filtering method
 	zoom: 1;
 }
 */
+
+.visually-hidden {
+
+}
+
+/*
+이미지 대체 기법
+*/
+.ir {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+img.overflow
+
+/* 
+박스 사이징: IE 8+ 에서 padding과 border을 넣었을 때 
+전체 width height가 그대로 남아있는다. 
+한마디로 `width` `height`의 범위가 border까지 늘어난 것.
+*/
+body.box-sizing *,
+body.box-sizing *::before,
+body.box-sizing *::after {
+	box-sizing: border-box;
+}
+
+/* 
+이미지 하단에 공백을 형성하여 옆으로 배치되는 글들이 
+동일한 공간을 가질 수 있도록 설정해줌.
+float를 사용할 때 쓸모 있을 지도? 
+*/
+.blank-bottom-img img + *,
+img.blank-bottom + * {
+	overflow: hidden;
+}
+
+
+/* 스크린리더에서 읽을 수 있는 숨김 텍스트 */
+.visually-hidden {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0,0,0,0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+}
+.visually-hidden.focusable:focus {
+	overflow: visible;
+	position: static;
+	clip: auto;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
