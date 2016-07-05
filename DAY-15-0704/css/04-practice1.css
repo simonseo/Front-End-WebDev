@@ -10,7 +10,30 @@
 
 .image-container:hover {
 	background-color: #FFF1E2;
-	float: left;
+}
+
+.float-left .text-box::before {
+	position: absolute;
+	border-right: 2rem solid #FFF1E2;
+	border-top: 2.5rem solid transparent;
+	border-bottom: 2.5rem solid transparent;
+	top: 76px;
+	left: -2rem;
+	z-index: 100;
+}
+
+.float-right .text-box::before {
+	position: absolute;
+	border-left: 2rem solid #FFF1E2;
+	border-top: 2.5rem solid transparent;
+	border-bottom: 2.5rem solid transparent;
+	top: 76px;
+	right: -2rem;
+	z-index: 100;
+}
+
+.image-container:hover .text-box::before {
+	content: '';
 }
 
 
@@ -42,6 +65,7 @@
 }
 
 .text-box {
+	position: relative;
 	display: inline-block;
 	line-height: 1;
 }
