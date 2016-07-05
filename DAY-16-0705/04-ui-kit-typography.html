@@ -9,19 +9,15 @@
 	<link rel="stylesheet" href="../Resources/reset.css">
 	<link rel="stylesheet" href="../Resources/common.css">
 	<style>
-		html {
-			font-size: 1.5rem;
-		}
+		html { font-size: 1.5rem; }
 		
 		body {
-			background-image: linear-gradient(180deg, transparent 96%, #EC4949 96%);
+			/*background-image: linear-gradient(180deg, transparent 96%, #EC4949 96%);*/
 			-webkit-background-size: 10px 24px;
 			background-size: 10px 24px;
 			font-family: "Spoqa Han Sans", Sans-serif;
 		}
-		.typography-example {
-			position: relative;
-		}
+		.typography-example { position: relative; }
 		.title {
 			font-family: Helvetica, Sans-Serif;
 			font-weight: 200;
@@ -42,9 +38,7 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
-		.subtitle {
-			margin-left: 1.17rem;
-		}
+		.subtitle { margin-left: 1.17rem; }
 		hr {
 			border: 0;
 			border-bottom: 1px solid #DFDFDF;
@@ -67,91 +61,115 @@
 			margin-bottom: 1rem;
 		}
 		.uppercase { text-transform: uppercase; }
-		th, tr, td {
+		/*th, tr, td {
 			border: 1px solid #000;
+		}*/
+		.style1, .style2 { margin-bottom: 5rem; }
+		table { 
+			margin-bottom: 0; 
+			font: bold 0.58rem/2rem "Spoqa Han Sans"; 
+			text-align: left; 
 		}
+		td { font-weight: normal; text-align: center; padding: 0 2rem; }
+		th:first-child { width: 11rem; padding: 0 1.5rem; }
+		thead th { text-align: center; }
+		.style1 tr { border-top: 1px solid #E2E1E1; border-bottom: 1px solid #E2E1E1; }
+		.style1 thead { background-color: #F8F8F8; }
+		.style2 thead,
+		.style2 tbody { border-bottom: 1px solid #505050; }
+		.style2 .mult-row th { line-height: 4rem; vertical-align: middle; }
+		.style2 .mult-row:not(:first-of-type) { border-top: 1px solid #E2E1E1; }
+		.style2 tbody tr:not(.mult-row) { border-top: 1px dashed #E2E2E1 }
 	</style>
 </head>
 <body>
-	<section class="table">
+	<section class="table box-sizing">
 		<h4 class="title uppercase">TABLE</h4>
 		<div class="style1">
 			<table>
-				<tr>
-					<th scope="col">제목</th>
-					<th scope="col">종류</th>
-					<th scope="col">가격</th>
-					<th scope="col">수량</th>
-					<th scope="col">비고</th>
-				</tr>
-				<tr>
-					<th scope="row">사망 플래그</th>
-					<td>도서</td>
-					<td>50,000</td>
-					<td>300</td>
-					<td>재고없음</td>
-				</tr>
-				<tr>
-					<th scope="row">설마 죽기야 하겠어</th>
-					<td>E-BOOK</td>
-					<td>50,000</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<th scope="row">이번이 정말 마지막이야</th>
-					<td>도서</td>
-					<td>50,000</td>
-					<td>212</td>
-					<td>재고없음</td>
-				</tr>
-				<tr>
-					<th scope="row">곧 돌아올게 기다려</th>
-					<td>도서</td>
-					<td>50,000</td>
-					<td>179</td>
-					<td>-</td>
-				</tr>
-			</table>
-
-			<table>
-				<tr>
-					<th colspan="2"></th>
-					<th scope="col">가격</th>
-					<th scope="col">수량</th>
-					<th scope="col">비고</th>
-				</tr>
-				<tr>
-					<th scope="row" rowspan="2">사망 플래그</th>
-					<td>도서</td>
-					<td>50,000</td>
-					<td>300</td>
-					<td>재고없음</td>
-				</tr>
-				<tr>
-					<td>E-BOOK</td>
-					<td>50,000</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<th scope="row" rowspan="2">이번이 정말 마지막이야</th>
-					<td>도서</td>
-					<td>50,000</td>
-					<td>212</td>
-					<td>재고없음</td>
-				</tr>
-				<tr>
-					<td>도서</td>
-					<td>50,000</td>
-					<td>179</td>
-					<td>-</td>
-				</tr>
+				<thead>
+					<tr>
+						<th scope="col">제목</th>
+						<th scope="col">종류</th>
+						<th scope="col">가격</th>
+						<th scope="col">수량</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">사망 플래그</th>
+						<td>도서</td>
+						<td>50,000</td>
+						<td>300</td>
+						<td>재고없음</td>
+					</tr>
+					<tr>
+						<th scope="row">설마 죽기야 하겠어</th>
+						<td>E-BOOK</td>
+						<td>50,000</td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<th scope="row">이번이 정말 마지막이야</th>
+						<td>도서</td>
+						<td>50,000</td>
+						<td>212</td>
+						<td>재고없음</td>
+					</tr>
+					<tr>
+						<th scope="row">곧 돌아올게 기다려</th>
+						<td>도서</td>
+						<td>50,000</td>
+						<td>179</td>
+						<td>-</td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 		<div class="style2">
-			
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2"></th>
+						<th scope="col">가격</th>
+						<th scope="col">수량</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="mult-row">
+						<th scope="row" rowspan="2">사망 플래그</th>
+						<td>도서</td>
+						<td>50,000</td>
+						<td>300</td>
+						<td>재고없음</td>
+					</tr>
+					<tr>
+						<td>E-BOOK</td>
+						<td>50,000</td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr class="mult-row">
+						<th scope="row" rowspan="2">이번이 정말 마지막이야</th>
+						<td>도서</td>
+						<td>50,000</td>
+						<td>212</td>
+						<td>재고없음</td>
+					</tr>
+					<tr>
+						<td>도서</td>
+						<td>50,000</td>
+						<td>179</td>
+						<td>-</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
+		
+			
 	</section>
 	<section class="typography">
 		<h4 class="title uppercase">TYPOGRAPHY<span class="subtitle">14PX  / 타입 크기 배율: x 1.313</span></h4>

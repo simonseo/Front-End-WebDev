@@ -90,9 +90,9 @@ img.overflow
 전체 width height가 그대로 남아있는다. 
 한마디로 `width` `height`의 범위가 border까지 늘어난 것.
 */
-body.box-sizing *,
-body.box-sizing *::before,
-body.box-sizing *::after {
+.box-sizing *,
+.box-sizing *::before,
+.box-sizing *::after {
 	box-sizing: border-box;
 }
 
