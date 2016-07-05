@@ -43,6 +43,12 @@ body {
 - absolute: 가장 가까운 static이 아닌 부모요소에 상대적임. 보통 normal flow를 깨고 싶지 않기 때문에 쓰고 싶은 요소에 relative를 쓴다. (자바스크립트에서는 offset parent라고 부름. 옛날 조건으로 절대적임 - 전부 static이면 화면이 기준이 되기 때문) z축을 지정하면 (모든 정수) 어떤 레이어가 위에 오는지 지정할 수 있음.
 - fixed: 스크롤해도 같은 위치에 있음.
 
+###과제1 (03-momentum-theme-layout.html)
+Google Chrome의 Momentum Theme의 레이아웃을 Position을 사용해서 만들어라.
+
+###과제2 (04-ui-kit-typography.html)
+UI Kit.psd  
+
 
 ##Questions
 - Difference between outline and border?
