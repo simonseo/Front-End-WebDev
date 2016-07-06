@@ -38,10 +38,13 @@ body {
 
 ###Position
 - 박스의 안쪽이 양수, 바깥쪽이 음수이다. (ex. top은 윗쪽이 음수, 아랬족이 양수)
+- display가 자동으로 block으로 바뀐다.
+- float와는 다르게, 부모가 감싸는 방법은 없고 width height를 지정해줘서 감싸는 것처럼 보이게만 할 수 있다.
+- static을 제외하고 모두 z-index를 같이 써줘야 함. 모든 정수가 가능하지만 10이나 100단위로 써주는게 유지보수에 좋다. z-index 특징: 부모요소의 높이 근처에서만 날뛸 수 있다.
 - static (기본값)
 - relative: 본인의 Normal Flow에 의한 원래 위치에 상대적인 위치. 이동 하더라도 Normal flow를 깨지 않기 때문에 다른 속성에 영향을 주지 않는다.
-- absolute: 가장 가까운 static이 아닌 부모요소에 상대적임. 보통 normal flow를 깨고 싶지 않기 때문에 쓰고 싶은 요소에 relative를 쓴다. (자바스크립트에서는 offset parent라고 부름. 옛날 조건으로 절대적임 - 전부 static이면 화면이 기준이 되기 때문) z축을 지정하면 (모든 정수) 어떤 레이어가 위에 오는지 지정할 수 있음.
-- fixed: 스크롤해도 같은 위치에 있음.
+- absolute: 가장 가까운 static이 아닌 부모요소에 상대적임. 보통 부모요소는 normal flow를 깨고 싶지 않기 때문에 쓰고 싶은 요소에 relative를 쓴다. (자바스크립트에서는 offset parent라고 부름. 옛날 조건으로 절대적임 - 전부 static이면 화면이 기준이 되기 때문) z축을 지정하면 (모든 정수) 어떤 레이어가 위에 오는지 지정할 수 있음.
+- fixed: 스크롤해도 같은 위치에 있음. 스크린 (viewport, screen) 에 상대적임. 기본적으로는 absolute와 비슷함
 
 ###과제1 (03-momentum-theme-layout.html)
 Google Chrome의 Momentum Theme의 레이아웃을 Position을 사용해서 만들어라.

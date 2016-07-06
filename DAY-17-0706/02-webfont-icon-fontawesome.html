@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Font Awesome</title>
+	<link rel="stylesheet" href="../Resources/reset.css">
+	<link rel="stylesheet" href="../Resources/font-awesome/font-awesome.min.css">
+	<style>
+		body {
+			width: 100vh;
+			height: 100vh;
+			background-image: radial-gradient(farthest-corner at 50% 50% , #3BBDED 10%, #003F7C 100%);
+		}
+		.buttonset-movie-control {
+			float: left;
+			padding: 0.4em;
+			border-radius: 4.3em;
+			overflow: hidden;
+			background-image: linear-gradient(180deg, #083E5A, #217DA7);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.buttonset-movie-control button:first-of-type {
+			padding-left: 0.6em;
+			border-top-left-radius: 1em;
+			border-bottom-left-radius: 1em;
+		}
+		.buttonset-movie-control button:last-of-type {
+			padding-right: 0.6em;
+			border-top-right-radius: 1em;
+			border-bottom-right-radius: 1em;
+		}
+		.buttonset-movie-control button {
+			font-size: 1.4em;
+			line-height: 1.7em;
+			float: left;
+			background-image: linear-gradient(180deg, #EFFDFF 2%, #ECF8FA 4%, #80AABD 80%, #85B1C9 96%, #073C5C 98%);
+			border: none;
+			border-left: 1px solid #AAAAAA;
+			border-right: 1px solid #AAAAAA;
+			border-collapse: separate;
+		}
+
+		.buttonset-movie-control .fa {
+			font-size: 0.4em;
+			position: relative;
+			bottom: 1em;
+			left: -0.2em;
+		}
+		button:active {
+			background-image: linear-gradient(180deg, #085A6B 0%, #4FACCF 6%, #3374B2 88%, #62CCF4 91%, #056986 96%);
+			color: white;
+		}
+		button:active .fa {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="buttonset-movie-control">
+		<button class="button-play"><span aria-hidden="true" class="fa fa-play"></span>play</button>
+		<button class="button-pause"><span aria-hidden="true" class="fa fa-pause"></span>pause</button>
+		<button class="button-stop"><span aria-hidden="true" class="fa fa-stop"></span>stop</button>
+	</div>
+</body>
+</html>
