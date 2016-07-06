@@ -1,0 +1,69 @@
+body {
+	font-family: "Spoqa Han Sans", Sans-serif;
+	font-weight: bold;
+	/*font-size: 4em;*/
+	color: white;
+	background: 
+		linear-gradient(45deg, hsla(0,50%,0%,0.3) 50%, transparent 50%), 
+		linear-gradient(135deg, hsla(0,50%,0%,0.3) 50%, transparent 50%), 
+		radial-gradient(circle 140vmin, transparent, skyblue),
+		url(../images/Rain-City.jpg) no-repeat center;
+	background-size: 
+		30px 30px, 
+		30px 30px, 
+		100%,
+		cover;
+	text-shadow: 0px 0 4.9px #000000;
+}
+
+::selection {
+	background-color: #000;
+	text-shadow: none;
+	}
+
+
+
+header {
+    padding: 0rem 0;
+    margin: 0;
+    width: initial;
+    text-align: center;
+    font-size: xx-large;
+    background: linear-gradient(180deg, skyblue -25%, transparent 90%),
+    linear-gradient(90deg, transparent, skyblue, transparent) center 88% no-repeat;
+    background-size: 100vw auto, 30% auto;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+footer {
+	/*background: -webkit-linear-gradient(0deg, skyblue, transparent);*/
+	/*background: -o-linear-gradient(0deg, skyblue, transparent);*/
+	 background: linear-gradient(90deg, transparent, skyblue, transparent); 
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	bottom: 0rem;
+}
+
+ol, ul, li {
+    display: inline;
+    padding: 0 0.5rem;
+    font-size: smaller;
+}
+
+header span.h4 {
+	line-height: 1.2em;
+	position: relative;
+	top: 0.15em;
+}
+
+header nav a {
+    text-decoration: initial;
+    color: #fFF;
+}
