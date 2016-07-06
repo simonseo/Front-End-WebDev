@@ -1,0 +1,35 @@
+
+.gnb li:hover {  }
+.util li:hover { background-color:  }
+.slide > * { float: left; }
+.slider > article { width: 75vw; height:50vw; }
+.slider > .clothing-preview-img { width: 25vw; height: 12.5vw; }
+.slider > clothing-preview-img::after { background-image: linear-gradient(90deg, violet 5%, rgba(255,255,255,0.5) 5%); }
+article { position:relative; float:left; }
+
+/* logo */
+h1 {  }
+/* section title */
+h4 { text-transform: uppercase; color: violet; font-size: 20px;}
+/* item category*/
+h5 { text-transform: uppercase; color: violet; font-size: 12px;}
+/* title of block(article) */
+h6 { font-weight: bold; font-size: 14px; }
+/* greyed letters describing block*/
+.item-desc { color: #939393; }
+.price { font-weight: bold; font-size: 14px }
+
+
+.hamburger-menu {  }
+.icon-portrait {  }
+.search-bar {  }
+.icon-shopping-bag {  }
+.icon-jewel {  }
+.hit {  }
+.new {  }
+.sale {  }
+.sale .price { color: #FF3F2B; }
+.sale::after {  }
+
+
+#1F4BA5

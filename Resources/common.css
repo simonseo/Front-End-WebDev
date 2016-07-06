@@ -83,7 +83,7 @@ for IE - use with filtering method
 	text-indent: -9999px;
 }
 
-img.overflow
+/*img.overflow*/
 
 /* 
 박스 사이징: IE 8+ 에서 padding과 border을 넣었을 때 
@@ -126,3 +126,8 @@ img.blank-bottom + * {
 	height: auto;
 	margin: 0;
 }
+
+.small-caps { font-variant: small-caps; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
