@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Font Awesome</title>
 	<link rel="stylesheet" href="../Resources/reset.css">
+	<link rel="stylesheet" href="../Resources/common.css">
 	<link rel="stylesheet" href="../Resources/font-awesome/font-awesome.min.css">
 	<style>
 		body {
@@ -14,14 +15,15 @@
 		}
 		.buttonset-movie-control {
 			float: left;
-			padding: 0.4em;
-			border-radius: 4.3em;
 			overflow: hidden;
-			background-image: linear-gradient(180deg, #083E5A, #217DA7);
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
+			padding: 0.4em;
+			border-radius: 4em;
+			min-width: 14em;
+			background-image: linear-gradient(180deg, #083E5A, #217DA7);
 		}
 		.buttonset-movie-control button:first-of-type {
 			padding-left: 0.6em;
@@ -34,10 +36,10 @@
 			border-bottom-right-radius: 1em;
 		}
 		.buttonset-movie-control button {
+			float: left;
 			font-size: 1.4em;
 			line-height: 1.7em;
-			float: left;
-			background-image: linear-gradient(180deg, #EFFDFF 2%, #ECF8FA 4%, #80AABD 80%, #85B1C9 96%, #073C5C 98%);
+			background-image: linear-gradient(180deg, #EFFDFF 2%, #ECF8FA 4%, #80AABD 80%, #85B1C9 94%, #073C5C 96%);
 			border: none;
 			border-left: 1px solid #AAAAAA;
 			border-right: 1px solid #AAAAAA;
@@ -50,18 +52,18 @@
 			bottom: 1em;
 			left: -0.2em;
 		}
-		button:active {
-			background-image: linear-gradient(180deg, #085A6B 0%, #4FACCF 6%, #3374B2 88%, #62CCF4 91%, #056986 96%);
+		.buttonset-movie-control button:active {
+			background-image: linear-gradient(0deg, #085A6B 0%, #4FACCF 6%, #3374B2 88%, #62CCF4 91%, #62CCF4 95%, #056986 96%);
 			color: white;
 		}
-		button:active .fa {
+		.buttonset-movie-control button:active .fa {
 			color: white;
 		}
 	</style>
 </head>
 <body>
 	
-	<div class="buttonset-movie-control">
+	<div class="buttonset-movie-control clearfix">
 		<button class="button-play"><span aria-hidden="true" class="fa fa-play"></span>play</button>
 		<button class="button-pause"><span aria-hidden="true" class="fa fa-pause"></span>pause</button>
 		<button class="button-stop"><span aria-hidden="true" class="fa fa-stop"></span>stop</button>

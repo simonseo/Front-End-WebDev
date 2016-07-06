@@ -10,11 +10,11 @@ article { position:relative; float:left; }
 /* logo */
 h1 {  }
 /* section title */
-h4 { text-transform: uppercase; color: violet; font-size: 20px;}
-/* item category*/
-h5 { text-transform: uppercase; color: violet; font-size: 12px;}
+h2 { text-transform: uppercase; color: violet; font-size: 20px;}
 /* title of block(article) */
-h6 { font-weight: bold; font-size: 14px; }
+h3 { font-weight: bold; font-size: 14px; }
+/* item category*/
+.item-category { text-transform: uppercase; color: violet; font-size: 12px;}
 /* greyed letters describing block*/
 .item-desc { color: #939393; }
 .price { font-weight: bold; font-size: 14px }
