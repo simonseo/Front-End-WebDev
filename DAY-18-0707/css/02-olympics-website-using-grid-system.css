@@ -53,9 +53,11 @@ section > h2 {
 }
 
 section {
+	box-sizing: border-box;
 	position: relative;
-	margin: 72px 0;
-	/*border: 1px solid transparent;*/
+	margin: calc(72px - 1px) 0;
+	padding-bottom: 24px;
+	border-bottom: #AAA 1px solid;
 }
 article.block-inside-banner {
     width: 341px;
@@ -99,11 +101,6 @@ footer .newsletter {
 
 
 /*Typography*/
-hr {
-	border: none;
-	border-top: 1px solid #E2E2E2;
-	margin-bottom: 95px;
-}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -176,5 +173,9 @@ footer {
 .newsletter p {
     position: absolute;
     top: 50%;
-    transform: translate(-50%);
+    transform: translate(calc(-100% - 6px), -50%);
+}
+
+section.banner {
+    border: none;
 }
