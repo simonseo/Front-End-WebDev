@@ -45,6 +45,7 @@ In the above image, 3 columns are used for
 Photoshop > new > web > most common (1366x768)
 * In Korea, 1920x1080 is the most common
 grid margin should not be controlled with the body tag it should be controlled with a wrapper/container that wraps the content + `margin: 0 auto`
+if you use outline in photoshop, you might be 1px off
 
 ###How to create color palette
 because desingners don't do it for you, they can't simply share it either
