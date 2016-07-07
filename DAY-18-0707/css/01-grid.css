@@ -1,0 +1,20 @@
+body.show-grid::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background-image: linear-gradient(transparent);
+
+}
+
+.page-header {
+	height: 144px;
+	background: #06B1F5;
+
+}
+
+.page-header::before {
+	background: #;
+}

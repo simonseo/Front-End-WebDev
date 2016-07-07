@@ -1,0 +1,180 @@
+body {
+	text-align: left;
+	font-family: "Spoqa Han Sans", Sans-Serif;
+	/*box-sizing: border-box;*/
+}
+body.showbaseline {
+	background: linear-gradient(180deg, transparent 95%, lightblue 95%);
+	-webkit-background-size: 1px 24px;
+	background-size: 1px 24px;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clearfix > * {
+	float: left;
+}
+header {
+	padding-top: 24px;
+	position: relative;
+}
+header .util {
+	/* float: right; */
+	position: absolute;
+	bottom: 5.25em;
+	right: 0;
+	color: #B3B3B3;
+}
+header .util li {
+	list-style: none;
+	float: left;
+	margin-left: 24px;
+}
+header .main {
+	margin: 48px auto;
+	letter-spacing: -0.030em;
+	word-spacing: 1em;
+	position: relative;
+	width: 984px;
+	right: calc(calc(984px - 960px) / 2);
+}
+header .main li {
+	margin: 0 5px;
+}
+header .main span {
+	margin-left: -1em;
+}
+
+section > h2 {
+	margin-bottom: 48px;
+}
+
+section {
+	position: relative;
+	margin: 72px 0;
+	/*border: 1px solid transparent;*/
+}
+article.block-inside-banner {
+    width: 341px;
+    height: 316px;
+    position: absolute;
+    bottom: 50%;
+    left: 20%;
+    transform: translate(-20%,50%);
+    background-color: rgba(211, 211, 211, 0.5);
+    color:  white;
+    padding: 24px;
+}
+.content ul a:not(last-of-type) {
+	display: block;
+	/* margin-right: 10px; */
+}
+.content img {
+	/* margin-top: 24px; */
+	/* margin-bottom: 24px; */
+}
+.story h3 {
+	margin-top: 24px;
+}
+.story .date {
+	font-size: 14px;
+	color: #AAA;
+}
+.see-more-links {
+	position: absolute;
+	right: 0;
+	transform: translate(-10px,-200%);
+}
+footer .newsletter {
+	position: absolute;
+	right: 0;
+	bottom: 50%;
+	transform: translateY(50%);
+}
+
+
+
+
+/*Typography*/
+hr {
+	border: none;
+	border-top: 1px solid #E2E2E2;
+	margin-bottom: 95px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+body {
+	font-size: 16px;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+h1,h2,h3,h4,h5,h6,p {
+	line-height: 24px;
+	margin-bottom: 24px;
+}
+
+.previous-olympics h3 {
+    color: #BABABA;
+    font-size: small;
+}
+
+.previous-olympics article {
+    text-align: center;
+    /* width: 230px; */
+    /* height: 144px; */
+}
+
+.content li {
+    margin-right: 10px;
+    /* height: 240px; */
+}
+
+.news li {
+    /* height: 240px; */
+}
+
+.newsletter > * {
+}
+
+form[name="newsletter"] {
+	color: #DDDDDD;
+	padding-left: 14px;
+	border: 1px solid #DDD;
+}
+
+form[name="newsletter"] .fa-envelope {
+	margin-right: 6px;
+}
+
+form[name="newsletter"] input[type="email"]:focus {
+	color: black;
+}
+form[name="newsletter"] button[type="submit"] {
+	color: white;
+	background-color: #333;
+	padding: 5px 8px;
+}
+
+footer p {
+	font-size: smaller;
+    margin-bottom: 0;
+    color: #97979F;
+}
+
+footer {
+    position: relative;
+}
+.copyright {
+	margin-left: 6px;
+}
+
+.newsletter p {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+}

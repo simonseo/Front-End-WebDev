@@ -44,6 +44,22 @@ In the above image, 3 columns are used for
 ### Let's make our own
 Photoshop > new > web > most common (1366x768)
 * In Korea, 1920x1080 is the most common
+grid margin should not be controlled with the body tag it should be controlled with a wrapper/container that wraps the content + `margin: 0 auto`
+
+###How to create color palette
+because desingners don't do it for you, they can't simply share it either
+in photoshop, sample your colors and add to your swatch list
+make a .sass file
+import adobe swatches from brackets
+this adds the colors into sass
+	you can use zeplin (ps plugin available) or avocode to do this
+
+######Normalize.css
+Another reset code, but less brute and more geared towards fixing browser errors
+	> "A modern, HTML5-ready alternative to CSS Resets"
+######Ress.css
+Inherited from Normalize.css
+Basically `box-sizing: border-box`
 
 ##Questions
 - diff. btwn cover, contain
