@@ -36,16 +36,16 @@ header .util li {
 header .main {
 	margin: 48px auto;
 	letter-spacing: -0.030em;
-	word-spacing: 1em;
+	/* word-spacing: 1em; */
 	position: relative;
-	width: 984px;
-	right: calc(calc(984px - 960px) / 2);
+	width: 1014px;
+	right: calc(calc(1014px - 960px) / 2);
 }
 header .main li {
-	margin: 0 5px;
+	margin: 0px 8px;
 }
 header .main span {
-	margin-left: -1em;
+	margin-left: 0em;
 }
 
 section > h2 {
