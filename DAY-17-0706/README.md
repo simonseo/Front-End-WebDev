@@ -50,7 +50,7 @@ label: 가상요소 안씀 일부러.
 
 ###Type-Scale Ratio
 H6를 1로 잡았을 때 매 단계마다 똑같은 비율을 곱한다. [다음](http://www.type-scale.com)은 일반적으로 사용되는 비율이다.
-
+The name comes from [music theory](https://24ways.org/2011/composing-the-new-canon#h5o-8)
 Minor Second
 Major Second
 Minor Third
@@ -71,11 +71,12 @@ descender
 각 요소간의 수직적인 공간 배열 관계. 리듬을 지켜주면 읽기 편하고 정돈된 느낌.
 
 [ line-height을 구하는 공식 ]
-1) ceil( 글자 크기 비율(1.24) ÷ 기본 행간 비율(1.5) ) = 글자 크기가 차지하는 행의 개수
-   1.24/1.5 = .826666667 => 1개
-2) 기본 행간 비율(1.5) ÷ 글자 크기 비율(1.24) × 행의 개수
-`line-height / 글자 크기 = 기본행간 * 행 개수`
-   1.5/1.24 = 1.209677419 * 1
+
+	1) ceil( 글자 크기 비율(1.24) ÷ 기본 행간 비율(1.5) ) = 글자 크기가 차지하는 행의 개수
+	   1.24/1.5 = .826666667 => 1개
+	2) 기본 행간 비율(1.5) ÷ 글자 크기 비율(1.24) × 행의 개수
+	`line-height / 글자 크기 = 기본행간 * 행 개수`
+	   1.5/1.24 = 1.209677419 * 1
 
 
 Use Metric Prefix + role="Heading" to extend 6 levels of headings
