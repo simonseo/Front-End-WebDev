@@ -93,7 +93,7 @@ for IE - use with filtering method
 .box-sizing *,
 .box-sizing *::before,
 .box-sizing *::after {
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 }
 
 /* 
