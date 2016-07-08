@@ -79,27 +79,35 @@ ul, ol, dl {
 }
 .list div {
 	float: left;
-	margin-right: 4rem;
+	margin-right: 3rem;
 }
-ul {
+ul, ol {
+	padding-left: 1.2em;
+	list-style-type: none;
+	color: #333741;
+}
+li {
+	display: block;
+}
+li:before {
+	content: '';
+	display: list-item;
+	float: left;
+}
+ul li:before {
 	list-style-type: disc;
 	color: #969595;
-	padding-left: 1.2em;
 }
-ul ul, ol ul {
+ul ul li:before , ol ul li:before {
 	list-style-type: circle;
 	color: #9B9A9A;
 }
-ol {
+ol li:before {
 	list-style-type: decimal;
-	padding-left: 1.2em;
 }
-ol ol, ul ol {
-    color: #969595;
-}
-ul p, ol p {
-	color: #333741;
-	margin-bottom: 0;
+ol ol li:before, ul ol li:before {
+	list-style-type: decimal;
+	color: #9B9A9A;
 }
 li:last-child {
 	margin-bottom: 24px;
