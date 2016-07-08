@@ -1,0 +1,59 @@
+/* ============================== *
+ * Typography Stylesheet for the Minor Third scale (5:6)
+ * 
+ * line height: 1.5
+ * bolder: h6, h5
+ * normal: p, h4, h3
+ * lighter: h2, h1
+ *
+ * ⓒ Simon Seo, 2016
+ * ============================== */
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-weight: bolder;
+}
+
+h5 {
+    font-size: 1.2em;
+    line-height: 1.25;
+	margin-bottom: 1.25em;
+    font-weight: bolder;
+}
+
+h4 {
+    font-size: 1.44em;
+    line-height: 1.0417;
+    margin-bottom: 1.0417em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.728em;
+    line-height: 1.7361;
+    margin-bottom: 0.8681em;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.0736em;
+    line-height: 1.4468;
+    margin-bottom: 0.7234em;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 2.4883em;
+    line-height: 1.2056;
+    margin-bottom: 0.6028em;
+    font-weight: lighter;
+}

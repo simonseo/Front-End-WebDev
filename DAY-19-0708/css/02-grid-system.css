@@ -1,0 +1,20 @@
+/*body {
+	background-image: url();
+	background-repeat: repeat;
+
+}*/
+
+.container {
+	width: 960px;
+}
+
+[class^="col"] {
+	background-color: #000;
+	color: #fff;
+	height: 48px;
+}
+
+.row {
+	margin-bottom: 1rem;
+}
+

@@ -1,13 +1,13 @@
 ###### Front End Web Development School
 
 #Team Activity 3 (Aweare Website Structuring & Styling)
-[웹표준 준수] HTML, CSS 문법은 유효한가?
-[접근성 고려] 사용자 입장에서 접근하는데 문제가 없는가? (음성 출력/키보드 접근 등)
-[의미 구조화] HTML 구조는 올바른 의미를 가지는가?
-[스타일 모듈] CSS 스타일 디자인(설계)는 효율적으로 작성되었는가?
-[네이밍 규칙] HTML, CSS에 설정된 이름은 간결하며 읽기 용이한가?
-[코드 최적화] 불 필요한 <div> 또는 <span> 요소의 남용 및 무의미하게 중복되는 스타일 코드는 없었는가?
-[팀원간 소통] 코드는 읽기 쉽고, 간결한가?
+- [웹표준 준수] HTML, CSS 문법은 유효한가?
+- [접근성 고려] 사용자 입장에서 접근하는데 문제가 없는가? (음성 출력/키보드 접근 등)
+- [의미 구조화] HTML 구조는 올바른 의미를 가지는가?
+- [스타일 모듈] CSS 스타일 디자인(설계)는 효율적으로 작성되었는가?
+- [네이밍 규칙] HTML, CSS에 설정된 이름은 간결하며 읽기 용이한가?
+- [코드 최적화] 불 필요한 <div> 또는 <span> 요소의 남용 및 무의미하게 중복되는 스타일 코드는 없었는가?
+- [팀원간 소통] 코드는 읽기 쉽고, 간결한가?
 
 문법
 img empty
@@ -51,14 +51,124 @@ label: 가상요소 안씀 일부러.
 ###Type-Scale Ratio
 H6를 1로 잡았을 때 매 단계마다 똑같은 비율을 곱한다. [다음](http://www.type-scale.com)은 일반적으로 사용되는 비율이다.
 The name comes from [music theory](https://24ways.org/2011/composing-the-new-canon#h5o-8)
-Minor Second
-Major Second
-Minor Third
-Major Third
-Perfect Fourth
-Augmented Fourth
-Perfect Fifth
-Minor Sixth
+
+<table class="full">
+		<tr>
+			<th>Name </th>
+			<th>Ratio </th>
+			<th>% of larger value </th>
+			<th>% of smaller value </th>
+		</tr>
+		<tr>
+			<td> unison </td>
+			<td> 1:1 </td>
+			<td> 100% </td>
+			<td> 100% </td>
+		</tr>
+		<tr>
+			<td> minor second </td>
+			<td> 15:16 </td>
+			<td> 93.75% </td>
+			<td> 106.667% </td>
+		</tr>
+		<tr>
+			<td> major second </td>
+			<td> 8:9 </td>
+			<td> 88.889% </td>
+			<td> 112.5% </td>
+		</tr>
+		<tr>
+			<td> minor third </td>
+			<td> 5:6 </td>
+			<td> 83.333% </td>
+			<td> 120% </td>
+		</tr>
+		<tr>
+			<td> major third </td>
+			<td> 4:5 </td>
+			<td> 80% </td>
+			<td> 125% </td>
+		</tr>
+		<tr>
+			<td> perfect fourth </td>
+			<td> 3:4 </td>
+			<td> 75% </td>
+			<td> 133.333% </td>
+		</tr>
+		<tr>
+			<td> augmented fourth <br />
+or diminished fifth </td>
+			<td> 1:√2 </td>
+			<td> 70.711% </td>
+			<td> 141.421% </td>
+		</tr>
+		<tr>
+			<td> perfect fifth </td>
+			<td> 2:3 </td>
+			<td> 66.667% </td>
+			<td> 150% </td>
+		</tr>
+		<tr>
+			<td> minor sixth </td>
+			<td> 5:8 </td>
+			<td> 62.5% </td>
+			<td> 160% </td>
+		</tr>
+		<tr>
+			<td> major sixth </td>
+			<td> 3:5 </td>
+			<td> 60% </td>
+			<td> 166.667% </td>
+		</tr>
+		<tr>
+			<td> minor seventh </td>
+			<td> 9:16 </td>
+			<td> 56.25% </td>
+			<td> 177.778% </td>
+		</tr>
+		<tr>
+			<td> major seventh </td>
+			<td> 8:15 </td>
+			<td> 53.333% </td>
+			<td> 187.5% </td>
+		</tr>
+		<tr>
+			<td> octave </td>
+			<td> 1:2 </td>
+			<td> 50% </td>
+			<td> 200% </td>
+		</tr>
+		<tr>
+			<td> major tenth </td>
+			<td> 2:5 </td>
+			<td> 40% </td>
+			<td> 250% </td>
+		</tr>
+		<tr>
+			<td> major eleventh </td>
+			<td> 3:8 </td>
+			<td> 37.5% </td>
+			<td> 266.667% </td>
+		</tr>
+		<tr>
+			<td> major twelfth </td>
+			<td> 1:3 </td>
+			<td> 33.333% </td>
+			<td> 300% </td>
+		</tr>
+		<tr>
+			<td> double octave </td>
+			<td> 1:4 </td>
+			<td> 25% </td>
+			<td> 400% </td>
+		</tr>
+		<tr>
+			<th>Name </th>
+			<th>Ratio </th>
+			<th>% of larger value </th>
+			<th>% of smaller value </th>
+		</tr>
+</table>
 
 ###Baseline
 Row 사이 간격으로 글자크기를 포함하는 높이를 말한다.

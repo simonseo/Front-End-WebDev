@@ -1,0 +1,93 @@
+/* ============================== *
+ * Grid System: 1366-16
+ *
+ * 화면 가로폭: 1366px
+ * 마진: 171*2
+ * 컬럼 개수: 16개
+ * 거터 유무: 有
+ * 컬럼과 거터의 비율: 3:1 (8-48-8)
+ *
+ * Use .container to wrap into a 1024px box;
+ * Use .grid-overlay on body element to show grid in the middle region;
+ * ============================== */
+
+.container, body.grid-overlay::after {
+	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body.grid-overlay::after {
+	content: '';
+	min-height: 147.6667rem;
+	z-index: 9999;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background: 
+		linear-gradient(180deg, transparent 95.83%, hsla(197, 71%, 73%, 0.5) 95.83%),
+		linear-gradient(90deg, hsla(339,86%,93%,0.2) 12.5%, hsla(339,86%,93%,0.5) 12.5%, hsla(339,86%,93%,0.5) 87.5%, hsla(339,86%,93%,0.2) 87.5%) repeat;
+	background-size: 64px 24px, 64px 24px;
+}
+
+body.grid-overlay::after:hover {
+	background: none;
+}
+
+.col-span::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* ============================== *
+ * Default blocks. Have margin
+ * ============================== */
+
+[class^="col"]:not(.col-span) {
+	float: left;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-bottom: 24px;
+}
+
+.col-1 { width: 48px; }
+.col-2 { width: 112px; }
+.col-3 { width: 176px; }
+.col-4 { width: 240px; }
+.col-5 { width: 304px; }
+.col-6 { width: 368px; }
+.col-7 { width: 432px; }
+.col-8 { width: 496px; }
+.col-9 { width: 560px; }
+.col-10 { width: 624px; }
+.col-11 { width: 688px; }
+.col-12 { width: 752px; }
+.col-13 { width: 816px; }
+.col-14 { width: 880px; }
+.col-15 { width: 944px; }
+.col-16 { width: 1008px; }
+
+/* ============================== *
+ * Blocks with no margin
+ * ============================== */
+.tile-layout > [class^="col"]:not(.col-span) {
+	margin: 0;
+}
+.tile-layout > .col-1 { width: 64px; }
+.tile-layout > .col-2 { width: 128px; }
+.tile-layout > .col-3 { width: 192px; }
+.tile-layout > .col-4 { width: 256px; }
+.tile-layout > .col-5 { width: 320px; }
+.tile-layout > .col-6 { width: 384px; }
+.tile-layout > .col-7 { width: 448px; }
+.tile-layout > .col-8 { width: 512px; }
+.tile-layout > .col-9 { width: 576px; }
+.tile-layout > .col-10 { width: 640px; }
+.tile-layout > .col-11 { width: 704px; }
+.tile-layout > .col-12 { width: 768px; }
+.tile-layout > .col-13 { width: 832px; }
+.tile-layout > .col-14 { width: 896px; }
+.tile-layout > .col-15 { width: 960px; }
+.tile-layout > .col-16 { width: 1024px; }

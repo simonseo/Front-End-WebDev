@@ -1,0 +1,93 @@
+body {
+	font-family: Roboto, Sans-Serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+[class^="col"]:not(.col-span):before {
+	content: attr(class);
+	position:absolute;
+
+}
+.col-span {
+	background-color: #ddd;
+}
+
+.row-1 { height: 24px; }
+.row-2 { height: 48px; }
+.row-5 { height: 120px; }
+.row-10 { height: 240px; }
+.row-13 { height: 312px; }
+.row-14 { height: 336px; }
+.row-17 { height: 408px; }
+.row-18 { height: 432px; }
+
+header, footer { background-color: #202124; position: relative; }
+header { height: 72px; }
+footer { height: 240px; }
+
+
+
+.headline-video { background-color: #ff3b3b; }
+.news-category:nth-last-child(1) { background-color: #FF4A23; }
+.news-category:nth-last-child(2) { background-color: #C3B499; }
+.news-category:nth-last-child(3) { background-color: #444E64; }
+.news-category:nth-last-child(4) {  }
+.news-category:nth-last-child(5) { background-color: grey; }
+
+.happening-now .left-column {
+	width: 256px;
+	float: left;
+}
+.happening-now > .right-column {
+	width: 768px;
+	float: left;
+}
+.happening-now .left-column :nth-child(1) { background-color: #FAEAC7; }
+.happening-now .left-column :nth-child(2) { background-color: #A6C3F8; }
+.happening-now .left-column :nth-child(3) { background-color: #F8A652; }
+.happening-now .right-column :nth-child(1) { background-color: #32E978; }
+.happening-now .right-column :nth-child(2) { background-color: #C5C4C6; }
+.happening-now .right-column :nth-child(3) { background-color: #FF6D1E; }
+
+.footer-nav ul {
+	height: 96px;
+}
+.main-nav li, .footer-nav li { list-style-type: none; }
+.main-nav li a, .footer-nav li a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.footer-nav ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.footer-nav li { 
+	position: relative; 
+	left: -256px;
+	bottom: 0px;
+}
+.footer-nav li:nth-child(4) ~ * {
+	left: -128px;
+	bottom: 96px;
+}
+.footer-nav li:nth-child(8) ~ * {
+	left: 0;
+	bottom: 192px;
+}
+.footer-nav li:nth-child(12) ~ * {
+	left: 128px;
+	bottom: 288px;
+}
+.footer-nav li:nth-child(16) ~ * {
+	left: 256px;
+	bottom: 384px;
+}
+
+img.logo {
+    position: absolute;
+}

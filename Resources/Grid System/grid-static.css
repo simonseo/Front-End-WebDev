@@ -1,0 +1,57 @@
+.container, body.overlay-grid::after {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.container.show-grid, 
+.container.hover-hide-grid, 
+body.overlay-grid::after {
+	/* 속기형 쓸 때는 어차피 repeat가 됨 */
+	/*background: url(./images/GS-pattern-10-60-10.png) repeat;*/
+	background: 
+		linear-gradient(180deg, transparent 95.83%, hsla(197, 71%, 73%, 0.5) 95.83%),
+		linear-gradient(90deg, hsla(339,86%,93%,0.3) 12.5%, hsla(339,86%,93%,0.9) 12.5%, hsla(339,86%,93%,0.9) 87.5%, hsla(339,86%,93%,0.3) 87.5%) repeat;
+	background-size: 80px 24px, 80px 24px;
+}
+.container.hover-hide-grid:hover {
+	background: none;
+}
+body.overlay-grid::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	/*bottom: 0;*/
+	height: 100vh;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+}
+
+
+/* Row module. A bit similar to clearfix*/
+.row::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+[class^="col"] {
+	float: left;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.col-1 { width: 48px; }
+.col-2 { width: 128px; }
+.col-3 { width: 208px; }
+.col-4 { width: 288px; }
+.col-5 { width: 368px; }
+.col-6 { width: 448px; }
+.col-7 { width: 528px; }
+.col-8 { width: 608px; }
+.col-9 { width: 688px; }
+.col-10 { width: 768px; }
+.col-11 { width: 848px; }
+.col-12 { width: 928px; }
