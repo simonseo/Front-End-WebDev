@@ -1,3 +1,7 @@
+html {
+	overflow-y: scroll;
+}
+
 body {
 	font-family: Roboto, Sans-Serif;
 	font-size: 16px;
