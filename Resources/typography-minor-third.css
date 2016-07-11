@@ -6,7 +6,7 @@
  * normal: p, h4, h3
  * lighter: h2, h1
  *
- * ⓒ Simon Seo, 2016
+ * â“’ Simon Seo, 2016
  * ============================== */
 
 p {
@@ -54,6 +54,6 @@ h2 {
 h1 {
     font-size: 2.4883em;
     line-height: 1.2056;
-    margin-bottom: 0.6028em;
+    margin-bottom: 0.5028em;
     font-weight: lighter;
 }

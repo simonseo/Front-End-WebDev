@@ -1,0 +1,20 @@
+div, nav, section:empty {
+	background: radial-gradient(circle, black, white);
+	border: 1px solid black;
+}
+
+* {
+	/*border-collapse: collapse;*/
+	border-collapse: all;
+}
+
+/**:before {
+	content: attr(class);
+	position: absolute;
+}*/
+
+div.grid { border: none; }
+
+.icon-shopping-bag {
+	background-image: url(../images/svg-icon-bag.png);
+}

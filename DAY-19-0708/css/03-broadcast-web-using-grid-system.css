@@ -24,6 +24,7 @@ body {
 .row-18 { height: 432px; }
 
 header, footer { background-color: #202124; position: relative; }
+img {position: absolute;top: 0px;left: 0;}
 header { height: 72px; }
 footer { height: 240px; }
 
@@ -86,8 +87,4 @@ footer { height: 240px; }
 .footer-nav li:nth-child(16) ~ * {
 	left: 256px;
 	bottom: 384px;
-}
-
-img.logo {
-    position: absolute;
 }

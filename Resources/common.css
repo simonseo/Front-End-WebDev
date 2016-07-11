@@ -151,7 +151,7 @@ img.blank-bottom + * {
 .lowercase { text-transform: lowercase; }
 .capitalize { text-transform: capitalize; }
 
-
-.breaking-news {
-	background-color: antiquewhite;
+.flex-img {
+	width: 100%;
+	height: auto;
 }
