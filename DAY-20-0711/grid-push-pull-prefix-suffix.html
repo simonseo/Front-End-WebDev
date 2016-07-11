@@ -12,26 +12,19 @@
 	<link rel="stylesheet" href="css/aware-using-grid.css">
 </head>
 <body>
-	<div class="grid-container">
-		<header class="grid">
-			<div class="unit-2 row-1">
-				<div class="hamburger">
-					<img src="images/svg-icon-hamberger.png" alt="">
-				</div>
-				<div class="logo">
-					<h1><img src="images/svg-logo-aware.png" alt="aware logo"></h1>
-				</div>
-			</div>
-			<nav class="gnb unit-3 row-1">
-				<h2 class="visually-hidden">Global Navigation Bar</h2>
-			<ul>
+	<header class="grid">
+		<img src="images/svg-icon-hamberger.png" alt="">
+		<h1><img src="images/svg-logo-aware.png" alt="aware logo"></h1>
+		<nav class="gnb">
+			<h2 class="visually-hidden">Global Navigation Bar</h2>
+			<ul dir="rtl">
 				<li><span class="gnb-menu">Men</span><ul></ul></li>
 				<li><span class="gnb-menu">Women</span><ul></ul></li>
 				<li><span class="gnb-menu">Kids</span><ul></ul></li>
 				<li><span class="gnb-menu">Accessories</span><ul></ul></li>
 			</ul>
-			</nav>
-			<nav class="util prefix-1 unit-2 row-1">
+		</nav>
+		<nav class="util clearfix">
 			<h2 class="visually-hidden">Util Navigation Bar</h2>
 			<ul>
 				<li>
@@ -41,52 +34,147 @@
 					<a href="#" class="ir icon-portrait">profile</a>
 				</li>
 				<li>
-					<form name="search-bar" action="#" method="GET" enctype="application/x-www-form-urlencoded"><input type="text"><button type="submit"></button></form>
+					<form name="search-bar" action="#" method="GET" enctype="application/x-www-form-urlencoded"><input type="text" class="icon-search"><button type="submit"></button></form>
 				</li>
 			</ul>
-			</nav>
-		</header>
+		</nav>
+	</header>
+	<div class="grid-container">
 		<section class="slider grid">
-			<div class="unit-6 row-8"></div>
-			<div class="unit-2 row-2"></div>
-			<div class="unit-2 row-2"></div>
-			<div class="unit-2 row-2"></div>
-			<div class="unit-2 row-2"></div>
+			<h2 class="visually-hidden">Slider Section</h2>
+			<article class="item-preview unit-6 row-8">
+				<div class="text-area">
+					<span class="item-category">Men</span>
+					<h3>Replay Jeans Hyperflex</h3>
+					<p class="item-desc">Skinny Comfort Ultra Stretch Light Wash</p>
+					<p><span class="currency">&dollar;</span><span class="item-price">145</span><a href="#" class="button-buy-now">Buy now</a></p>
+				</div>
+			</article>
+			<div class="unit-2 row-2 slider-sidebar"></div>
+			<div class="unit-2 row-2 slider-sidebar"></div>
+			<div class="unit-2 row-2 slider-sidebar"></div>
+			<div class="unit-2 row-2 slider-sidebar"></div>
 		</section>
 		<section class="unit-8 banner grid">
-			<div class="unit-4 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
+			<h2 class="visually-hidden">Banner - Events</h2>
+			<article class="unit-4 row-4">
+				<div class="text-area">
+					<span class="item-category">Women</span>
+					<h3>Big Spring Sale - 70&percnt;</h3>
+					<p class="item-desc">Shoes, hats, pants, jeans</p>
+				</div>
+			</article>
+			<article class="unit-2 row-4">
+				<div class="text-area">
+					<span class="item-category">Men</span>
+					<h3>Last Winter Sale Boots 70&percnt; Discount</h3>
+				</div>
+			</article>
+			<article class="unit-2 row-4">
+				<div class="text-area">
+					<span class="item-category">Accessories</span>
+					<h3>New Hats for Every Day</h3>
+				</div>
+			</article>
 		</section>
 		<section class="featured unit-8 grid">
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
+			<div class="unit-2 row-4 section-title-block">
+				<h2 class="icon-jewel">featured products</h2>
+				<p class="item-desc">the best of out store</p>
+			</div>
+			<article class="unit-2 row-4 hit">
+				<h3>H&amp;M Chino Shorts</h3>
+				<span class="currency">&dollar;</span><span class="price">12</span>
+				<span class="ir">HIT ITEM</span>
+			</article>
+			<article class="unit-2 row-4">
+				<h3>Bobbies Elegant Leather Driving Shoes</h3>
+				<span class="currency">&dollar;</span><span class="price">149</span>
+			</article>
+			<article class="unit-2 row-4 sale">
+				<h3>Fiorelli Rita Striped Tote Bag</h3>
+				<span class="currency">&dollar;</span><span class="price">170</span>
+				<span class="ir">SALE ITEM</span>
+				<span class="visually-hidden">Originally</span>
+				<span class="currency">&dollar;</span><span class="original-price">180</span>
+			</article>
+			<article class="unit-2 row-4">
+				<h3>H&amp;M Polo Shirt</h3>
+				<span class="currency">&dollar;</span><span class="price">9.95</span>
+			</article>
+			<article class="unit-2 row-4">
+				<h3>ASOS Skinny Band Felt Floppy Hat</h3>
+				<span class="currency">&dollar;</span><span class="price">24</span>
+			</article>
+			<article class="unit-2 row-4 new">
+				<h3>Ted Baker Leather Messenger Bag</h3>
+				<span class="currency">&dollar;</span><span class="price">344</span>
+				<span class="ir">NEW ITEM</span>
+			</article>
+			<article class="unit-2 row-4">
+				<h3>H&amp;M Canvas Parka</h3>
+				<span class="currency">&dollar;</span><span class="price">69</span>
+			</article>
 		</section>
 		<section class="blog unit-8 grid">
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
-			<div class="unit-2 row-4"></div>
+			<div class="unit-2 row-4 section-title-block">
+				<h2 class="icon-newspaper">Our Blog</h2>
+				<p class="item-desc">tips, trends, services</p>
+			</div>
+			<article class="unit-2 row-4">
+				<span class="date">April 12, 2015</span>
+				<h3>The Most Stylish Fashion Designers of All Time</h3>
+				<p>by <span class="author-name">anvar Joraev</span></p>
+			</article>
+			<article class="unit-2 row-4">
+				<span class="date">May 1, 2015</span>
+				<h3>One of America's Favorite Drunk Foods Is Being Recalled</h3>
+				<p>by <span class="author-name">Bahodir Komilov</span></p>
+			</article>
+			<article class="unit-2 row-2">
+				<span class="date">May 1, 2015</span>
+				<h3>Surprise 'Games of Thrones' Clips Are Really Deep, Man</h3>
+			</article>
+			<article class="unit-2 row-2">
+				<span class="date">April 7, 2015</span>
+				<h3>Patek Philippe Sells Out of $2.5 Million Watches</h3>
+			</article>
 		</section>
 		<div class="grid">
-			<section class="testimonial unit-4 row-8"></section>
-			<section class="about unit-4 row-8"></section>
+			<section class="testimonial unit-4 row-8 section-title-block">
+				<h2>what people say</h2>
+				<blockquote>
+					<p>And they, too, had big dreams for their daughter. I believe that we can give our middle class relief and provide working families with a road to opportunity. They've worked hard all their lives, many times only to see their jobs shipped overseas or their pension dumped after a lifetime of labor.</p>
+					<cite><span class="customer-name">Komol Kuchkarov</span><span class="customer-from">From Uzbekistan</span></cite>
+				</blockquote>
+				<a href="#">add comment</a>
+				<button>refresh</button>
+			</section>
+			<section class="about unit-4 row-8 section-title-block">
+				<h2>who we are</h2>
+				<a href="#">see more</a>
+				<span>est. 2015</span>
+				<div class="key-photos">
+					<div></div>
+					<div></div>
+					<div><strong>2970</strong><em>brands</em></div>
+					<div><strong>245</strong><em>countries</em></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</section>
 		</div>
 		<section class="brand grid">
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
-			<div class="unit-1 row-2"></div>
+			<h2 class="visually-hidden">Our Brands</h2>
+			<div class="unit-1 row-2"><a href="#"><img src="images/H&M.png" alt="" width="60" height="39"></a></div>
+			<div class="unit-1 row-2"><a href="#"><img src="images/PUMA.png" alt="" width="70" height="35"></a></div>
+			<div class="unit-1 row-2"><a href="#"><img src="images/adidas.png" alt="" width="51" height="50"></a></div>
+			<div class="unit-1 row-2"><a href="#"><img src="images/CONVERSE.png" alt="" width="70" height="44"></a></div>
+			<div class="unit-1 row-2"><a href="#"><img src="images/BOSS.png" alt="" width="70" height="25"></a></div>
+			<div class="unit-1 row-2"><a href="#"><img src="images/Nike.png" alt="" width="60" height="21"></a></div>
+			<div class="unit-1 row-2"><a href="#"><img src="images/Crown.png" alt="" width="66" height="56"></a></div>
+			<div class="unit-1 row-2"><a href="#">all brands</a></div>
 		</section>
 		<footer>
 			<nav class="footer-nav unit-8 row-1"></nav>

@@ -1,20 +1,140 @@
-div, nav, section:empty {
-	background: radial-gradient(circle, black, white);
-	border: 1px solid black;
+article, div, nav, section:empty {
+	/*background: radial-gradient(circle, black, white);*/
+	/*border: 1px solid black;*/
+	/*bdcl-*/
 }
-
-* {
-	/*border-collapse: collapse;*/
-	border-collapse: all;
-}
-
-/**:before {
-	content: attr(class);
-	position: absolute;
-}*/
-
 div.grid { border: none; }
 
-.icon-shopping-bag {
-	background-image: url(../images/svg-icon-bag.png);
+/* ============================== *
+ * General Typography
+ * ============================== */
+html { font: 16px/1.5 "Spoqa Han Sans", Sans-Serif; }
+span.item-category { color: #1f4ba5; font-weight: bolder; text-transform: uppercase; }
+.section-title-block h2 { text-transform: uppercase; font-weight: bold; color: #1f4ba5; }
+
+
+/* ============================== *
+ * Header
+ * ============================== */
+header {position: relative;height: 120px;}
+header > * { position: absolute; }
+header > img { top: 50%; left: 2rem; transform: translateY(-50%); }
+header > h1 {left: 5.3rem;top: 50%;transform: translateY(-65%);margin: 0;line-height: 0;}
+nav.gnb {left: 50%;top: 50%;transform: translate(-50%, -50%);}
+nav.gnb > ul { list-style-image: url(../images/icon-arrow-down.png); }
+nav.gnb > ul > li {float: left;margin-right: 5em;text-indent: 5px;}
+nav.util { right: 0; top:50%; transform: translateY(-50%); }
+nav.util > ul { list-style: none; }
+nav.util > ul > li {float: left;}
+.icon-shopping-bag { background-size: 20px 20px; background-image: url(../images/svg-icon-bag.png); }
+.icon-portrait { background-size: 20px 20px; background-image: url(../images/svg-icon-face.png); }
+.icon-search { background-size: 20px 20px; background-image: url(../images/svg-icon-search.png); }
+
+/* ============================== *
+ * Section: Slider;
+ * ============================== */
+.slider .item-preview {
+	background-image: url(../images/photo-slider-content.png);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: relative;
 }
+.slider .slider-sidebar:nth-of-type(1) { background-image: url(../images/photo-slider-slides-01.png); }
+.slider .slider-sidebar:nth-of-type(2) { background-image: url(../images/photo-slider-slides-02.png); }
+.slider .slider-sidebar:nth-of-type(3) { background-image: url(../images/photo-slider-slides-03.png); }
+.slider .slider-sidebar:nth-of-type(4) { background-image: url(../images/photo-slider-slides-04.png); }
+.slider .slider-sidebar { position: relative; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
+.slider .slider-sidebar:hover::after,
+.slider .slider-sidebar:active::after {
+	display: block;
+	content: '';
+	z-index: 300;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(90deg, #494189 4%, hsla(0, 0%, 100%, 0.4) 4%);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+
+.slider .item-preview::before,
+.slider .item-preview::after {
+	position: absolute;
+	top: 0;
+	display: block;
+	content: '';
+	width: 48px;
+	height: 100%;
+	background-repeat: no-repeat;
+	-webkit-background-size: 48px 48px;
+	background-size: 48px 48px;
+	-ms-background-position-y: 50%;
+	background-position-y: 50%;
+}
+.slider .item-preview::before { background-image: url(../images/svg-icon-arrow-left.png); left: 5%; }
+.slider .item-preview::after { background-image: url(../images/svg-icon-arrow-right.png); right: 5%; }
+.slider .item-preview:hover::before,
+.slider .item-preview:hover::after { cursor: pointer; }
+
+/* ============================== *
+ * Section: Banner;
+ * ============================== */
+.banner > article { position: relative; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
+.banner > article:nth-of-type(1) { background-image: url(../images/photo-banners-01.png); }
+.banner > article:nth-of-type(2) { background-image: url(../images/photo-banners-02.png); }
+.banner > article:nth-of-type(3) { background-image: url(../images/photo-banners-03.png); }
+
+
+
+
+/* ============================== *
+ * Section: Featured;
+ * ============================== */
+.featured > article { position: relative; background-position: center center; }
+.featured > article > img { bgi transform: scale(1.3,1.3); }
+.featured > article:nth-of-type(1) { background-image: url(../images/photo-featured-01.png); }
+.featured > article:nth-of-type(2) { background-image: url(../images/photo-featured-02.png); }
+.featured > article:nth-of-type(3) { background-image: url(../images/photo-featured-03.png); }
+.featured > article:nth-of-type(4) { background-image: url(../images/photo-featured-04.png); }
+.featured > article:nth-of-type(5) { background-image: url(../images/photo-featured-05.png); }
+.featured > article:nth-of-type(6) { background-image: url(../images/photo-featured-06.png); }
+.featured > article:nth-of-type(7) { background-image: url(../images/photo-featured-07.png); }
+.icon-jewel { background-image: url(../images/svg-icon-ruby.png); }
+.featured > *,
+.blog > *,
+.brand > * { display: table-cell; border: 1px solid #ECECEC; border-collapse: collapse; }
+
+
+/* ============================== *
+ * Section: Blog;
+ * ============================== */
+.icon-newspaper { background-image: url(../images/svg-icon-news.png); }
+
+/* ============================== *
+ * Section: About;
+ * ============================== */
+.key-photos { border: none; }
+.key-photos > div { width: 80px; height: 80px; margin-left: 80px; float: left; background-size: 100% 100%;}
+.key-photos div:nth-of-type(1) { margin: 0; background-image: url(../images/photo-Inf-01.png); }
+.key-photos div:nth-of-type(2) { margin-left: 160px; background-image: url(../images/photo-Inf-02.png); }
+.key-photos div:nth-of-type(3) { width: 160px; color: #fff; background-color: #1f4ba5;  }
+.key-photos div:nth-of-type(3)::before { width: 1em; position: relative; content: ''; background-image: url(../images/svg-icon-map.png);}
+.key-photos div:nth-of-type(4) { width: 160px; color: #fff; background-color: #1f4ba5;  }
+.key-photos div:nth-of-type(4)::before { width: 1em; position: relative; content: ''; background-image: url(../images/svg-icon-storage.png); }
+.key-photos div:nth-of-type(5) { background-image: url(../images/photo-Inf-03.png); }
+.key-photos div:nth-of-type(6) { background-image: url(../images/photo-Inf-04.png); }
+.key-photos div:nth-of-type(7) { margin: 0; background-image: url(../images/photo-Inf-05.png); }
+
+/* ============================== *
+ * Section: Brand;
+ * ============================== */
+ .brand div { position: relative; }
+ .brand img { position: absolute; left: 50%; top: 50%; transform:  scale(1.3,1.3) translate(-50%,-50%); transform-origin: top left; }
+
+ /* ============================== *
+  * Footer
+  * ============================== */
+footer > *:not(:first-child) { display: table-cell; border: 1px solid #353535; border-collapse: collapse; }
+footer > * { background-color: #222222; }
