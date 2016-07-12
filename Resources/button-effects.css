@@ -1,0 +1,119 @@
+/* ============================== *
+ * Button Visual Effect Module
+ * ⓒ Simon Seo, 2016
+ * ============================== */
+
+
+/* ============================== *
+ * Button Design
+ * ============================== */
+.button {
+	cursor: pointer;
+	border-bottom: 2px solid #939393;
+	padding: 0.65em 0.85em;
+	background-color: #ECECEC;
+	color: #122122;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.button.button-3d {
+	border-bottom:none;
+	box-shadow: 
+	1px 1px 1px #939393,
+	2px 2px 2px #939393,
+	3px 3px 3px #939393,
+	4px 4px 4px #939393,
+	5px 5px 5px #939393;
+}
+
+.button.button-3d:active {
+	border-bottom:none;
+	box-shadow: 
+	inset 1px 1px 1px #939393,
+	inset 2px 2px 2px #939393,
+	inset 3px 3px 3px #939393,
+	inset 4px 4px 4px #939393,
+	inset 5px 5px 5px #939393;
+}
+.button-round { border-radius: 3px; }
+.button-rounder { border-radius: 6px; }
+.button-roundest { border-radius: 12px; }
+
+
+
+/* ============================== *
+ * Button Slide
+ * ============================== */
+button[class*="slide-"] {
+	position: relative;
+	z-index: 1;
+	border: 2px solid #4a43af;
+	background: #4a43af;
+	color: white;
+	overflow: hidden;
+}
+button[class*="slide-"]::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	background: #6655fb;
+	transition: all 0.3s linear;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	left: 0;
+}
+button.slide-from-bottom::before { top: 100%; }
+button.slide-from-top::before { bottom: 100%; }
+button.slide-from-left::before { right: 100%; }
+button.slide-from-right::before { left: 100%; }
+button[class*="slide-"]:hover::before {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+
+/* ============================== *
+ * Button Grow
+ * ============================== */
+button[class*="grow-"] {
+	position: relative;
+	z-index: 1;
+	border: 2px solid hsl(48, 100%, 45%);
+	background: #fff;
+	color: black;
+	overflow: hidden;
+}
+button[class*="grow-"]:hover { color: white; }
+button[class*="grow-"]::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	background: hsla(48, 100%, 50%, 0.6);
+	transition: all 0.3s linear;
+	transform: scale(0);
+}
+button.grow-rectangle::before,
+button.grow-ellipse::before { 
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	left: 0; 
+}
+button.grow-rectangle:hover::before { transform: scale(1); }
+button.grow-ellipse::before {  border-radius: 50%;}
+button.grow-ellipse:hover::before { transform: scale(1.4); }
+	/* doesn't work very well with portrait mode buttons */
+button.grow-circle::before { top: 50%; left: 50%; transform: translate(-50px,-50px) scale(0); width:100px; height:100px; border-radius: 100%;}
+button.grow-circle:hover::before { transform: translate(-50px,-50px) scale(1); }
+button.grow-skew::before { transform: skewX(45deg);top: 0;bottom: 0;left: 50%; right: 50%; }
+button.grow-skew-ccw::before { transform: skewX(-45deg); top: 0;bottom: 0;left: 50%; right: 50%; }
+button.grow-skew:hover::before, 
+button.grow-skew-ccw:hover::before { left: -20%; right: -20%; }
+button.grow-spin::before { transform: p; }
+button.grow-spin:hover::before { transform: scale(1); }

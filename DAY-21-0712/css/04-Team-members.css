@@ -1,0 +1,162 @@
+/* ============================== *
+ *  Simon Seo, 2016
+ * ============================== */
+
+
+/* Layout */
+body {
+	font: 16px/1.5 "Spoqa Han Sans", Helvetica, Arial, Sans-Serif;
+}
+.container {
+	width: auto;
+}
+div { 
+	box-sizing: border-box;
+	/*border: 1px solid; */
+}
+.member-profile > * { position: relative; }
+.member-profile.text-first .member-profile-image {
+	transform: translateX(100%);
+}
+.member-profile.text-first .member-profile-text {
+	transform: translateX(-100%);
+}
+.member-profile-text {
+	/*padding: 0 1rem;*/
+}
+.wrapper-for-center-align {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1rem;
+	right: 1rem;
+	text-align: center;
+}
+
+
+/* image */
+.member-profile-image {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.member-list article:nth-of-type(1) .member-profile-image {
+	background-image: url(../images/Dolly_n_bj.jpg);
+	background-position: 39% 57%;
+	background-size: 254%;
+}
+.member-list article:nth-of-type(2) .member-profile-image {
+	background-image: url(../images/Kalvin.jpg);
+	background-position: 96% 0%;
+	background-size: 163%;
+}
+.member-list article:nth-of-type(3) .member-profile-image {
+	background-image: url(../images/Semin.jpg);
+	background-position: 0% 29%;
+	background-size: 250%;
+}
+.member-list article:nth-of-type(4) .member-profile-image {
+	background-image: url(../images/Simon.jpg);
+	background-position: 17% 8%;
+	background-size: 226%;
+}
+.member-list article:nth-of-type(5) .member-profile-image {
+	background-image: url(../images/Vincent.jpg);
+	background-position: 39% 23%;
+	background-size: 226%;
+}
+.member-list article:nth-of-type(6) .member-profile-image {
+	background-image: url(../images/Woogie.jpg);
+	background-position: 57% 1%;
+	background-size: 143%;
+}
+.member-list article:nth-of-type(7) .member-profile-image {
+	background-image: url(../images/Yangfing.jpg);
+	background-position: 32% 16%;
+	background-size: 200%;
+}
+.member-profile-image::before {
+	content: '';
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(circle, transparent, black 95%);
+}
+.member-profile:hover .member-profile-image::before {
+	background-image: none;
+}
+.member-profile:hover .member-profile-image {
+	-webkit-filter: none;
+	filter: none;
+}
+
+
+
+/* Icon */
+.icon:not(:last-of-type) {
+	margin-right: 12px;
+}
+.icon-overwatch {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/icon-overwatch-color.svg);
+	background-size: 48px 48px;
+	background-position: -12px 99%;
+}
+.icon-overwatch:hover,
+.icon-overwatch:focus {
+	background-position: -12px 0%;
+}
+.icon-facebook {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/icon-facebook.svg);
+	background-size: 48px 48px;
+	background-position: -12px 0;
+}
+.icon-facebook:hover,
+.icon-facebook:focus {
+	background-position: -12px 100%;
+}
+
+
+hr {
+	margin: 5% auto;
+	width: 15%;
+	border: none;
+	border-bottom: 1px solid #AAA;
+}
+
+.member-profile .member-profile-image::after {
+	display: block;
+	width: 0;
+	height: 0;
+	content: '';
+	position: absolute;
+	z-index: 400;
+	top: 50%;
+	transform: translateY(-50%);
+	border-style: solid;
+	border-color: transparent;
+}
+.member-profile:hover .member-profile-text {
+	background-color: #fff2e2;
+}
+.member-profile.text-first:hover .member-profile-image::after {
+	left:0;
+	border-width: 2.5rem 0 2.5rem 2rem;
+	border-left-color: #fff2e2;
+}
+.member-profile.image-first:hover .member-profile-image::after {
+	right:0;
+	border-width: 2.5rem 2rem 2.5rem 0;
+	border-right-color: #fff2e2;
+}
+
+https://maxcdn.icons8.com/iOS7/PNG/32/Logos/overwatch_filled-32.png
+
+https://maxcdn.icons8.com/Color/PNG/48/Logos/overwatch-48.png
+

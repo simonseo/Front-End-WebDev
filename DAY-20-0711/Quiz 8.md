@@ -77,3 +77,13 @@
 	  border-right: 3em solid transparent;
 	}
 	```
+	> ```css
+	> .css-triangle-to-top {
+	>   display: block;
+	>   width: 0;
+	>   height: 0;
+	>   border-bottom: 2em solid black;
+	>   border-left: 3em solid transparent;
+	>   border-right: 3em solid transparent;
+	> }
+	> ```
