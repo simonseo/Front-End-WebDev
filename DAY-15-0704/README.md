@@ -28,3 +28,4 @@
 	1. `<div class="clear"></div>`를 부모 요소의 마지막에 넣고, `.clear { clear: both; }` 를 적용시켜준다. 안 좋은 이유는 무의미한 코드이기 때문.
 	1. 부모요소에 `overflow: hidden | auto;` 간단하지만 나중에 자식요소를 부모요소 바깥에 배치시키고 싶을 때 안 보여져버림.
 	1. .clearfix 두번째 방법을 의미적으로 사용하기! 가상요소 `.clearfix::after`에 `clear: both;`를 적용시켜주면 문제 없음!
+	1. microclearfix: display table?

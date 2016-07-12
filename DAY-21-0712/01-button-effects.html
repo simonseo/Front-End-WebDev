@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Resources/Initialization/ress.css">
+	<link rel="stylesheet" href="../Resources/button-effects.css">
+	<style>
+		.button {
+			font-family: Arial, sans-serif;
+			margin-top: 6rem;
+		}
+		
+		body {
+			text-align: center;
+		}
+		
+		.piggy {
+			position: absolute;
+			z-index: 400;
+			top: -69px;
+			left: -300px;
+			width: 600px;
+			height: 460px;
+			transform-origin: 100% 20%;
+			-webkit-animation: swing 3s infinite alternate ease-in-out;
+			-o-animation: swing 3s infinite alternate ease-in-out;
+			animation: swing 3s infinite alternate ease-in-out;
+		}
+		
+		@keyframes swing {
+			0% {
+				transform: rotate(-97.5deg);
+			}
+			100% {
+				transform: rotate(-7.5deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<button class="button slide-from-left button-rounder">slide from left</button>
+	<button class="button slide-from-bottom button-rounder">slide from bottom</button>
+	<button class="button slide-from-right button-rounder">slide from right</button>
+	<button class="button slide-from-top button-rounder">slide from top</button>
+
+	<div class="grow-button-set">
+		<button type="button" class="button button-round grow-rectangle">rectangle</button>
+		<button type="button" class="button button-round grow-ellipse">ellipse</button>
+		<button type="button" class="button button-round grow-circle">circle</button>
+	</div>
+	<div>
+		<button type="button" class="button button-roundest grow-skew">skew</button>
+		<button type="button" class="button button-roundest grow-skew-ccw">skew-ccw</button>
+		<button type="button" class="button button-roundest grow-spin">spin</button>
+		<button type="button" class="button button-roundest grow-spin-ccw">spin-ccw</button>
+	</div>
+
+	<div>
+		<img src="pig_PNG2215.png" alt="" class="piggy">
+	</div>
+</body>
+
+</html>

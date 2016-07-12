@@ -38,7 +38,7 @@
 
 [class*="unit-"] {
     float: left;
-    margin-right: 0px;
+    margin-right: 30px;
 }
 
 [class*="unit-"]:last-child,
@@ -47,14 +47,14 @@
     margin-right: 0;
 }
 
-.unit-1 { width: 160px; }
-.unit-2 { width: 320px; }
-.unit-3 { width: 480px; }
-.unit-4 { width: 640px; }
-.unit-5 { width: 800px; }
-.unit-6 { width: 960px; }
-.unit-7 { width: 1120px; }
-.unit-8 { width: 1280px; }
+.unit-1 { width: 130px; }
+.unit-2 { width: 290px; }
+.unit-3 { width: 450px; }
+.unit-4 { width: 610px; }
+.unit-5 { width: 770px; }
+.unit-6 { width: 930px; }
+.unit-7 { width: 1090px; }
+.unit-8 { width: 1250px; }
 
 /* ============================== *
  * Row Module
@@ -73,17 +73,26 @@
  * Push, Pull Module
  * ============================== */
 
-.grid [class*="push-"] {
+.grid [class*="push-"],
+.grid [class*="pull-"] {
     position: relative;
 }
 
-.push-1 {/* left: 160px; */}
+.push-1 { left: 160px; }
 .push-2 { left: 320px; }
 .push-3 { left: 480px; }
 .push-4 { left: 640px; }
 .push-5 { left: 800px; }
 .push-6 { left: 960px; }
 .push-7 { left: 1120px; }
+
+.pull-1 { right: 160px; }
+.pull-2 { right: 320px; }
+.pull-3 { right: 480px; }
+.pull-4 { right: 640px; }
+.pull-5 { right: 800px; }
+.pull-6 { right: 960px; }
+.pull-7 { right: 1120px; }
 
 /* ============================== *
  * Prefix, Suffix Module

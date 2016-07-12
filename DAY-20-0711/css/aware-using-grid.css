@@ -25,7 +25,7 @@ nav.gnb > ul { list-style-image: url(../images/icon-arrow-down.png); }
 nav.gnb > ul > li {float: left;margin-right: 5em;text-indent: 5px;}
 nav.util { right: 0; top:50%; transform: translateY(-50%); }
 nav.util > ul { list-style: none; }
-nav.util > ul > li {float: left;}
+nav.util > ul > li {float: left; width: 24px; height: 24px;}
 .icon-shopping-bag { background-size: 20px 20px; background-image: url(../images/svg-icon-bag.png); }
 .icon-portrait { background-size: 20px 20px; background-image: url(../images/svg-icon-face.png); }
 .icon-search { background-size: 20px 20px; background-image: url(../images/svg-icon-search.png); }
