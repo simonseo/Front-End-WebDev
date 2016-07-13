@@ -1,3 +1,7 @@
+/* ============================== *
+ * Grid System: 1280px 8 units;
+ * ============================== */
+
 .grid-container {
 	box-sizing: border-box;
     width: 1284px;

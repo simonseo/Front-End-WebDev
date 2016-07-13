@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Animation</title>
+	<style>
+		[class*="sprite-"] {
+			float: left;
+			outline: 1px solid;
+		}
+		.sprite-animation-1 {
+			width: 70px;
+			height: 110px;
+			background-image: url(css-sprite-animation-steps-ken-tatsumaki-senpuu-kyaku.png);
+			-webkit-animation: sprite-x-840 steps(12) 0.6s infinite;
+			-o-animation: sprite-x-840 steps(12) 0.6s infinite;
+			animation: sprite-x-840 steps(12) 0.6s infinite;
+		}
+		.sprite-animation-2 {
+			width: 70px;
+			height: 110px;
+			background-image: url(css-sprite-animation-steps-ken-shoryuken.png);
+			-webkit-animation: sprite-x-420 0.4s steps(6) infinite;
+			-o-animation: sprite-x-420 0.4s steps(6) infinite;
+			animation: sprite-x-420 0.4s steps(6) infinite;
+		}
+		.sprite-animation-3 {
+			width: 120px;
+			height: 182px;
+			background-image: url(css-sprite-animation-steps-adam.png);
+			-webkit-animation: sprite-x-840 0.35s steps(7) infinite;
+			-o-animation: sprite-x-840 0.35s steps(7) infinite;
+			animation: sprite-x-840 0.35s steps(7) infinite;
+		}
+		.sprite-animation-4 {
+			width: 156px;
+			height: 156px;
+			background-image: url(css-sprite-animation-steps-foxtail.png);
+			-webkit-animation: sprite-x-7176 0.5s steps(46) infinite;
+			-o-animation: sprite-x-7176 0.5s steps(46) infinite;
+			animation: sprite-x-7176 0.5s steps(46) infinite;
+		}
+
+		.sprite-animation-5 {
+			width: 40px;
+			height: 57px;
+			background-image: url(css-sprite-animation-steps-mario.png);
+			-webkit-animation: sprite-x-1040 1s steps(26) infinite;
+			-o-animation: sprite-x-1040 1s steps(26) infinite;
+			animation: sprite-x-1040 1s steps(26) infinite;
+		}
+		.sprite-animation-6 {
+			width: 100px;
+			height: 102px;
+			background-image: url(css-sprite-animation-steps-penguin.png);
+			-webkit-animation: sprite-x-900 steps(9) 0.5s infinite;
+			-o-animation: sprite-x-900 steps(9) 0.5s infinite;
+			animation: sprite-x-900 steps(9) 0.5s infinite;
+		}
+		.sprite-animation-7 {
+			width: 400px;
+			height: 200px;
+			background-image: url(css-sprite-animation-steps-rachel.png);
+			-webkit-animation: sprite-y-2200 steps(11) 0.3s infinite;
+			-o-animation: sprite-y-2200 steps(11) 0.3s infinite;
+			animation: sprite-y-2200 steps(11) 0.3s infinite;
+		}
+		.sprite-animation-8 {
+			width: 33px;
+			height: 43px;
+			background-image: url(../../../../../Downloads/x.gif);
+			background-position-y: -10px;
+			transform: scale(4);
+			/*background-size: 2541%;*/
+			-webkit-animation: sprite-megaman 2s timing-function delay iteration-count direction fill-mode;
+			-o-animation: sprite-megaman 2s timing-function delay iteration-count direction fill-mode;
+			animation: sprite-megaman 2s steps(18) infinite;
+		}
+
+		@keyframes sprite-megaman {
+			0% { background-position-x: -43px; }
+			100% { background-position-x: -656px; }
+		}
+		@keyframes sprite-x-840{
+			0% { background-position-x: 0px; }
+			100% { background-position-x: -840px; }
+		}
+		@keyframes sprite-x-420{
+			0% { background-position-x: 0px; }
+			100% { background-position-x: -420px; }
+		}
+		@keyframes sprite-x-900{
+			0% { background-position-x: 0px; }
+			100% { background-position-x: -900px; }
+		}
+		@keyframes sprite-x-7176{
+			0% { background-position-x: 0px; }
+			100% { background-position-x: -7176px; }
+		}
+		@keyframes sprite-x-1040{
+			0% { background-position-x: 0px; }
+			100% { background-position-x: -1040px; }
+		}
+		@keyframes sprite-y-2200 {
+			from { background-position-y: 0; }
+			to { background-position-y: -2200px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="sprite-animation-1"></div>
+	<div class="sprite-animation-2"></div>
+	<div class="sprite-animation-3"></div>
+	<div class="sprite-animation-4"></div>
+	<div class="sprite-animation-5"></div>
+	<div class="sprite-animation-6"></div>
+	<div class="sprite-animation-7"></div>
+	<div class="sprite-animation-8"></div>
+</body>
+</html>

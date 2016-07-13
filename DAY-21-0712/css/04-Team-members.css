@@ -95,7 +95,7 @@ div {
 
 /* Icon */
 .icon:not(:last-of-type) {
-	margin-right: 12px;
+	margin-right: 0.0375%;
 }
 .icon-overwatch {
 	display: inline-block;
