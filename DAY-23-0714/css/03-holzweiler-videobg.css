@@ -8,6 +8,9 @@ header {
 	background-color: hsla(255,255,255,0);
 	color: grey;
 }
+/*div, section, a, h2, p, span, nav, ul {
+	outline: 1px yellow dashed;
+}*/
 a.logo svg {
 	position: relative; z-index: 300;
 	fill: #fff;
@@ -44,9 +47,14 @@ header nav.util {
 }
 
 section.video-bg {
-	filter: contrast(140%) grayscale(100%);
+	color: #fff;
+	/*text-shadow: */
+	filter: contrast(140%) grayscale(70%);
 	position: relative;
 	z-index: 0;
+}
+section.video-bg a:focus {
+	outline: 10px dashed blue;
 }
 section.video-bg::before {
 	position: absolute;
@@ -59,4 +67,27 @@ section.video-bg::before {
 }
 section.video-bg video{
 	width: 100%;
+}
+section.video-bg .text-area {
+	color:white;
+	text-shadow: 1px 1px 1px black;
+	width: 60%;
+	font: 2em/1.5 Helvetica, Arial, Sans-Serif;
+	text-align: center;
+	position: absolute;
+	top: 18vw;
+	left: 50vw;
+	transform: translateX(-50%);
+}
+section.video-bg p {
+	font-size: 0.5em;
+}
+.icon-arrow {
+	transition: all 0.25s linear;
+	transform: translateX(0%);
+	display: inline-block;
+}
+/*a:hover{ cursor: text; }*/
+a:hover span {
+	transform: translateX(100%);
 }
