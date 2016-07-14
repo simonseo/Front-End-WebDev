@@ -13,14 +13,14 @@ header {
 }*/
 a.logo svg {
 	position: relative; z-index: 300;
-	fill: #fff;
-
-	filter: drop-shadow(1px 1px 1px lightgrey);
+	fill: #333;
+	/*filter: drop-shadow(1px 1px 1px lightgrey);*/
 }
 a.logo {
 	display: block;
 	width: 400px;
 	margin: 0 auto;
+	border: none;
 }
 header nav a {
 	color: inherit;
@@ -38,12 +38,12 @@ header nav {
 	text-shadow: 1px 1px 1px lightgrey;
 }
 header nav.main {
-	left: 20%;
-	transform: translateX(-50%);
+	right: 75%;
+	/*transform: translateX(-50%);*/
 }
 header nav.util {
-	right: 20%;
-	transform: translateX(50%);
+	left: 75%;
+	/*transform: translateX(50%);*/
 }
 
 section.video-bg {
@@ -90,4 +90,8 @@ section.video-bg p {
 /*a:hover{ cursor: text; }*/
 a:hover span {
 	transform: translateX(100%);
+}
+
+@media only screen and (max-width: 900px) {
+
 }

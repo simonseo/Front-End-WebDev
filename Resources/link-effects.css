@@ -69,11 +69,16 @@ a.slide-from-bottom:focus::after { bottom: 0; }
 
 /* ============================== *
  * Underline - Fade Effect and Slide Effect
- * ============================== */'
+ * ============================== */
 
-.fade-underline {
-	border-bottom: 2px solid transparent;
+a.fade-underline {
+	border-bottom: 1px solid transparent;
+	transition: 0.35s 0.1s all;
 }
+a.fade-underline:hover {
+	border-bottom: 1px solid currentColor;
+}
+
 
 a[class*="underline-"] {
 	border-bottom: none;
