@@ -4,15 +4,28 @@
 
 
 /* Layout */
+html {
+	font-size: 1.3vw;
+}
 body {
-	font: 16px/1.5 "Spoqa Han Sans", Helvetica, Arial, Sans-Serif;
+	font: 1rem/1.5 "Spoqa Han Sans", Helvetica, Arial, Sans-Serif;
 }
 .container {
 	width: auto;
 }
 div { 
 	box-sizing: border-box;
-	/*border: 1px solid; */
+}
+[class*="unit-"] {
+	float: left;
+	/* float 쓰면 width가 줄기 때문에 강제적으로 늘려줌*/
+	width: 100%;
+	box-sizing: border-box;
+}
+.unit-1-2,.unit-2-4,.unit-3-6,.unit-4-8,.unit-6-12 { width: 50%; }
+.unit-1-4,.unit-2-8,.unit-3-12 { width: 25%; }
+.row-4 {
+	height: 25vw;
 }
 .member-profile > * { position: relative; }
 .member-profile.text-first .member-profile-image {
@@ -103,6 +116,7 @@ div {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
+	transform: scale(calc(1vw/24));
 	background-image: url(../images/icon-overwatch-color.svg);
 	background-size: 48px 48px;
 	background-position: -12px 99%;

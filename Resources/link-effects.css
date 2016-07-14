@@ -73,7 +73,7 @@ a.slide-from-bottom:focus::after { bottom: 0; }
 
 a.fade-underline {
 	border-bottom: 1px solid transparent;
-	transition: 0.35s 0.1s all;
+	transition: 0.3s all;
 }
 a.fade-underline:hover {
 	border-bottom: 1px solid currentColor;

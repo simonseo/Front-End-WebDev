@@ -14,7 +14,6 @@ header {
 a.logo svg {
 	position: relative; z-index: 300;
 	fill: #333;
-	/*filter: drop-shadow(1px 1px 1px lightgrey);*/
 }
 a.logo {
 	display: block;
@@ -48,11 +47,15 @@ header nav.util {
 
 section.video-bg {
 	color: #fff;
-	/*text-shadow: */
-	filter: contrast(140%) grayscale(70%);
 	position: relative;
 	z-index: 0;
 }
+.video-area {
+	filter: contrast(80%) grayscale(70%);
+	position: relative;
+	z-index: -100;
+}
+
 section.video-bg a:focus {
 	outline: 10px dashed blue;
 }
