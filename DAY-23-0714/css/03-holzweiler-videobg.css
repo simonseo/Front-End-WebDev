@@ -1,0 +1,62 @@
+header {
+	position: absolute;
+	z-index: 200;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	background-color: hsla(255,255,255,0);
+	color: grey;
+}
+a.logo svg {
+	position: relative; z-index: 300;
+	fill: #fff;
+
+	filter: drop-shadow(1px 1px 1px lightgrey);
+}
+a.logo {
+	display: block;
+	width: 400px;
+	margin: 0 auto;
+}
+header nav a {
+	color: inherit;
+	text-decoration: none;
+	font: 16px/1.5 Sans-Serif;
+}
+header nav li {
+	float: left;
+	margin-right: 8px;
+}
+header nav {
+	position: absolute;
+	color: white;
+	top: 50%;
+	text-shadow: 1px 1px 1px lightgrey;
+}
+header nav.main {
+	left: 20%;
+	transform: translateX(-50%);
+}
+header nav.util {
+	right: 20%;
+	transform: translateX(50%);
+}
+
+section.video-bg {
+	filter: contrast(140%) grayscale(100%);
+	position: relative;
+	z-index: 0;
+}
+section.video-bg::before {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: radial-gradient(circle, transparent, #555);
+}
+section.video-bg video{
+	width: 100%;
+}

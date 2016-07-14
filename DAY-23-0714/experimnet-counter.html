@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ol:not(:nth-of-type(2)) {
+			counter-reset: section;
+											/* Creates a new instance of the
+											section counter with each ol
+											element */
+			list-style-type: none;
+		}
+		
+		li::before {
+			counter-increment: section;		/* Increments only this instance
+											of the section counter */
+			content: counters(section, ".") " ";
+											/* Adds the value of all instances
+											of the section counter separated
+											by a ".". */
+											/* if you need to support < IE8 then
+											make sure there is no space after 
+											the ',' */
+		}
+		div::before {
+			content: counters(section, ".") " ";
+		}
+	</style>
+</head>
+
+<body>
+	<ol>
+		<li>item</li>
+		<!-- 1     -->
+		<li>item
+			<!-- 2     -->
+			<ol>
+				<li>item</li>
+				<!-- 2.1   -->
+				<li>item</li>
+				<!-- 2.2   -->
+				<li>item
+					<!-- 2.3   -->
+					<ol>
+						<li>item</li>
+						<!-- 2.3.1 -->
+						<li>item</li>
+						<!-- 2.3.2 -->
+					</ol>
+					<ol>
+						<li>item</li>
+						<!-- 2.3.1 -->
+						<li>item</li>
+						<!-- 2.3.2 -->
+						<li>item</li>
+						<!-- 2.3.3 -->
+					</ol>
+				</li>
+			</ol>
+		</li>
+	</ol>
+	<div>
+		
+	</div>
+</body>
+
+</html>

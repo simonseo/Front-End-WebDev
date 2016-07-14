@@ -7,20 +7,22 @@ make a web-based poster that interacts with the user.
 Use Animations/Transitions at your will.
 
 ###Text-align
-ta-j
-tal-j
+`ta-j`
+`tal-j`
+```css
 body {
 	-ms-text-align-last: ;
 	text-align-last: ;
 }
+```
 The last line of a paragraph is not affected by text align. You need to use text-align-last.
 
 ###Animation - sprite
 1. Photoshop > guidelines > draw frames
 1. export png > change matte color if you want to get rid of background
 
-If you use sprite images,  	
-animation: ken-kick steps(12) 2s infinite;
+If you use sprite images,
+`animation: ken-kick steps(12) 2s infinite;`
 steps and timing function can't coexist.
 
 

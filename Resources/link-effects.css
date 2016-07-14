@@ -37,8 +37,10 @@ a[class*="slide-"] {
 	vertical-align: top;
 	transition: all 1s;
 }
-a[class*="slide-"]:hover { 
+a[class*="slide-"]:hover,
+a[class*="slide-"]:focus { 
 	border-bottom-color: transparent;
+	outline:none;
 }
 a[class*="slide-"]::after {
 	position: absolute;
@@ -49,13 +51,20 @@ a[class*="slide-"]::after {
 	transition: all 1s;
 }
 a.slide-from-left::after { left: -100%; }
-a.slide-from-left:hover::after { left: 0; }
+a.slide-from-left:hover::after,
+a.slide-from-left:focus::after { left: 0; }
+
 a.slide-from-right::after { right: -100%; }
-a.slide-from-right:hover::after { right: 0; }
+a.slide-from-right:hover::after,
+a.slide-from-right:focus::after { right: 0; }
+
 a.slide-from-top::after { top: -100%; left:0; }
-a.slide-from-top:hover::after { top: 0; }
+a.slide-from-top:hover::after,
+a.slide-from-top:focus::after { top: 0; }
+
 a.slide-from-bottom::after { bottom: -100%; left: 0; }
-a.slide-from-bottom:hover::after { bottom: 0; }
+a.slide-from-bottom:hover::after,
+a.slide-from-bottom:focus::after { bottom: 0; }
 
 
 /* ============================== *
@@ -69,6 +78,7 @@ a.slide-from-bottom:hover::after { bottom: 0; }
 a[class*="underline-"] {
 	border-bottom: none;
 	position: relative;
+	outline:none;
 	/*display: inline-block;*/
 }
 /*a[class*=underline-]::before {
@@ -96,5 +106,6 @@ a[class*=underline-]::before {
 a.underline-from-left::before { right:100%; }
 a.underline-from-right::before { left:100%; }
 a.underline-from-center::before { left: 50%; right: 50%; }
-a[class*="underline-"]:hover::before { left: 0; right: 0; /*width:100%;*/ }
+a[class*="underline-"]:hover::before,
+a[class*="underline-"]:focus::before { left: 0; right: 0;}
 

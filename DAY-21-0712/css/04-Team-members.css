@@ -83,10 +83,12 @@ div {
 	height: 100%;
 	background-image: radial-gradient(circle, transparent, black 95%);
 }
-.member-profile:hover .member-profile-image::before {
+.member-profile:hover .member-profile-image::before,
+.member-profile:focus .member-profile-image::before {
 	background-image: none;
 }
-.member-profile:hover .member-profile-image {
+.member-profile:hover .member-profile-image,
+.member-profile:focus .member-profile-image {
 	-webkit-filter: none;
 	filter: none;
 }
@@ -108,6 +110,7 @@ div {
 .icon-overwatch:hover,
 .icon-overwatch:focus {
 	background-position: -12px 0%;
+	transform: scale(1.2);
 }
 .icon-facebook {
 	display: inline-block;
@@ -142,15 +145,18 @@ hr {
 	border-style: solid;
 	border-color: transparent;
 }
-.member-profile:hover .member-profile-text {
+.member-profile:hover .member-profile-text,
+.member-profile:focus .member-profile-text {
 	background-color: #fff2e2;
 }
-.member-profile.text-first:hover .member-profile-image::after {
+.member-profile.text-first:hover .member-profile-image::after,
+.member-profile.text-first:focus .member-profile-image::after {
 	left:0;
 	border-width: 2.5rem 0 2.5rem 2rem;
 	border-left-color: #fff2e2;
 }
-.member-profile.image-first:hover .member-profile-image::after {
+.member-profile.image-first:hover .member-profile-image::after
+.member-profile.image-first:foucs .member-profile-image::after {
 	right:0;
 	border-width: 2.5rem 2rem 2.5rem 0;
 	border-right-color: #fff2e2;

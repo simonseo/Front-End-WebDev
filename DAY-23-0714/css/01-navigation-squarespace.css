@@ -1,0 +1,39 @@
+.header-container {
+    background-image: linear-gradient( 180deg, black -20%, grey 0%, transparent 25%), url(https://static1.squarespace.com/static/ta/5134cbefe4b0c6fb04df8065/8639/assets/pages/tour/overview/hero-desktop.jpg?a);
+    background-size: 100% 600px, cover;
+
+    width: 100%;
+    height: 600px;
+}
+
+.gnb {
+    width: 95%;
+    margin: 3rem;
+    position: relative;
+}
+
+
+.gnb ul { height: 24px; position: absolute; top:22px; left:400px; transform: translate(0,-50%); }
+.gnb li { float: left; margin-right: 50px; }
+
+a.underline-from-left {
+    color: white;
+    font: 16px/1.5 Arial;
+    font-weight: bold;
+}
+
+.gnb a:hover::before {
+    border-bottom-color: white;
+}
+
+h1 {
+    width: 300px;
+    height: 150px;
+}
+
+h1 a { border:none; }
+h1 a:focus { outline: 4px auto white; }
+
+header {
+    padding: 1px;
+}
