@@ -21,15 +21,6 @@ a.logo {
 	margin: 0 auto;
 	border: none;
 }
-header nav a {
-	color: inherit;
-	text-decoration: none;
-	font: 16px/1.5 Sans-Serif;
-}
-header nav li {
-	float: left;
-	margin-right: 8px;
-}
 header nav {
 	position: absolute;
 	color: white;
@@ -40,6 +31,43 @@ header nav.main {
 	right: 75%;
 	/*transform: translateX(-50%);*/
 }
+header nav a {
+	color: inherit;
+	text-decoration: none;
+	font: 16px/1.5 Sans-Serif;
+}
+header ul.depth-1 > li {
+	float: left;
+	margin-right: 8px;
+	height: 1.2em;
+	line-height: 1.2em;
+	position: relative;
+	padding-bottom: 1em;
+}
+header ul.depth-2 {
+	background-color: grey;
+	padding: 1rem;
+	position: absolute;
+	top: 1.6em;
+	left: 0;
+	display: none;
+}
+header ul.depth-2 li,
+header ul.depth-2 a {
+	height: 1em;
+	line-height: 1.5;
+	width: auto;
+}
+/* a 혹은 li에만 hover/focus을 적용하는 건 접근성 문제가 있는 방식이다! 탭 네비게이션을 할 수가 없다. 자바스크립트로 해결할 수 있다*/
+/* 4가지 원칙 중 2번째 기기 접근성 어긋남.*/
+/* 그렇다고 li에만 적용하더라도 접근성 안됨. */
+/* 미국은 접근성 심사가 매우 업격하고 벌금이 빡세다 */
+header nav ul.depth-1 a:focus + .depth-2,
+header nav ul.depth-1 a:hover + .depth-2,
+header nav ul.depth-1 > li:hover > .depth-2 {
+	display: initial;
+}
+
 header nav.util {
 	left: 75%;
 	/*transform: translateX(50%);*/
@@ -56,9 +84,9 @@ section.video-bg {
 	z-index: -100;
 }
 
-section.video-bg a:focus {
+/*section.video-bg a:focus {
 	outline: 10px dashed blue;
-}
+}*/
 section.video-bg::before {
 	position: absolute;
 	z-index: 100;
