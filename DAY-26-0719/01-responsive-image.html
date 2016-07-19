@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Responsive Imag</title>
+	<style>
+		div::before {
+			position: absolute;
+			z-index: 100;
+			color: white;
+			content: attr(class);
+		}
+		.responsive-scale img {
+			width: 100%;
+			height: auto;
+		}
+		.responsive-crop {
+			width: 100%;
+			overflow: hidden;
+		}
+		.responsive-crop img {
+			min-height: 400px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@media only screen and (min-width: 815px) {
+			.responsive-crop img {
+				min-height: unset;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="responsive-crop">
+		<img src="../DAY-15-0704/images/speaker_1.jpg" alt="">
+	</div>
+	<div class="responsive-scale">
+		<img src="../DAY-15-0704/images/speaker_1.jpg" alt="">
+	</div>
+</body>
+</html>

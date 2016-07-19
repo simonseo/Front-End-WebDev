@@ -1,0 +1,143 @@
+/* ============================== *
+ * Fluid Grid
+ * ============================== */
+
+
+
+
+/* ============================== *
+ * Flexible image
+ * ==============================
+ * [Content Image]
+ * width: 100%;
+ * height: auto;
+ * 
+ * [Maintain Original Max Size]
+ * max-width: 100%;
+ * 
+ * [BG Image]
+ * width: 100%;
+ * padding-bottom: 75%; or whatever the ratio is
+ * 
+ * [Crop Image]
+ * BG image + specify height in pixels.
+ * ============================== */
+.flex-img-4-3 {
+	width: 100%;
+	padding-bottom: 75%;
+	/*height 는 적용되지 않는다. padding의 퍼센트는 width 기준?*/
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.flex-img-16-9 {
+	width: 100%;
+	padding-bottom: 56.25%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+
+
+
+
+
+
+/* ============================== *	
+ * Flexible Video
+ * ==============================
+ * HTML5 <video>
+ *   Flexible Image 와 유사함.
+ * Youtube/Vimeo <iframe>, <object>, <embed>
+ *   감싸주는 컨테이너가 필요함. 
+ *   컨테이너의 크기를 유동성있게 만들고, 
+ *   padding을 줘서 크기를 조정해준다. 
+ *   position을 줘서 위치를 잡아준다.
+ * ============================== */
+/*.container {
+	max-height: 920px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: lightgrey;
+}*/
+.rwd-video {
+	width: 100%;
+	height: auto;
+	border: 1px solid red;
+}
+.rwd-media-container {
+	position: relative;
+	width: 100%;
+	height: 0;
+	/*padding-top: 30px; /*피요이상으로 높이가 생기면 자동으로 레터박스가 생긴다*/
+	padding-bottom: 56.25%; /* 16:9 비율 내부 영상의 사이즈를 설정해줄 수 있다*/
+}
+.rwd-media {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+}
+
+
+
+
+
+
+
+
+/* ============================== *
+ * Media Queries/Breakpoint
+ * 
+ * CSS2
+ * @media all {}
+ * @media screen {}
+ * @media print {}
+ * 
+ * CSS3
+ * @media [only|not] media-type and (condition) [and (condition)] {}
+ *
+ conditions: all, screen, print, handheld, (min-width: length), (max-width: length), (orientation: landscape|portrait), (color);
+ logical operators: only, not, ',' (comma = or), and;
+ * you can also do this directly in HTML link tag.
+ * attr: media="screen"
+ * attr: media="(max-width:480px)"
+resolution: dpi, dppx(device pixel retina - 고해상도);
+ the file is downloaded anyways though. Probably because if the file was to be downloaded every ti
+ * ============================== */
+@media
+	(-webkit-min-device-pixel-ratio: 2),
+	(-min-moz-device-pixel-ratio: 2),
+	(min-resolution: 2dppx),
+	(min-resolution: 96*2dpi) {
+		
+	}
+
+.grid-container::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+[class*="unit-"] {
+	float: left;
+	width: 100%;
+}
+
+.unit-s-1-2 { width: 50%; }
+.unit-s-1-3 { width: 33.3333%; }
+.unit-s-2-3 { width: 66.6667%; }
+
+@media only screen and (min-width:600px) {
+	.unit-m-1-2 { width: 50%; }
+	.unit-m-1-3 { width: 33.3333%; }
+	.unit-m-2-3 { width: 66.6667%; }
+}
+
+@media only screen and (min-width:900px) {
+	.unit-l-1-2 { width: 50%; }
+	.unit-l-1-3 { width: 33.3333%; }
+	.unit-l-2-3 { width: 66.6667%; }
+}
