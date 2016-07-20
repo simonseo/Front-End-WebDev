@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Isolate Float Layout</title>
+	<link rel="stylesheet" href="../Resources/Initialization/normalize.css">
+	<link rel="stylesheet" href="../Resources/common.css">
+	<link rel="stylesheet" href="../Resources/grid-static-1280-8.css">
+	<style>
+		.box {
+			width: 10.15625%;
+			height: 48px;
+			text-align: center;
+			line-height: 48px;
+			background: #313131;
+			color: #fff;
+			float: left;
+		}
+
+		.box-float {
+			margin-right: 2.34375%;
+
+		}
+		.box-isolate {
+			margin-right: -12%;
+			padding:10px;
+		}
+		.grid { margin-bottom: calc(24px * 1); }
+		.grid > :nth-child(1) { border: 1px solid white; }
+		.grid > :nth-child(2) { background-color: lightgrey; }
+		.grid > :nth-child(3) { background-color: grey; }
+		.grid > :nth-child(4) { background-color: darkgrey; }
+		[isolate-order="1"] { margin-right: 0%; }
+		[isolate-order="2"] { margin-right: 12.5%; }
+		[isolate-order="3"] { margin-right: 25%; }
+		[isolate-order="4"] { margin-right: 37.5%; }
+	</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid">
+			<div class="box box-float">box-1</div>
+			<div class="box box-float">box-2</div>
+			<div class="box box-float">box-3</div>
+			<div class="box box-float">box-4</div>
+		</div>
+		<div class="grid">
+			<div class="box box-isolate" isolate-order="1">box-A</div>
+			<div class="box box-isolate" isolate-order="2">box-B</div>
+			<div class="box box-isolate" isolate-order="3">box-C</div>
+			<div class="box box-isolate" isolate-order="4">box-D</div>
+		</div>
+	</div>
+</body>
+</html>

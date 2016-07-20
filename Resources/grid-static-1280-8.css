@@ -4,7 +4,7 @@
 
 .grid-container {
 	box-sizing: border-box;
-    width: 1284px;
+    width: 1280px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,9 +25,10 @@
     background-size: 160px 1px, 1px 24px;
 }
 
-.grid-container:hover::before {
-	content: none;
-	background: none;
+html:hover .grid-container::before {
+	/*display: none;*/
+    content: none;
+    /*background: none;*/
 }
 
 .grid::after {
