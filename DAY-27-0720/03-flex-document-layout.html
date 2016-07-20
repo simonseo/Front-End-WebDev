@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>HTML 기본 레이아웃</title>
+	<style>
+		body { margin: 0; }
+		header, footer { height: 100px; background-color: #DA4B39; }
+		section { background-color: #8967A0; order: 2; flex-basis: 300px; flex-grow: 6;  }
+		.side-A { background-color: #EF8B21; order: 1; flex-basis: 300px; flex-grow: 1; }
+		.side-B { background-color: #F4CD30; order: 3; flex-basis: 300px; flex-grow: 1; }
+		main > * { flex-shrink: 0; }
+		main { display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex; }
+
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<main>
+		<section>section</section>
+		<aside class="side-A">aside-1</aside>
+		<aside class="side-B">aside-2</aside>
+	</main>
+	<footer>
+		footer
+	</footer>
+</body>
+</html>
