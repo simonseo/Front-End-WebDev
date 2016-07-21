@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Smiley</title>
+	<style>
+		main {
+			width: 168px;
+			height: 168px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.nose::before {
+			content: '';
+			width: 16px;
+			height: 16px;
+			transform-origin: center center;
+			transform: rotateZ(45deg) translate(-50%, 0%);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: #000;
+		}
+		
+		.forehead,
+		.chin {
+			height: 12px;
+		}
+		
+		.out {
+			width: 48px;
+			background-image: linear-gradient(90deg, black, black);
+		}
+		
+		.middle {
+			width: 96px;
+			background-image: linear-gradient(90deg, black 25%, yellow 25%, yellow 75%, black 75%);
+		}
+		
+		.in {
+			width: 120px;
+			background-image: linear-gradient(90deg, black 10%, yellow 10%, yellow 90%, black 90%);
+		}
+		
+		.eyes {
+			width: 144px;
+			background-image: linear-gradient(90deg, black 12px, yellow 12px, yellow 132px, black 132px);
+			height: 24px;
+			display: flex;
+			justify-content: center;
+		}
+		
+		.nose {
+			width: 168px;
+			background-image: linear-gradient(90deg, black 12px, yellow 12px, yellow 156px, black 156px);
+			height: 48px;
+			position: relative;
+		}
+		
+		.dimple {
+			width: 144px;
+			background-image: linear-gradient(90deg, black 12px, yellow 12px, yellow 24px, black 24px, black 36px, yellow 36px, yellow 108px, black 108px, black 120px, yellow 120px, yellow 132px, black 132px);
+			height: 12px;
+		}
+		
+		.mouth {
+			width: 144px;
+			background-image: linear-gradient(90deg, black 12px, yellow 12px, yellow 36px, black 36px, black 108px, yellow 108px, yellow 132px, black 132px);
+			height: 12px;
+		}
+		/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+		
+		.visually-hidden {
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+		
+		.visually-hidden.focusable:active,
+		.visually-hidden.focusable:focus {
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1 class="visually-hidden">Face</h1>
+		<div class="forehead out"></div>
+		<div class="forehead middle"></div>
+		<div class="forehead in"></div>
+		<div class="eyes"><img src="smiley.png" alt=""></div>
+		<div class="nose"></div>
+		<div class="dimple"></div>
+		<div class="mouth"></div>
+		<div class="chin in"></div>
+		<div class="chin middle"></div>
+		<div class="chin out"></div>
+	</main>
+</body>
+
+</html>
