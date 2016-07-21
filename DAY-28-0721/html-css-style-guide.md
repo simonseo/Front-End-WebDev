@@ -10,12 +10,14 @@
 	1. Assets folder which will include any other (non-sourcecode) files that are used commonly throughout the project or any files that simply don't fit in anywhere. Examples are logos, design layout psds, simon's birthday photo, fonts, etc. This can be used as a trash bin.
 	1. Submodule folders which will each have their own folders named img and css.
 1. Aside from the common folders which can have generic names, each file and folder should have names that are self-explanatory on what their roles are. When in need of using spaces or special characters in names, it is recommended to replace them with hyphens.
-이름
-GIT
 
 
-HTML
-html5
+##HTML
+1. Use HTML5 syntax. It is important to abide by Web Standards, to markup symantically, to follow Web Accessibility guidelines, and to be practical. If there comes a trade off situation, value them in the following order
+	1. Follow Web Accessibility Guidelines
+	1. Be Practical. Do what must be done.
+	1. Markup symantically
+	1. 
 doctype
 meta 위치
 line break
