@@ -14,14 +14,15 @@
 
 ##HTML
 ###HTML5
-1. Use HTML5 syntax and doctype (`<!DOCTYPE html>`). It is important to abide by Web Standards, to markup symantically, to follow Web Accessibility guidelines, and to be practical. If there comes a trade off situation, value them in the following order
-	1. Follow Web Accessibility Guidelines
-	1. Be Practical. Do what must be done.
-	1. Markup symantically
-	1. Follow Web Standards
+Use HTML5 syntax and doctype (`<!DOCTYPE html>`). It is important to abide by Web Standards, to markup symantically, to follow Web Accessibility guidelines, and to be practical. If there comes a trade off situation, value them in the following order:
+
+1. Follow Web Accessibility Guidelines
+1. Be Practical. Do what must be done.
+1. Markup symantically
+1. Follow Web Standards
 
 ###Positioning of HTML fundamental elements
-1. Template guide adapted from [Matej Janovcik](http://stackoverflow.com/users/763948/matej-janov%c4%8d%c3%adk)'s template. The most fundamental points are to keep the meta elements `http-equiv` and `charset` before the title, and to load the stylesheet as early as possible. Other meta elements and script elements can be placed where deemed necessary.
+Template guide adapted from [Matej Janovcik](http://stackoverflow.com/users/763948/matej-janov%c4%8d%c3%adk)'s template. The most fundamental points are to keep the meta elements `http-equiv` and `charset` before the title, and to load the stylesheet as early as possible. Other meta elements and script elements can be placed where deemed necessary.
 
 	```html
 	<!DOCTYPE html>
@@ -68,9 +69,13 @@
 	</html>
 	```
 
-###Line breaks and indentation
+###Line breaks
+1. Opening and closing tags of all block elements should have their own line, unless they are empty. 
+1. `<a>` elements that wrap block elements should have their own line. 
+1. Inline element tags do not need line breaks. 
+1. The `<title>` element should have its own line, but only one line -- the opening and closing tags should be on the same line.
 
-
-line break
-class naming
-
+###Indentation
+1. Indent with tab. Tab width: 4.
+1. The content/children of every block element should be indented one more level than their parent tag.
+1. `<html> > <head> + <body>` elements are exceptions. All three elements should be on the same level, for the sake of visuals.

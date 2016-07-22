@@ -1,0 +1,23 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1180px;
+}
+
+.container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, transparent 80px, rgba(204, 51, 255, 0.5) 80px);
+  background-size: 100px 24px;
+}
+
+.container :first-child {
+  margin-left: 0;
+}
+
+.container :last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=01-sass-intro.css.map */
