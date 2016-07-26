@@ -115,3 +115,54 @@ They are currently looking for consultants and software engineers. In terms of s
 웹: JQuery, JSP, PHP, CodeIgniter, MySQL 웹 2년
 마케팅: 디지털 컨테츠 기획/제작이 기본, trend research
 데이터분석: 추출, 변환, 통합, 데이터 기반 의사결정시스템, 
+
+###[Solidware](solidware.io) (2016.07.26)
+발표자: [김영한](yhkim@solidware.io) Chief Engineer
+> 솔리드웨어는 "yello Financial Group"에 속한 여러 핀테크 중 하나로, 현재 금융권에서 동업은 없다. 여의도 IFC에 위치함.
+
+####비즈니스
+- 머신러닝을 금융권에 적용함. 은행, 대부업체에서 (상품 개발/ 등급 적용)이 아니라, 데이터를 전처리하고 , 머신러닝 기법을 적용해서 예측모델을 만들어 신용등급, 대출 커트라인, 가격 등을 계산해낸다. 
+- 은행의 경우에는 데이터 반출이 안되기 때문에 on-site로 일하는 경우가 많음. 회사가 많이 비어있음. 
+- 최근에 솔루션 (다빈치 랩) 1.0을 완성함.
+
+####Team
+박사가 많고, 석사도 있고, 패스트캠퍼스 데이터사이언스 수강생도 하면 있다. (Founders are Husband and Wife <3)
+
+1. ML Science - 6 peeps
+1. Soft Eng - 4 peeps
+1. Business - 4 peeps (PM, 기획)
+
+####업무 환경
+- Backend, Frontend crossover each project
+- Self-motivated, learn from each other
+- Remote (once a week)
+- Fun projects and challenges
+
+####Tech Stack
+######Web
+- **Main** JavaScript (es6)
+- Node.js Express(koa)
+- React.js, Redux, Webpack, npm
+
+######Core
+- Linux, Docker (Frontend and Backend should both study Docker)
+- **Main** Python (not R), celery, node-celery
+- MongoDB(mongoose) GraphQL(made by fb to refine restful api)
+
+######Bridge
+- celery, node-celery, gitlab
+
+####채용과정
+######Front End
+- Need to finish a [Front-end mini project](https://github.com/davezuko/react-redux-starter-kit), within 3 weeks. This is related to their current work and is fun!
+
+######Full stack
+- Keep learning - new technology every day!
+- Work on mini projects while you're at it
+- Think UX - end users
+- Team play
+
+######ML Scientist
+- Linux (Ubuntu) + Gitlab
+- R and MATLAB are only for showing. The core is Pythin.
+- Jupyter Notebook (iPython Notebook). Testing is done in laptop environment!

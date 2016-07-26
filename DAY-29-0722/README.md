@@ -23,7 +23,7 @@ rmdir /q directory| `rmdir --force <directory>` || remove directory by force |
 | `mv <file_name>.<file_extension> <new_directory>/<new_file_name>.<file_extension>` || move and rename |
 | `<command_line> && <command_line>` || execute multiple commands |
 cat <file> check content
-echo <content> > <file> add content? make file?
+echo <content> >> <file> add content (make file if doesn't exist)
 subl <file> open in sublime (customized)
 [CLI basic Commands]
 
