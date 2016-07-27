@@ -57,7 +57,7 @@ subl <file> open in sublime (customized)
 ```
 
 ##SASS
-.sass is the next generation of .sass. Explanation of .SASS vs .SCSS on the sass-lang.com website:
+.sass is the next generation of .scss. Explanation of .SASS vs .SCSS on the sass-lang.com website:
 > Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for “Sassy CSS”), and is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.
 >
 >The second, older syntax is known as the indented syntax (or just “.sass”). Inspired by Haml’s terseness, it’s intended for people who prefer conciseness over similarity to CSS. Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Files in the indented syntax use the extension .sass.
@@ -135,10 +135,10 @@ $ sass-convert <directory>/<file> <new_directory>/<new_file> //rubysass. convert
 	
 	```sass
 	.a
-	.b
-		&-c
-			&:focus .d
-				color: #fff
+		.b
+			&-c
+				&:focus .d
+					color: #fff
 	```
 	becomes
 	```css
@@ -149,9 +149,7 @@ $ sass-convert <directory>/<file> <new_directory>/<new_file> //rubysass. convert
 	
 ###OOSASS?
 #####Selector Inheritance: `@extend` directive, placeholder selector`%`
-If you `@extend .class#id[attr="smth"]`, the same properties that you applied to that selector will be copy-pasted. 
-
-The @extend rule throws errors when the selector mentioned does not exist. add `!optional` flag to skip extension in case there's an error.
+If you `@extend .class#id[attr="smth"]`, the same properties that you applied to that selector will be copy-pasted. The @extend rule throws errors when the selector mentioned does not exist. add `!optional` flag to skip extension in case there's an error.
 
 But there may be some properties that you only want them to exist as templates, not actual selectors. Then use the `%` selector.
 

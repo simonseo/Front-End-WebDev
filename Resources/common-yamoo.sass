@@ -1,0 +1,426 @@
+// ----
+// libsass (v3.3.6)
+// ----
+
+@import "bourbon/bourbon"
+
+/*! common.css © yamoo9.net, 2016 */
+
+// 모바일 최적화 모듈
+$setting-mobile         : true
+// 화면 감춤 모듈
+$setting-hidden         : true
+// 접근성 모듈
+$setting-a11y           : true
+// 이미지 모듈
+$setting-image          : true
+// 미디어 모듈
+$setting-media          : true
+// 폼 모듈
+$setting-form           : true
+// 타입 일반화 모듈
+$setting-type-normalize : true
+// 프린트 모듈
+$setting-print          : true
+
+
+// ----------------------------------------------------------------
+
+// rem 단위 사용 설정
+$using-rem      : true
+// 포커스 상태에서 화면에 표시되는 색상
+$focus-color    : #ff0
+// 아웃라인 두께 설정
+$outline-width  : 3px
+// 아웃라인과 요소 간격 설정
+$outline-offset : 2px
+// 반응형 미디어 컨테이너 클래스 이름 설정
+$rwd-container: rwd-media
+
+
+// ----------------------------------------------------------------
+@if $setting-mobile
+  @viewport
+    width: device-width
+    zoom: 1
+  
+  html
+    font-family: sans-serif
+    box-sizing: border-box
+    text-size-adjust: 100%
+    -webkit-font-smoothing: antialiased
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004)
+    @if $using-rem
+      $rem-unit: rem(1px)
+      text-shadow: $rem-unit $rem-unit $rem-unit rgba(0, 0, 0, 0.004)
+
+  *
+    &, &::before, &::after
+      box-sizing: inherit
+  
+  body
+    margin: 0
+  
+  article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary
+    display: block
+  
+  audio, canvas, progress, video
+    display: inline-block
+    vertical-align: baseline
+  
+  audio:not([controls])
+    display: none
+    height: 0
+  
+  template
+    display: none
+
+// ----------------------------------------------------------------
+@if $setting-hidden
+  .a11y-hidden, .visually-hidden
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    @if $using-rem
+      width: rem(1px)
+      height: rem(1px)
+      margin: rem(-1px)
+    border: 0
+    padding: 0
+  
+    &.focusable
+      &:active, &:focus
+        overflow: visible
+        clip: auto
+        position: static
+        width: auto
+        height: auto
+        margin: 0
+  
+  [hidden], .hidden
+    display: none
+    visibility: hidden
+  
+  .invisible
+    visibility: hidden
+  
+  .truncate
+    overflow: hidden
+    width: 100%
+    max-width: 100%
+    white-space: nowrap
+    text-overflow: ellipsis
+  
+  .scrollable
+    overflow-x: auto
+    overflow-y: hidden
+    max-width: 100%
+    -webkit-overflow-scrolling: touch
+
+// ----------------------------------------------------------------
+@if $setting-a11y
+  a
+    &:hover, &:active
+      outline: none
+    &:focus
+      outline: $outline-width solid $focus-color
+      @if $using-rem
+        outline-width: rem($outline-width)
+  
+  [tabindex="0"]:focus, input:focus, textarea:focus, button:focus, select:focus
+    outline: $outline-width solid $focus-color
+    @if $using-rem
+      outline-width: rem($outline-width)
+  
+  a:focus, [tabindex="0"]:focus
+    outline-offset: $outline-offset
+    @if $using-rem
+      outline-offset: rem($outline-offset)
+      
+// ----------------------------------------------------------------
+@if $setting-image
+  img
+    // IE 10-
+    border: 0
+    vertical-align: middle
+  
+  .rwd-image, .img-flex
+    display: block
+    width: 100%
+    height: auto
+  
+  .image-replacement, .ir
+    overflow: hidden
+    direction: ltr
+    text-align: left
+    text-indent: 100%
+    white-space: nowrap
+  
+  svg
+    fill: currentColor
+    &:not(:root)
+      overflow: hidden
+
+//
+@if $setting-media
+  .#{$rwd-container}
+    overflow: hidden
+    position: relative
+    width: 100%
+    margin-right: 0
+    margin-left: 0
+  
+  .#{$rwd-container}-item
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  
+  .#{$rwd-container}-1by1
+    padding-top: 100%
+  
+  .#{$rwd-container}-4by3
+    padding-top: 75%
+  
+  .#{$rwd-container}-3by2
+    padding-top: 66.6%
+  
+  .#{$rwd-container}-2by3
+    padding-top: 150%
+  
+  .#{$rwd-container}-golden
+    padding-top: 61.8%
+  
+  .#{$rwd-container}-16by9
+    padding-top: 56.25%
+  
+  .#{$rwd-container}-185by100
+    padding-top: 54.05%
+  
+  .#{$rwd-container}-24by10
+    padding-top: 41.667%
+  
+  .#{$rwd-container}-3by1
+    padding-top: 33.3333%
+  
+  .#{$rwd-container}-4by1
+    padding-top: 25%
+  
+  .#{$rwd-container}-5by1
+    padding-top: 20%
+  
+  .#{$rwd-container}-iso216
+    padding-top: 70.92%
+
+// ----------------------------------------------------------------
+@if $setting-form
+  label, .label-block
+    cursor: pointer
+    display: block
+  
+  input[type="checkbox"] + label, input[type="radio"] + label, .label-inline
+    display: inline-block
+  
+  button, input, optgroup, select, textarea
+    margin: 0
+    color: inherit
+    font: inherit
+  
+  button, input
+    overflow: visible
+  
+  button, select
+    text-transform: none
+  
+  button, html input[type="button"]
+    cursor: pointer
+    -webkit-appearance: button
+  
+  input
+    &[type="reset"], &[type="submit"]
+      cursor: pointer
+      -webkit-appearance: button
+  
+  button[disabled], html input[disabled]
+    cursor: default
+  
+  button, [type="button"], [type="reset"], [type="submit"]
+    &::-moz-focus-inner
+      border: 0
+      padding: 0
+  
+  input
+    &::-moz-focus-inner
+      border: 0
+      padding: 0
+    &[type="checkbox"], &[type="radio"]
+      padding: 0
+    &[type="number"]
+      &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+        height: auto
+    &[type="search"]
+      -webkit-appearance: textfield
+      &::-webkit-search-cancel-button, &::-webkit-search-decoration
+        -webkit-appearance: none
+        
+  button, [type="button"], [type="reset"], [type="submit"]
+    &:-moz-focusring
+      outline: 1px dotted ButtonText
+  
+  fieldset
+    border: 1px solid #c0c0c0
+    margin: 0 2px
+    padding: 0.35em 0.625em 0.75em
+    @if $using-rem
+      margin: 
+        left: rem(2px)
+        right: rem(2px)
+      border-width: rem(1px)
+  
+  legend
+    display: table
+    max-width: 100%
+    border: 0
+    padding: 0
+    color: inherit
+    white-space: normal
+  
+  textarea
+    overflow: auto
+  
+  optgroup
+    font-weight: bold
+    
+  [type="checkbox"], [type="radio"]
+    box-sizing: border-box
+    padding: 0
+  
+  [type="number"]
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+      height: auto
+    
+  [type="search"]
+    -webkit-appearance: textfield
+    outline-offset: -2px
+    @if $using-rem
+      outline-offset: rem(-2px)
+    
+  [type="search"], [type="search"]
+    &::-webkit-search-cancel-button
+      -webkit-appearance: none
+  
+  ::-webkit-input-placeholder
+    color: inherit
+    opacity: 0.54
+  
+  ::-webkit-file-upload-button
+    -webkit-appearance: button
+    font: inherit
+    
+// ----------------------------------------------------------------
+@if $setting-type-normalize
+  a
+    // IE 10 엑티브 상태의 회색 배경 제거
+    background-color: transparent
+    // iOS 8+, Safari 8+ 텍스트 링크 사이 간격 제거
+    -webkit-text-decoration-skip: objects
+    
+  abbr
+    // Firefox 39- 에서 보더 제거
+    border-bottom: none
+    // Chrome, Edge, IE, Opera, and Safari 에서 화면 처리 동일하게
+    text-decoration: underline
+    text-decoration: underline dotted
+    
+  b, strong
+    // Safari 6
+    font-weight: inherit
+    // Chrome, Edge, and Safari
+    font-weight: bolder
+    
+  dfn
+    // Android 4.3-
+    font-style: italic
+  
+  mark
+    // IE 9-
+    background-color: #ff0
+    color: #000
+    
+  small
+    font-size: 80%
+
+  sub, sup
+    font-size: 75%
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+  sub
+    bottom: -0.25em
+  sup
+    top: -0.5em
+  
+  code, kbd, pre, samp
+    font-family: monospace, monospace
+    font-size: 1em
+
+  figure
+    // IE 8
+    margin: 1em 40px
+
+  hr
+    // Firefox
+    box-sizing: content-box
+    height: 0
+    // Edge | IE
+    overflow: visible
+
+// ----------------------------------------------------------------
+@if $setting-print
+  .print-only
+    display: none
+    visibility: hidden
+  
+  @media print
+    .no-print
+      display: none
+      visibility: hidden
+    .print-only
+      display: block
+      visibility: visible
+    *
+      color: #000 !important
+      background: none transparent !important
+      box-shadow: none !important
+      text-shadow: none !important
+      &::before, &::after, &::first-letter, &::first-line
+        color: #000 !important
+        background: none transparent !important
+        box-shadow: none !important
+        text-shadow: none !important
+    a
+      text-decoration: underline
+      &:visited
+        text-decoration: underline
+      &[href]::after
+        content: " (" attr(href) ")"
+    abbr[title]::after
+      content: " (" attr(title) ")"
+    a
+      &[href^="#"]::after, &[href^="javascript:"]::after
+        content: ""
+    pre, blockquote
+      page-break-inside: avoid
+    thead
+      display: table-header-group
+    tr, img
+      page-break-inside: avoid
+    p, h1, h2, h3, h4, h5, h6
+      orphans: 3
+      widows: 3
+    h1, h2, h3, h4, h5, h6
+      page-break-after: avoid

@@ -1,0 +1,39 @@
+@import colors
+
+$l_width: 1220px
+$m_width: 960px
+$s_width: 320px
+
+$l_logo_width: 400px
+$m_logo_width: 300px
+$s_logo_width: 200px
+
+
+
+%reset-list ul,
+%reset-list ol,
+%reset-list
+	margin-top: 0
+	margin-bottom: 0
+	padding-left: 0
+	list-style-type: none
+
+%uppercase
+	text-transform: uppercase
+
+%visually-hidden
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute
+	width: 1px
+
+header nav
+	@extend %reset-list
+	@extend %uppercase
+
+section:not(.info) h2
+	@extend %visually-hidden

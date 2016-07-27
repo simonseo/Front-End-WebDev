@@ -1,0 +1,25 @@
+=triangle($direction: n, $base: 10px, $height: 10px, $color: #000)
+	&::before
+		width: 0
+		height: 0
+		content: ''
+		position: absolute
+		@if $direction == n
+			border-bottom: $height solid $color
+			border-left: ($base/2) solid transparent
+			border-right: ($base/2) solid transparent
+		@if $direction == e
+			border-right: $height solid $color
+			border-top: ($base/2) solid transparent
+			border-bottom: ($base/2) solid transparent
+		@if $direction == s
+			border-top: $height solid $color
+			border-left: ($base/2) solid transparent
+			border-right: ($base/2) solid transparent
+		@if $direction == w
+			border-left: $height solid $color
+			border-top: ($base/2) solid transparent
+			border-bottom: ($base/2) solid transparent
+		@else
+			@error "In triangle, set direction to n, e, s, w"
+

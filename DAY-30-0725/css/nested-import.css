@@ -18,3 +18,11 @@ body {
 .box {
   top: 10%;
 }
+
+@media (min-width: 800px) {
+  .box {
+    float: left;
+    padding-right: 16.66667px;
+    padding-left: 0;
+  }
+}

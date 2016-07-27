@@ -1,0 +1,17 @@
+
+$colors: (
+	"red": #c30007, 
+	"dahong": #ed1c24, 
+	"brown": #9a5f34, 
+	"white": #ffffff, 
+	"blue": #556b86, 
+	"grey": #2b2b2b
+);
+
+@function color($key) {
+	@if not map-has-key($colors, $key) {
+		@warn "Key `#{$key}` not found in $colors map."
+	}
+	@return map-get($colors, $key);
+}
+
