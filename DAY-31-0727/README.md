@@ -101,7 +101,7 @@ Mixins can receive several (unlimited) arguments by summarizing the list of argu
 	- index($list, $value) = .indexOf(list, value)
 
 
-###`background-origin` vs `background-clip`
+###background-origin vs background-clip
 수업 도중 야무선생님의 설명이 이해가 안가서 스펙을 찾아봤더니 선생님이 말씀하신 것과 다른 내용 있어서 정리해봅니다. 4줄 요약:
 
 1. clip과 origin 둘 다 background image, background color에 사용이 가능합니다.
@@ -109,19 +109,19 @@ Mixins can receive several (unlimited) arguments by summarizing the list of argu
 3. origin은 배경의 위치의 기준을 지정해줍니다. (color를 사용한 경우에는 필요가 없다.)
 배경이미지 [예시](http://codepen.io/anon/pen/RNVKvj)를 보면 이해하기 더 쉬울 것 같습니다.
 
-#####공통점
+####공통점
 - 둘 다 기본값은 `border-box`이며 `padding-box`와 `content-box`도 사용 가능하다.
 - 특정 경우에는 시각적으로 비슷해보일 수 있다.
 
-#####[background-clip](https://drafts.csswg.org/css-backgrounds-3/#the-background-clip)
+####[background-clip](https://drafts.csswg.org/css-backgrounds-3/#the-background-clip)
 배경이미지 혹은 배경색이 지정해준 박스까지만 보인다. 그 공간 안에 이미지가 다 못 들어가면 크롭/클립 된다.
 
-#####[background-origin](https://drafts.csswg.org/css-backgrounds-3/#the-background-origin)
+####[background-origin](https://drafts.csswg.org/css-backgrounds-3/#the-background-origin)
 `background-position`과 함께 사용된다. 지정해준 박스가 포지션의 기준이 된다. 예를 들어, `background-origin: padding-box`라고 설정해줬을 경우에는 `background-position`에서 '0 0'은 패딩박스의 왼쪽 위 구석이고, '100% 100%'는 패딩박스의 오른쪽 아래 구석이다.
 
 배경색은 위치를 지정해준다는게 좀 웃기다. W3C도 그렇게 생각했는지 origin은 배경색에 아무 영향이 없게 해놨다. 따라서 origin은 배경이미지에만 사용된다.
 
-#####[예시](http://codepen.io/anon/pen/RNVKvj)
+####[예시](http://codepen.io/anon/pen/RNVKvj)
 `background-position: top left`, `background-origin: border-box`, `background-clip: border-box`를 지정해주면 이미지가 보더의 왼쪽 위에 붙어버린다. 
 
 1. 이때, `background-clip: padding-box`라고 바꿔주면 이미지 위치는 그대로 있지만 보더 공간에 있는 이미지가 안 보이게 된다.
