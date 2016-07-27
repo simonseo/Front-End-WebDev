@@ -104,9 +104,9 @@ Mixins can receive several (unlimited) arguments by summarizing the list of argu
 ###background-origin vs background-clip
 수업 도중 야무선생님의 설명이 이해가 안가서 스펙을 찾아봤더니 선생님이 말씀하신 것과 다른 내용 있어서 정리해봅니다. 4줄 요약:
 
-1. clip과 origin 둘 다 background image, background color에 사용이 가능합니다.
+1. clip은 배경이미지, 배경색에 사용이 가능하고, origin은 배경이미지에만 된다.
 2. clip은 배경을 어디서 크롭하는지를 지정해주고,
-3. origin은 배경의 위치의 기준을 지정해줍니다. (color를 사용한 경우에는 필요가 없다.)
+3. origin은 배경의 위치의 기준을 지정해줍니다.
 배경이미지 [예시](http://codepen.io/anon/pen/RNVKvj)를 보면 이해하기 더 쉬울 것 같습니다.
 
 ####공통점
