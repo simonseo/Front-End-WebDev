@@ -61,11 +61,21 @@
 ####@if, @else, @else if
 There is also a built-in function if. Similar to `JS 3항식 조건문` or conditional expression or ternary operator. `color: if($main-bg == black, #fff, #000)`처럼 사용 가능. 
 ####@while, @for, @each
+```sass
+@for $i from $start through $end //through means less than or equal to
+@for $i from $start to $end //to means less than
 ```
-@for $i from $start through $end
-@for $i from $start to $end
+@for doesn't have steps in sass.
+In JavaScript, if, for, while do not have their own scope.
+```sass
+@each $obj in fb, twitter, linkedin
+@each $heading in (h1: 3rem, h2: 2rem, h3: 1.5rem)
+	#{nth($heading, 1)}
+		font-size: nth($heading, 2)
+@each $header, $size in (h1: 3rem, h2: 2rem, h3: 1.5rem)
+	#{$header}
+		font-size: $size
 ```
-
 
 
 
