@@ -11,17 +11,20 @@ workflow
 
 
 ###Operations
-
-- 사칙연산의 원리를 따른다(`+`,`-`,`*`,`/`, `%[나머지 연산자]`)
-- 폰트 속기형을 쓸 때 생각처럼 작동하지 않는다
-- 비교연산( `==`, `!=`, `<`, `>`, `<=`, `>=` )
-- 문자열도 연산할 수 있다
-
+- Use `sass -i` in ruby-sass to check this in shell. 
+- Arithmetic Operations
+	`+`,`-`,`*`,`/`, `%[나머지 연산자]` <br>
+	폰트 속기형을 쓸 때 생각처럼 작동하지 않는다
+- Color Operations
+	`+`,`-`,`*`,`/`, `%`
+- Comparison Operations
+	`==`, `!=`, `<`, `>`, `<=`, `>=`
+- String Operations (`+`)
 	```sass
 	'foo' + 'bar' // 'foobar'
 	'foo ' + 'bar' // 'foo bar'
 	```
-- boolean 연산 (and, or, not)
+- Boolean Operations (and, or, not)
 
 ###interpolation 보간법
 JavaScript ES6 (ECMAscript) `${}`
@@ -51,6 +54,7 @@ You can use `@debug`, `@error`, `@warn` to output messages in the console while 
 - mixin copy pastes a bunch of code, so this can slow down the process
 - placeholder takes up less space because it copy pastes only selectors.
 - mixin can be used for a wider range of purpose that requires variables. (eg. vendor prefix mixins)
+- Mixins can be called outside selectors.
 
 ```sass
 //Mixin: Mixins can receive (multiple) parameters. You can set default values.
@@ -77,8 +81,14 @@ main
 ```
 //It seems that "Required parameters must precede optional parameters"
 
-###Multi Mixins (or Variable Arguments 가변전달인자)
-Mixins can receive several (unlimited) arguments by summarizing the list of arguments as `$args...`. Add `...` after your first argument. These are to be treated the same. You don't need dots 
+###Multivariable Mixin (or Variable Arguments 가변전달인자)
+> Sometimes it makes sense for a mixin or function to take an unknown number of arguments. For these situations, Sass supports “variable arguments,” which are arguments at the end of a mixin or function declaration that take all leftover arguments and package them up as a list. 
+
+Mixins can receive several (unlimited) arguments by summarizing the list of arguments as `$args...`. Add `...` after your first argument. These are to be treated the same. You don't need dots <br>
+You can use them for maps too.
+
+>Variable arguments can also be used when calling a mixin. Using the same syntax, you can expand a list of values so that each value is passed as a separate argument, or expand a map of values so that each pair is treated as a keyword argument. For example:
+
 
 ###@content
 `+mixin {<content>}` 에서 컨텐츠가 믹스인 안에 `@content`로 지정해준 위치에 옮겨짐. 미디어쿼리처럼 믹스인 내부에 코드가 아주 많이 있어야 할 때, 혹은 reset-list처럼 블럭 내부의 요소에 추가적인 내용을 적어야 할 때 특히 좋을 것으로 예상된다.
@@ -93,13 +103,14 @@ Mixins can receive several (unlimited) arguments by summarizing the list of argu
 > 링크의 저자는 그 부분의 리스크를 과대평가해서, 그럴 바에는 믹스인이 항상 옳다고까지 주장하는 것 같아요
 
 ###List Functions: Sass list starts from 1
- 	- length($list)
- 	- nth($list, $n)
-	- set-nth($list, $n, $value) makes a new list with replaced value
-	- join($list1, $list2, [$separator])
-	- append($list1, $value, [$separator])
-	- index($list, $value) = .indexOf(list, value)
-
+```sass
+length($list)
+nth($list, $n)
+set-nth($list, $n, $value)	//makes a new list with replaced value
+join($list1, $list2, [$separator])
+append($list1, $value, [$separator])
+index($list, $value) 			//= .indexOf(list, value) in JS
+```
 
 ###background-origin vs background-clip
 수업 도중 야무선생님의 설명이 이해가 안가서 스펙을 찾아봤더니 선생님이 말씀하신 것과 다른 내용 있어서 정리해봅니다. 4줄 요약:
@@ -126,6 +137,7 @@ Mixins can receive several (unlimited) arguments by summarizing the list of argu
 
 1. 이때, `background-clip: padding-box`라고 바꿔주면 이미지 위치는 그대로 있지만 보더 공간에 있는 이미지가 안 보이게 된다.
 1. `background-clip: border-box`로 돌려놓고, `background-origin: padding-box`로 바꿔주면 배경이미지가 패딩박스 왼쪽 위로 옮겨진다.
+
 
 
 

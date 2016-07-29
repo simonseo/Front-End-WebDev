@@ -27,7 +27,7 @@ becomes
 ```css
 .a .b-c:focus .d {
 	color: #fff;
-}
+}	
 ```
 
 6. mixin placeholder difference
