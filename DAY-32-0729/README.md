@@ -56,7 +56,15 @@
 	RGB(296-**234**, 296-**127**, 296-**62**)를 계산해주면 보색은 RGB(62, 169, 234)가 된다. <br>
 	최대값과 최소값이 항상 뒤바뀐다.
 
-
+###Directives
+####@mixin
+####@if, @else, @else if
+There is also a built-in function if. Similar to `JS 3항식 조건문` or conditional expression or ternary operator. `color: if($main-bg == black, #fff, #000)`처럼 사용 가능. 
+####@while, @for, @each
+```
+@for $i from $start through $end
+@for $i from $start to $end
+```
 
 
 

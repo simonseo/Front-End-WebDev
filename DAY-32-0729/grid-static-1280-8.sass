@@ -1,0 +1,81 @@
+// Customizable Grid System
+// * ⓒ Simon Seo, 2016
+
+$column: 8
+$gutter: 0px
+$unit: 160px
+$container-width: $column * ($unit + $gutter) - $gutter
+$row-height: $unit
+$max-row-size: $column
+$gutter-position: split //split, before, after
+$line-height: 24px
+$fluid: true
+
+//grid
+.grid-container
+	display: flex
+	box-sizing: border-box
+	width: $container-width
+	margin:
+		left: auto
+		right: auto
+	&::before
+		content: ''
+		z-index: 9999
+		position: absolute
+		top: 0
+		left: center
+		width: $container-width
+		height: 500vh
+		background-color: rgba(#fbdb65, 0.3)
+		@if $gutter-position == after
+			background: linear-gradient( 90deg, rgba(#fbdb65, 0.3) $unit, transparent $unit ), linear-gradient( 180deg, transparent ($line-height - 1px), hsla(195, 53%, 79%, 0.3) ($line-height - 1px) )
+			-webkit-background-size: ($unit + $gutter) 1px, 1px $line-height
+			background-size: ($unit + $gutter) 1px, 1px $line-height
+	&:hover &::before
+		content: none
+	&::after
+		content: ''
+		display: block
+		clear: both
+
+//unit
+[class*="unit-"]
+	float: left
+	@if $gutter-position == after
+		margin-right: $gutter
+	@if $gutter-position == before
+		margin-left: $gutter
+
+[class*="unit-"]:last-child, .grid .last, .grid .omega
+	margin-right: 0
+
+@for $col from 1 through $column
+	.unit-#{$col}
+		width: $col * ( $unit + $gutter ) - $gutter
+
+//row
+@for $row from 1 through $max-row-size
+	.row-#{$row}
+		height: $row * $row-height
+
+//push, pull
+.grid [class*="push-"], .grid [class*="pull-"]
+	position: relative
+
+@for $col from 1 through ( $column - 1 )
+	.push-#{$col}
+		left: ( $unit + $gutter ) * ( $col )
+
+@for $col from 1 through ( $column - 1 )
+	.pull-#{$col}
+		right: ( $unit + $gutter ) * ( $col )
+
+//prefix, suffix
+@for $col from 1 through ( $column - 1 )
+	.prefix-#{$col}
+		margin-left: ( $unit + $gutter ) * ( $col )
+
+@for $col from 1 through ( $column - 1 )
+	.suffix-#{$col}
+		margin-right: ( $unit + $gutter ) * ( $col )

@@ -42,7 +42,7 @@ $ sass -i
 ####Variables: `$`
 1. State a variable with the syntax: `$var_name: value`. Sass allows hyphen `-` and underscore `_` to be treated the same in variable names. You can use `$my-nickname` and `$my_nickname` to mean the same thing.
 1. Variables can be set with a global scope inside the namespace of a selector, by adding `!global` flag at the end of a statement.
-If you modularize stylesheets and you want one file to set a default value, add the `!default` flag.
+1. If you modularize stylesheets and you want one file to set a default value, add the `!default` flag. If you mark a statement with the default flag and there aren't any statements doing the same job before, the flagged statement will take effect. If the variable was already defined previously, then the flagged statement will be ignored.
 1. If there's an error with the automatic calculator, wrap the whole expression with parentheses.
 
 ####Datatypes
