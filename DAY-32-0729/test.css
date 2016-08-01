@@ -1,0 +1,21 @@
+.grid-container::before {
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.grid-container.show-grid::before {
+  heigth: 500vh;
+  background: linear-gradient(90deg, rgba(104, 200, 222, 0.7) 81.25%, transparent 81.25%), linear-gradient(transparent 23px, red 23px);
+  background-size: 160px 24px; }
+
+.grid [class*="unit-"]::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.grid [class*="unit-"] {
+  float: left;
+  margin-right: 30px; }
