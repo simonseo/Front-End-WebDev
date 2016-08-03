@@ -1,0 +1,18 @@
+$colors: (
+	"green": #ddba76,
+	"black-text": #333333,
+	"grey-text-sm": #818181,
+	"grey-text-md": #a3a3a3,
+	"grey-line": #e8e8e8,
+	"grey-bg-3": #eaeaea,
+	"grey-bg-2": #f9f9f9,
+	"grey-bg-1": #fcfcfc,
+	"white": #ffffff,
+);
+
+@function color($key) {
+	@if not map-has-key($colors, $key) {
+		@warn "Key `#{$key}` not found in $colors map."
+	}
+	@return map-get($colors, $key);
+}

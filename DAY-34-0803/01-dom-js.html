@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div class="note-01">
+		<h2 id="heading-01">headline</h2>
+		<ul>
+			<li><a href="">item-01</a></li>
+			<li><a href="">item-02</a></li>
+			<li><a href="">item-03</a></li>
+		</ul>
+	</div>
+	<div class="note-02">
+		<h2 id="heading-02">headline</h2>
+		<ul>
+			<li><a href="">item-01</a></li>
+			<li><a href="">item-02</a></li>
+			<li><a href="">item-03</a></li>
+		</ul>
+	</div>
+	<div class="note-03">
+		<h2 id="heading-03">headline</h2>
+		<ul>
+			<li><a href="">item-01</a></li>
+			<li><a href="">item-02</a></li>
+			<li><a href="">item-03</a></li>
+		</ul>
+	</div>
+	<div class="note-04">
+		<h2 id="heading-04">headline</h2>
+		<ul>
+			<li><a href="">item-01</a></li>
+			<li><a href="">item-02</a></li>
+			<li><a href="">item-03</a></li>
+		</ul>
+	</div>
+	<script>
+		function getByTagName(name) {
+			return document.getElementsByTagName(name);
+		}
+		function getByClass(name) {
+			return document.getElementsByClassName(name);
+		}
+		function getById(id) {
+			return document.getElementById(id);
+		}
+		var h_2 = getByTagName('h2');
+		console.log(h_2);
+	</script>
+</body>
+</html>
