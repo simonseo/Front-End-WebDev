@@ -39,6 +39,11 @@
 			<li><a href="">item-03</a></li>
 		</ul>
 	</div>
+	<div>
+		<button>Submit!</button>
+		<button class="color-btn">#ff0000</button>
+		<button class="color-btn">#ffff00</button>
+	</div>
 	<script>
 		function getByTagName(name) {
 			return document.getElementsByTagName(name);
@@ -51,6 +56,56 @@
 		}
 		var h_2 = getByTagName('h2');
 		console.log(h_2);
+		//색상이 적혀진 버튼을 누르면 화면 색상이 바뀐다.
+		var btn = getByClass('color-btn');
+		var body = document.body;
+		function changeBGC () {
+			body.style.backgroundColor = this.innerHTML;
+		}
+		for (var i = 0; i < btn.length; i++) {
+			btn[i].style.backgroundColor = btn[i].innerHTML;
+			btn[i].onclick = changeBGC;
+		};
+		
+		// // 버튼에 마우스를 올리면 버튼이 화낸다
+		// var btn = getByTagName('button')[0];
+		// var btn_data;
+		// var btn_style = new Map();
+		// btn.onmouseenter = function() {
+		// 	btn_data = btn.innerHTML;
+		// 	btn_style = btn.style;
+		// 	btn.innerHTML = 'SUBMIT!!!!! PRESS ITT!!!!';
+		// 	btn.style.backgroundColor = 'blue';
+		// 	btn.style.width = '50%';
+		// 	btn.style.fontSize = '48px';
+		// 	btn.style.color = 'white';
+		// };
+		// btn.onmouseleave = function() {
+		// 	btn.innerHTML = btn_data;
+		// 	btn.style = btn_style;
+		// };
+		// //마우스가 body에 올라가면 색을 빨간색으로 바꿈
+		// var body = document.body;
+		// var head = getByTagName('h2');
+		// var innerhtmlval = [];
+		// var fsz;
+		// body.onmouseenter = function() {
+		// 	body.style.backgroundColor = '#ff0000';
+		// 	for (var i = 0; i < head.length; i++) {
+		// 		innerhtmlval[i] = head[i].innerHTML;
+		// 		fsz = head[i].style.fontSize;
+		// 		head[i].innerHTML = '까꿍!';
+		// 		head[i].style.fontSize = '56px';
+		// 	}
+		// };
+		// //마우스가 body에서 나가면 색을 없앰
+		// body.onmouseleave = function() {
+		// 	body.style.backgroundColor = '';
+		// 	for (var i = 0; i < head.length; i++) {
+		// 		head[i].innerHTML = innerhtmlval[i];
+		// 		head[i].style.fontSize = fsz;
+		// 	}
+		// };
 	</script>
 </body>
 </html>
