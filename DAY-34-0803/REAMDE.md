@@ -40,9 +40,9 @@ function consolog(str) {
 - you don't need to say 'var' every time. You can use it once and list all the variables connected with commas. This is called a singleton pattern.
 
 ###DOM Properties
-`.firstChild` - 첫번째 자식. text node도 포함이기 때문에 
-`.nodeValue`
-`.innerHTML`
+- `.firstChild` - 첫번째 자식. text node도 포함이기 때문에 
+- `.nodeValue`
+- `.innerHTML`
 
 ```javascript
 document.body.firstChild.nextSibling.innerHTML
@@ -55,16 +55,18 @@ document.body.firstChild.nextSibling.innerHTML
 ###DOM Methods
 
 
-
 ###DOM Event, Event Handler
+Insert a function to the onclick 
 ```javascript
 onclick = function () {}
 onfocus
 onmouseover - 마우스가 올라가서 움직일 때마다 작동함
+onmouseout
 onmouseenter - 마우스가 올라갈 때 한번만 작동함
+onmouseleave
 
 //Ejemplo
-//마우스가 body에 올라가면 색을 빨간색으로 바꿈
+//마우스가 body에 올라가면 색을 빨간색으로 바꿈 via inline style - edits HTML.
 body.onmouseenter = function() {
 	body.style.backgroundColor = '#ff0000';
 };
@@ -73,3 +75,6 @@ body.onmouseleave = function() {
 	body.style.backgroundColor = '';
 };
 ```
+
+`function () {}` is an `anonymous function`.
+if you save it to a variable, the variable stores a function literal.
