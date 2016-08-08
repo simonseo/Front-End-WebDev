@@ -54,3 +54,53 @@ console.log( '%c string string stirng', 'background: #222; color: #bada55');
 
 ####Scope
 In JavaScript, if, for, while do not have their own scope. Only functions do.
+
+####DOM Tree properties
+```javascript
+el.nodeName          //or .tageName is the name of the node saved as a string.
+el.nodeType
+el.nodeValue         //only for #text; others return null.
+el.parentNode
+el.parentElementNode //
+el.firstChild
+el.firstElementChild //retrieves the first element
+el.lastChild
+el.lastElementChild
+el.previousElementSibling
+el.nextElementSibling
+```
+####Node properties
+```javascript
+el.id
+el.className
+el.title //tooltip
+```
+
+####Node Attributes - Custom attributes
+```javascript
+el.getAttribute('id')	//[difference between property and attribute in JS](http://stackoverflow.com/a/10280487)
+el.getAttribute('role')
+el.getAttribute('data-container')
+el.getAttribute('aria-hidden')
+```
+####DOM Methods
+```javascript
+//get methods: array-like structure called Node-list: (유사배열) seems like an array, but is not. 
+Node.querySelectorAll('CSS Selector') //stronger version of get methods
+Node.querySelector('CSS Selector')    // == querySelectorAll()[0]
+Node.hasChildNodes()                  //https://developer.mozilla.org/ko/docs/Web/API/Node/hasChildNodes
+Node.item(0) = Node[0]
+```
+
+###Create Nodes!
+####creator methods
+```javascript
+document.createElement('p')
+document.createTextNode('strstr')
+context_node.appendChild(target_node); //appends target_node as the last child of context_node.
+```
+
+
+#####Sublime Package: Alignment
+select lines you want to align and press `ctrl+alt+A`.
+
