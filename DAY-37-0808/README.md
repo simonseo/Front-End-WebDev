@@ -98,6 +98,8 @@ Node.item(0) = Node[0]
 document.createElement('p')
 document.createTextNode('strstr')
 context_node.appendChild(target_node); //appends target_node as the last child of context_node.
+context_node.parentNode.insertBefore(target_node, context_node); //appends target_node in front of context_node. 
+                                                                 //You must provide the parent node too.
 ```
 
 

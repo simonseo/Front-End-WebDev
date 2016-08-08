@@ -18,4 +18,6 @@ console.log('made_ul'        , made_ul);
 console.log('made_ul_li'     , made_ul_li);
 console.log('made_ul_li_text', made_ul_li_text);
 
-
+Object.prototype.prependChild = function (target_node) {
+	this.insertBefore(target_node, this.firstChild);
+};
