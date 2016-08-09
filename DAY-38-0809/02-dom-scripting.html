@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Scripting</title>
+</head>
+<body>
+	<script>
+		function query(selector) {
+			return queryAll(selector)[0];
+		}
+		function queryAll(selector) {
+			if (typeof(selector) == 'string') {
+				return document.querySelectorAll(selector);
+			}
+			else {
+				console.error('내가 만든 에러 메세지');
+			}
+		}
+		function __q(selector, all) {
+			if (typeof(all) === 'undefined') {
+				console.log('triple true');
+			}
+			if (typeof(all) == 'undefined') {
+				console.log('double true');
+			}
+		}
+	</script>
+</body>
+</html>

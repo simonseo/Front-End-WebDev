@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Modal?</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+	<script>
+		var modal_data = [
+			['button', 'class', 'modal-open', 'text', 'Open Sesame'],
+			['div', 'class', 'modal'],
+			['h2', 'class', 'modal-title', 'text', 'Modal Window'],
+			['p', 'class', 'modal-desc', 'text', 'Modal Window Content....'],
+			['button', 'class', 'modal-cta', 'text', 'Send Message', 'type', 'button'],
+			['button', 'class', 'modal-close', 'aria-label', 'close modal window', 'text', 'X'],
+		]
+
+		function convertToHTML (modal_data) {
+			for (var modal_list = [], i = 0, j = 0; i < modal_data.length; i++) {
+				j = 0;
+				modal_list[i] = document.createElement(modal_data[i][j]);
+				while (!!modal_data[i][j + 1]) {
+					if (modal_data[i][j + 1] == 'text') {
+						modal_list[i].appendChild(document.createTextNode(modal_data[i][j + 2]));
+					} else {
+						modal_list[i].setAttribute(modal_data[i][j + 1], modal_data[i][j + 2]);
+					}
+					j += 2;
+				}
+			}
+			return modal_list;}
+		Object.prototype.prependChild = function(target_node) {
+};
+		function insertAfter(context_node, target_node) {
+}
+		function removeParent () {
+			this.parentNode.parentNode.removeChild(this.parentNode);
+		}
+		function getClass (className) {
+			return document.getElementsByClassName(className);
+		}
+
+		modal_list = convertToHTML(modal_data);
+		for (var i = 2; i < modal_list.length; i++) {
+			modal_list[1].appendChild(modal_list[i]);
+		}
+		document.body.insertBefore(modal_list[0], document.body.firstElementChild);
+
+			this.insertBefore(target_node, this.firstChild);
+
+			context_node.parentNode.insertBefore(target_node, context_node.nextElementSibling);
+
+
+		var btn_o = getClass('modal-open')[0];
+		btn_o.onclick = function() {
+			insertAfter(this, modal_list[1]);
+			var btn_c = getClass('modal-close')[0];
+			btn_c.onclick = removeParent;
+		}
+		var btn_msg = getClass('modal-cta')[0];
+		btn_msg.onclick = functi
+
+
+
+		// var modal = document.createElement('div');
+		// modal.setAttribute('class', 'modal');
+
+		// var modal_title = document.createElement('h2');
+		// modal_title.setAttribute('class', 'modal-title');
+		// modal_title.appendChild(document.createTextNode('Modal Window'));
+
+		// var modal_desc = document.createElement('p');
+		// modal_desc.setAttribute('class', 'modal-desc');
+		// modal_desc.appendChild(document.createTextNode('Modal Window Content....'));
+
+		// var modal_cta = document.createElement('button');
+		// modal_cta.setAttribute('class', 'modal-cta');
+		// modal_cta.appendChild(document.createTextNode('send Message'));
+
+		// var modal_close = document.createElement('button');
+		// modal_close.setAttribute('class', 'modal-close');
+		// modal_close.setAttribute('aria-label', 'close modal window');
+		// modal_close.appendChild(document.createTextNode('x'));
+
+		// modal.appendChild(modal_title);
+		// modal.appendChild(modal_desc);
+		// modal.appendChild(modal_cta);
+		// modal.appendChild(modal_close);
+		// document.body.appendChild(modal);
+	</script>
+</body>
+
+</html>
