@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Carousel</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		.cover {
+			width: 100vw;
+			height: 100vh;
+			background-color: hsla(187, 38%, 64%, 0.4);
+			background-position: center;
+			-webkit-background-size: contain;
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-end;
+			padding: 3vmin;
+			box-sizing: border-box;
+		}
+		a.carousel-option {
+			border-radius: 100%;
+			box-shadow: 1px 1px 5px black;
+			width: 15vh;
+			padding-bottom: 15vh;
+		}
+		a.carousel-option:nth-of-type(1) { background-position: 19% 30%; -webkit-background-size: 95%; background-size: 95%; }
+		a.carousel-option:nth-of-type(2) { background-position: 57% 5%; -webkit-background-size: 89%; background-size: 89%; }
+		a.carousel-option:nth-of-type(3) { background-position: 19% 9%; -webkit-background-size: 114%; background-size: 114%; }
+		a.carousel-option:nth-of-type(4) { background-position: 7% 69%; -webkit-background-size: 168%; background-size: 168%; }
+	</style>
+</head>
+<body>
+	
+	<script>
+		function convertToHTML(modal_data) {
+			for (var modal_list = [], i = 0, j = 0; i < modal_data.length; i++) {
+				j = 0;
+				modal_list[i] = document.createElement(modal_data[i][j]);
+				while (!!modal_data[i][j + 1]) {
+					if (modal_data[i][j + 1] == 'text') {
+						modal_list[i].appendChild(document.createTextNode(modal_data[i][j + 2]));
+					} else {
+						modal_list[i].setAttribute(modal_data[i][j + 1], modal_data[i][j + 2]);
+					}
+					j += 2;
+				}
+			}
+			return modal_list;
+		}
+		var modal_data = [
+			['a', 'class', 'carousel-option', 'tabindex', '1'],
+			['a', 'class', 'carousel-option', 'tabindex', '2'],
+			['a', 'class', 'carousel-option', 'tabindex', '3'],
+			['a', 'class', 'carousel-option', 'tabindex', '4'],
+			['div', 'class', 'cover'],
+		];
+		var carousel_img_list = [
+			'./image/01.jpg',
+			'./image/02.jpg',
+			'./image/03.jpg',
+			'./image/04.jpg',
+		];
+		var modal_list = convertToHTML(modal_data);
+		for (var i = 0; i < carousel_img_list.length; i++) {
+			modal_list[i].style.backgroundImage = 'url(' + carousel_img_list[i] + ')';
+			modal_list[i].onclick = function () {
+				this.parentNode.style.backgroundImage = this.style.backgroundImage;
+			};
+			modal_list[modal_list.length - 1].appendChild(modal_list[i]);
+		}
+		document.body.appendChild(modal_list[modal_list.length - 1]);
+	</script>
+</body>
+</html>

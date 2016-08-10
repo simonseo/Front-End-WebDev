@@ -6,23 +6,21 @@
 	<meta charset="UTF-8">
 	<title>Modal?</title>
 	<style>
-
+		.modal {
+			height: 500px;
+		}
 	</style>
 </head>
 
 <body>
 
 	<script>
-		var modal_data = [
-			['button', 'class', 'modal-open', 'text', 'Open Sesame'],
-			['div', 'class', 'modal'],
-			['h2', 'class', 'modal-title', 'text', 'Modal Window'],
-			['p', 'class', 'modal-desc', 'text', 'Modal Window Content....'],
-			['button', 'class', 'modal-cta', 'text', 'Send Message', 'type', 'button'],
-			['button', 'class', 'modal-close', 'aria-label', 'close modal window', 'text', 'X'],
-		]
 
-		function convertToHTML (modal_data) {
+		Object.prototype.prependChild = function(target_node) {
+			this.insertBefore(target_node, this.firstChild);
+		};
+
+		function convertToHTML(modal_data) {
 			for (var modal_list = [], i = 0, j = 0; i < modal_data.length; i++) {
 				j = 0;
 				modal_list[i] = document.createElement(modal_data[i][j]);
@@ -35,37 +33,56 @@
 					j += 2;
 				}
 			}
-			return modal_list;}
-		Object.prototype.prependChild = function(target_node) {
-};
-		function insertAfter(context_node, target_node) {
-}
-		function removeParent () {
-			this.parentNode.parentNode.removeChild(this.parentNode);
+			return modal_list;
 		}
-		function getClass (className) {
+
+		function insertAfter(context_node, target_node) {
+			if (!!context_node.nextElementSibling) {
+				context_node.parentNode.insertBefore(target_node, context_node.nextElementSibling);
+			}
+			else {
+				context_node.parentNode.appendChild(target_node);
+			}
+			console.info('inserted!');
+		}
+
+		function getClass(className) {
 			return document.getElementsByClassName(className);
 		}
 
-		modal_list = convertToHTML(modal_data);
+		function removeModal(modal) {
+			modal.parentNode.removeChild(modal);
+		}
+
+
+
+
+
+
+		var modal_data = [
+			['button', 'class', 'modal-open', 'text', 'Open Sesame'],
+			['div', 'class', 'modal'],
+			['h2', 'class', 'modal-title', 'text', 'Modal Window'],
+			['p', 'class', 'modal-desc', 'text', 'Modal Window Content....'],
+			['button', 'class', 'modal-cta', 'text', 'Send Message', 'type', 'button'],
+			['button', 'class', 'modal-close', 'aria-label', 'close modal window', 'text', 'X'],
+		]
+		var modal_list = convertToHTML(modal_data);
+		var btn_o = modal_list[0];
+		var modal_popup = modal_list[1];
 		for (var i = 2; i < modal_list.length; i++) {
-			modal_list[1].appendChild(modal_list[i]);
+			modal_popup.appendChild(modal_list[i]);
 		}
-		document.body.insertBefore(modal_list[0], document.body.firstElementChild);
-
-			this.insertBefore(target_node, this.firstChild);
-
-			context_node.parentNode.insertBefore(target_node, context_node.nextElementSibling);
-
-
-		var btn_o = getClass('modal-open')[0];
+		document.body.prependChild(btn_o);
 		btn_o.onclick = function() {
-			insertAfter(this, modal_list[1]);
+			insertAfter(this, modal_popup);
+			btn_o.style.display = 'none';
 			var btn_c = getClass('modal-close')[0];
-			btn_c.onclick = removeParent;
-		}
-		var btn_msg = getClass('modal-cta')[0];
-		btn_msg.onclick = functi
+			btn_c.onclick = function () { 
+				removeModal(btn_c.parentNode);
+				btn_o.style.display = '';
+			};
+		};
 
 
 

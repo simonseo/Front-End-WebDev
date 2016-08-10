@@ -1,0 +1,101 @@
+$colors: (
+	"blue": #0de0fc,
+);
+
+@function color($key) {
+	@if not map-has-key($colors, $key) {
+		@warn "Key `#{$key}` not found in $colors map."
+	}
+	@return map-get($colors, $key);
+}
+
+%shadow {
+	text-shadow: 0 0 5vh rgba(color('blue'),1);
+}
+
+@mixin transp_box($width, $height, $color) {
+	width: $width;
+	height: $height;
+	border: 1px solid $color;
+	color: $color;
+}
+
+@mixin opaque_box($width, $height, $color) {
+	width: $width;
+	height: $height;
+	background-color: $color;
+	color: #2c2c2c;
+	border: 0;
+}
+
+@mixin flex($direction: row, $main: center, $cross: center, $content: null) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $main;
+	align-items: $cross;
+	align-content: $content;
+}
+
+@mixin bgfilter($args...) {
+	&:after {
+		padding-right: 100%;
+		padding-bottom: 100%;
+		@for 
+	}
+}
+
+
+
+
+
+
+
+
+
+%reset-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*Type 2*/
+%clearfix {
+	&::after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+%visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+%ir {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+
+%small-caps { font-variant: small-caps; }
+%uppercase { text-transform: uppercase; }
+%lowercase { text-transform: lowercase; }
+%capitalize { text-transform: capitalize; }

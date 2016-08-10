@@ -1,0 +1,31 @@
+@import _reset.scss
+@import _common.scss
+
+body
+	@extend %uppercase
+	background-image: url('../image/Background.jpg')
+	background-size: cover
+	background-position: center center
+header
+	@include flex()
+	height: 44px
+	color: white
+	h1
+		margin: 0
+main
+	@include flex(column, center, center)
+	height: unquote("calc(100vh - 44px)")
+	form[name="sign-up"]
+		@include flex(column, center, center)
+		span
+			@extend %visually-hidden
+		input[placeholder]
+			background: none
+			@include transp_box(90vw, 8vh, color('blue'))
+			text-align: center
+		button
+			@include opaque_box(100vw, 8vh, color('blue'))
+			position: fixed
+			bottom: 0
+	a
+		@extend %reset-link
