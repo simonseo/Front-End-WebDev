@@ -8,7 +8,7 @@
 	- info
 	- error
 	- time
-	- dir
+	- `dir(object)` describes an object. Only usable in console.
 - ES6 let (지역변수 선언...이지만 약간 다르다?!), const (상수) 등의 키워드 지원 시작
 - JS comments
 	- `!<-`
