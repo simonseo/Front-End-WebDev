@@ -3,9 +3,7 @@
 ##TIL
 
 ###Strict Mode
-use strict mode when making constructor functions. `"use strict";`
-Before ES6, functions executed in the global scope regarded the window object as `this` inside a function, without having to write `window.fn()` or `this.fn`.
-After, without specifying what `this` refers to, `this` inside a function will be undefined.
+Use strict mode when making constructor functions. `"use strict";` Before ES6, functions executed in the global scope regarded the window object as `this` inside a function, without having to write `window.fn()` or `this.fn`. After, without specifying what `this` refers to, `this` inside a function will be undefined.
 
 ###Functions as FCO (First Class Objects)
 Javascript 함수는 일반 함수로서 때론 생성자 함수, 함수의 인자, 함수의 반환 값, 객체의 멤버, 배열의 원소로서 다양하게 사용된다.
@@ -52,8 +50,9 @@ arr[0] = function() {...};
 arr[0]();
 ```
 
+===
 ###Closure Function
-바깥에서는 함수 내부(Closure)의 객체를 참조할 수 없다. 그런데 클로져 내부로부터 반환된 함수(Closure Function)는 부모 함수의 스코프에 접근 가능하다.
+바깥에서는 함수 내부(Closure)의 객체를 참조할 수 없다. 그런데 클로져 내부로부터 반환된 함수(Closure Function)는 부모 함수의 스코프에 접근 가능하다. 이를 이용해서 할 수 있는게 참 많다. 여기서 보이는 예는 캡슐 탈출, 전역 변수 관리 
 >클로저 영역에서 반환된 함수 === 클로져 함수
 
 ####Example 1
@@ -77,6 +76,7 @@ countDown(); //8
 countDown(); //7
 ```
 
+===
 ####Example 2
 From the following HTML code, we want the console to log the index of an `a` link whenever it is clicked.
 
@@ -117,12 +117,13 @@ function fn(index) {
 
 for (var i = 0, l = list.length; i < l; i++) {
 	list[i].onclick = fn(index); //실행할 때는 index값을 전해줄 수 있다. 
-	                                 //순환할 당시의 index값을 탈출 시켜야함.
-	                                 //클로져를 사용하지 않으면 index가 undefined이건, 
-	                                 //루프의 마지막 값이 나온다. 
+	                             //순환할 당시의 index값을 탈출 시켜야함.
+	                             //클로져를 사용하지 않으면 index가 undefined이건, 
+	                             //루프의 마지막 값이 나온다. 
 }
 ```
 
+===
 ###IIFE Pattern (Immediately Invoked Function Expression)
 The most often used pattern in modern JS, the IIFE pattern, uses closure. This doesn't pollute the global scope. Different from normal function declaration & assignments, this pattern does not leave any trace in the global scope. This was derived because JS does not have support for differentiating between private and global members. There are several ways to make this:
 
@@ -146,6 +147,7 @@ var countDown = (function(num) {
 }(10)); //Immediately executed!
 ```
 
+===
 ####Example 2
 Let's try IIFE with the second example from above. In the original code, we had `fn`, `i`, `l`, and `list` as global variables. Ew. Let's move the declaration of the function `fn` into a closure.
 
@@ -179,7 +181,7 @@ var list = document.getElementsByTagName('a');
 ```
 Do we have just one variable? I'll go and check. (1 minute later) I just did. It works!
 
-
+===
 ###Modern JavaScript Module Pattern
 This modularizing method for frontend(different from backend, they have separate files for separate modules?) 
 
@@ -188,13 +190,14 @@ This modularizing method for frontend(different from backend, they have separate
 1. create an object in the global scope,  You can't get or set the hidden variables. You can edit variables inside our global object.
 1.  that has some of those functions.
 
-You could set the member variables to be 
+You could set the member variables to be directly in the global scope, but it can easily be edited.
 
 ```js
 //global is the window object passed to the closure.
 global.type = isType;
 global.getCSS = getStyle;
 ```
+Instead, you should create an object in the global scope that stores these functions.
 
 ```js
 function css(el, prop, value) {
@@ -208,11 +211,29 @@ function css(el, prop, value) {
 
 (function(global) {
 	'use strict';
-	var simonlib 
+	global.simonlib = {
+		"type": isType,
+		"css": css, //only open css function, not getStyle or setStyle.
+	};
 }(window));
 ```
 
+===
 ####Yahoo UX team
-Create object outside the closure.
-Inside the closure, add category objects to the object.
-Inside the categories assign functions to variables.
+1. Create object outside the closure.
+1. Inside the closure, add category objects to the object.
+1. Inside the categories assign functions to variables.
+
+```js
+var simonlib = {};
+
+(function() {
+	'use strict';
+	simonlib.check = {
+		"type": isType,
+	};
+	simonlib.style = {
+		"css": css, //only open css function, not getStyle or setStyle.
+	};
+}());
+```
