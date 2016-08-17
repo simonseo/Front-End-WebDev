@@ -185,6 +185,8 @@ In JS, like Python, `var`s in if, for, while blocks don't have their own scope. 
 1. global scope
 
 In ES6, `let` was introduced, which is a keyword used to declare a variable within if, for, and while blocks as well as function blocks.
+>let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
+>-MDN
 
 ###Comparison operators
 `===` and `!==` are strict comparison operators:

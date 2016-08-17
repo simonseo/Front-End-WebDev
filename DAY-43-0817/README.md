@@ -219,7 +219,7 @@ function css(el, prop, value) {
 ```
 
 ===
-####Yahoo UX team
+####Yahoo UI team (YUI)
 1. Create object outside the closure.
 1. Inside the closure, add category objects to the object.
 1. Inside the categories assign functions to variables.
@@ -237,3 +237,6 @@ var simonlib = {};
 	};
 }());
 ```
+
+===
+###Object
