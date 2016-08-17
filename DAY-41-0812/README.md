@@ -1,7 +1,6 @@
-new Array()
-Capitalizing the first `A` is a convention that is used to mean that it creates a object.
-
-You can make functions as constructors?
+`new Array()`
+- Capitalizing the first `A` is a convention that is used to mean that it creates a object.
+- You can make functions as constructors?
 
 Array
 You can also use strings as indices.
@@ -14,16 +13,17 @@ Object/property 추가
 
 `typeof var` or `typeof(var)`
 
-```javascript
-typeof number; //number
-typeof string; //string
-typeof boolean; //boolean
-typeof function; //function
-typeof object; //object
-typeof arrary; //object
+```js
+typeof num; //number
+typeof str; //string
+typeof bool; //boolean
+typeof fn; //function
+typeof obj; //object
+typeof arr; //object
 typeof null; //object
 typeof undefined; //undefined
 ```
+
 var instanceof object_type
 true || false
 
@@ -36,7 +36,15 @@ Object.prototype.toString.[call()](https://developer.mozilla.org/en-US/docs/Web/
 new로 만들어진 객체들은 전부 프로토타입을 공유한다.
 그 프로토타입을 접근(수정)하려면 함수.prototype이나 객체.constructor.prototype으로 가능.
 
+```js
+function isType(data) {
+	return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();
+}
+```
+
+
 Developer Menu
 add breakpoints on lines
 press F8 to go step by step
 add variables to `watch`
+

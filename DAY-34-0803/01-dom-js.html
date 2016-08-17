@@ -61,7 +61,8 @@
 		var btn = getByClass('color-btn');
 		var body = document.body;
 		function changeBGC () {
-			body.style.backgroundColor = this.innerHTML;
+			// body.style.backgroundColor = this.innerHTML;
+			body.style.backgroundColor = this.firstChild.nodeValue; //the value of this button's text node.
 		}
 		for (var i = 0; i < btn.length; i++) {
 			btn[i].style.backgroundColor = btn[i].innerHTML;

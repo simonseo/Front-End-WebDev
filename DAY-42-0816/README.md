@@ -133,6 +133,37 @@ for (var property in obj) {
 // 2. simon.property
 // 3. simon['property']
 ```
+For arrays,
+
+```javascript
+for (var index in movieList) {
+	if (movieList.hasOwnProperty(index)) {
+		console.log(movie);
+	}
+}
+```
+
+###`for ... of`
+Use for arrays. Not available for crossbrowsing. You need a transpiler to use this.
+
+```javascript
+for (var movie of movieList) {
+	console.log(movie);
+}
+```
+
+###`.forEach(function(item, index, arr) {  })`
+callback function. You can omit index and arr. In jQuery the parameters are in the order: index-item-arr. This method also exists for nodelists in Chrome.
+
+```javascript
+movieList.forEach(function(item, index) {
+		console.log('movie', index, item);
+	});
+```
+
+###`arr = arr.map(function(item, index, arr) {  })`
+map mutates items, if you return a value in the function. You map it into a new array. 
+
 
 ###with
 Used to call an object multiple times. For example, when you use `console.log()` multiple times. Or you need the properties of an object repetitively.
