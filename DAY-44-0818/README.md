@@ -39,7 +39,7 @@ for (var i=0, l=buttons.length; i<l; i++) {
 ```
 
 ###OOP: JS
-`constructor function` is the `class` of JS. All constructors (classes) have prototypes.
+`constructor function` is the `class` of JS. All constructors (classes) have prototypes. You can approach the prototype in two ways using `foo.__proto__` (only allowed in some browsers) and `foo.constructor.prototype`.
 
 Here is a constructor function Coffee:
 
@@ -49,7 +49,7 @@ function Coffee(name) {
 }
 ```
 
-To create instances, you need the `new` keyword.
+To create instances, you need the `new` keyword. All instances created (with the `new` keyword) all inherit the prototype and -
 
 ```js
 var americano = new Coffee('아뭬리카노');
@@ -91,3 +91,34 @@ Class Coffeee {
 1. Function
 1. Object
 
+###Why JS is shit
+Like some other beginner-friendly languages, JS allows unstrict typing. This is useful in simple operations, but as soon as you start
+
+```js
+num1 = (new Number(1)).valueOf(); // 1
+num2 = new Number(2)              // Number {[[PrimitiveValue]]: 2}
+// 
+isType(num1) // "number"
+isType(num2) // "number"
+// 
+num1.toString() // "1"
+num2.toString() // "2"
+// 
+typeof num1 // "number"
+typeof num2 // "object"
+// 
+num1 instanceof Number // false
+num2 instanceof Number // true
+// 
+num1.constructor // Number() { [native code] }
+num2.constructor // Number() { [native code] }
+// 
+num1.__proto__ // Number {[[PrimitiveValue]]: 0}
+num2.__proto__ // Number {[[PrimitiveValue]]: 0}
+// 
+1 == num1 // true
+2 == num2 // true
+// 
+1 === num1 // true
+2 === num2 // false
+```

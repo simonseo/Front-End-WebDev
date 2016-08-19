@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		@mixin radius($border-radius: 50%)
+  border-radius: $border-radius
+
+%position-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  
+
+
+/* 커스텀 라디오 박스 */ 
+@mixin base-radio-btn($icon-size: 100%, $icon-color: null, $icon-type: null)
+  position: relative
+  display: inline-block
+  cursor: pointer
+
+  .icon
+    display: inline-block
+
+  input[type="radio"]
+    display: none
+  
+  @if $icon-type == text
+    
+    .icon
+      @content
+      
+    input:checked + .icon
+      color: $icon-color
+      
+  @else if $icon-type == image
+    
+    .icon
+      width: $icon-size
+      padding-bottom: $icon-size
+      background: $icon-color
+      @content
+      
+      &:after
+        content: '✔'
+        opacity: 0
+        transition: all 0.2s
+        color: #fff
+        @extend %position-center
+      
+    input:checked + .icon
+      &:after
+        opacity: 1
+        
+  @else
+    
+    .icon
+      width: $icon-size
+      height: $icon-size
+      line-height: $icon-size
+      text-align: center
+      @content
+      
+    input:checked + .icon
+      background: $icon-color
+      color: #fff
+  
+
+
+
+body
+  padding: 20px
+    
+h1 
+  font-size: 18px
+  font-weight: bold
+  margin-bottom: 25px
+  
+.color-selector
+  overflow: hidden
+  margin-bottom: 50px
+  text-align: center
+  
+  li
+    float: left
+    width: 20%
+    padding: 0 3.33%
+    box-sizing: border-box
+  
+.color01
+  @include base-radio-btn(50px, #8c643c, image)
+    @include radius()
+      
+.color02
+  @include base-radio-btn(50px, #ba3337, image)
+    @include radius()
+      
+.color03
+  @include base-radio-btn(50px, #4e6a89, image)
+    @include radius()
+      
+.color04
+  @include base-radio-btn(50px, #242732, image)
+    @include radius()
+      
+.color05
+  @include base-radio-btn(50px, #c7cbd0, image)
+    
+.size
+  @include base-radio-btn(50px, #ddba76)
+    transition: all 0.2s
+    
+.size-selector
+  width: 50px
+  overflow: hidden
+  margin-bottom: 50px
+  
+  li
+    margin-bottom: 20px
+    
+.text
+  @include base-radio-btn(100%, red, text)
+	</style>
+</head>
+<body>
+	<h1>텍스트 + 아이콘 혼합 라디오 버튼</h1>
+
+<ul class="size-selector">
+  <li>
+    <label class="size">
+      <input type="radio" name="size" checked="checked" />
+      <span class="icon">S</span>
+    </label>
+  </li>
+  <li>
+    <label class="size">
+      <input type="radio" name="size" />
+      <span class="icon">M</span>
+    </label>
+  </li>
+  <li>
+    <label class="size">
+      <input type="radio" name="size" />
+      <span class="icon">L</span>
+    </label>
+  </li>
+  <li>
+    <label class="size">
+      <input type="radio" name="size" />
+      <span class="icon">XL</span>
+    </label>
+  </li>
+</ul>
+
+<h1>아이콘 only 라디오 버튼</h1>
+<ul class="color-selector">
+  <li>
+    <label class="color01">
+      <input type="radio" name="color" checked="checked" />
+      <span class="icon"></span>
+    </label>
+  </li>
+  <li>
+    <label class="color02">
+      <input type="radio" name="color" />
+      <span class="icon"></span>
+    </label>
+  </li>
+  <li>
+    <label class="color03">
+      <input type="radio" name="color" />
+      <span class="icon"></span>
+    </label>
+  </li>
+  <li>
+    <label class="color04">
+      <input type="radio" name="color" disabled />
+      <span class="icon"></span>
+      sold out
+    </label>
+  </li>
+  <li>
+    <label class="color05">
+      <input type="radio" name="color" />
+      <span class="icon"></span>
+    </label>
+  </li>
+</ul>
+
+<h1>텍스트 only 라디오 버튼</h1>
+<ul class="text-selector">
+  <li>
+    <label class="text" for="abc">
+      <input type="radio" id="abc" name="text" checked="checked" />
+      <span class="icon">Small</span>
+    </label>
+  </li>
+  <li>
+    <label class="text">
+      <input type="radio" name="text" />
+      <span class="icon">Medium</span>
+    </label>
+  </li>
+  <li>
+    <label class="text">
+      <input type="radio" name="text" />
+      <span class="icon">Large</span>
+    </label>
+  </li>
+  <li>
+    <label class="text">
+      <input type="radio" name="text" />
+      <span class="icon">X Large</span>
+    </label>
+  </li>
+</ul>
+
+</body>
+</html>
