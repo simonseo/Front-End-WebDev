@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Demo box</title>
+	<style>
+		.demo-box {
+			width: 100px;
+			height: 100px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			background-color: #000;
+			color: #fff;
+			cursor: pointer;
+		}
+		.demo-box.primary::before   { display: block; content: 'Red\n'; }
+		.demo-box.secondary::before { display: block; content: 'Green\n'; }
+		.demo-box.tertiary::before  { display: block; content: 'Blue\n'; }
+	</style>
+	<script src="../Resources/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<div class="demo-box" tabindex="1">demo box</div>
+	<script>
+		(function(global, $) {
+			'use strict';
+			$('.demo-box').on('click', function() {
+				$this = $(this);
+				$this.hasClass('primary') ? $this.removeClass('primary').addClass('secondary') : $this.hasClass('secondary') ? $this.removeClass('secondary').addClass('tertiary') : $this.hasClass('tertiary') ? $this.removeClass('tertiary').addClass('primary') : $this.addClass('primary');
+			});
+			
+		})(this, $);
+	</script>
+</body>
+</html>

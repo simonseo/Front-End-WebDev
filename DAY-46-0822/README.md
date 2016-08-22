@@ -74,6 +74,19 @@ $(this).attr('disabled', true); //diabled="disabled" XHTML 방식
 - `.prevUntil()`    Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.
 - `.siblings()`     Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
 
+###(Selector)[http://codylindley.com/jqueryselector]
+this can be used together with other CSS selectors, or as filters. 
+
+- `:first`, `:last`
+- `:odd`, `:even`
+- `:text`, `:checked`, `:selected`
+
+###.css
+`.css(prop, value)`
+`.css({prop:value})`
+`.css(prop, function(index, value) { ... })`
+
+
 ##Modernizr
 For JS and CSS. For CSS, tt detects features in the user's browser and adds classes. For JS, the `Modernizr` object will save boolean values for each function.
 
