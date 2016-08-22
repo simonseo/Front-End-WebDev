@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<script src="../Resources/jquery/dist/jquery.min.js"></script>
+	<script>window.jQuery && document.write('<p>제이쿼리 로딩에 성공했습니다.</p>');</script>
+	
+</head>
+<body>
+	<button class="change-text">Button to change text</button>
+	<p>Lolol</p>
+	<script>
+		(function(global, $) {
+			'use strict';
+			// global.setInterval(function() {
+			// 	$('p').text('이렇게 바뀌었습니다.');
+			// }, 1000)
+
+			var $button = $('.change-text');
+			$button.on('click', function() {
+				$(this).next().text('changed text');
+				$(this).prop('disabled', true); //disabled
+				$(this).attr('disabled', true); //diabled="disabled" XHTML 방식
+			});
+		})(this, this.jQuery);
+
+		
+	</script>
+</body>
+</html>
