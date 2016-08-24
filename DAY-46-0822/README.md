@@ -58,24 +58,39 @@ $(this).attr('disabled', true); //diabled="disabled" XHTML 방식
 - `$jqObject.hasClass()` Takes a string with class name and returns a boolean value.
 - `$jqObject.toggleClass()` Evaluates whether the element has the specified class: adds if not, removes if so.
 
-###Traversal
-- `.children()`     Get the children of each element in the set of matched elements, optionally filtered by a selector.
-- `.closest()`      For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
-- `.find()`         Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
-- `.next()`         Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector.
-- `.nextAll()`      Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
-- `.nextUntil()`    Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.
-- `.offsetParent()` Get the closest ancestor element that is positioned.
-- `.parent()`       Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
-- `.parents()`      Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.
-- `.parentsUntil()` Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.
-- `.prev()`         Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector.
-- `.prevAll()`      Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector.
-- `.prevUntil()`    Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.
-- `.siblings()`     Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
+###Traversal/Find
+- `.content()`         Descendent Nodes  Get everything inside. Including text nodes, element nodes, etc.
+- `.find()`            Descendent        Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
+- `.children()`        Children          Get the children of each element in the set of matched elements, optionally filtered by a selector.
+- `.next()`            Sibling           Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector.
+- `.nextAll()`         Sibling           Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
+- `.nextUntil()`       Sibling           Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.
+- `.prev()`            Sibling           Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector.
+- `.prevAll()`         Sibling           Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector.
+- `.prevUntil()`       Sibling           Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.
+- `.siblings()`        Sibling           Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
+- `.parent()`          Parent            Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
+- `.parents()`         Ancestor          Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.
+- `.parentsUntil()`    Ancestor          Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.
+- `.offsetParent()`    Ancestor          Get the closest ancestor element that is positioned.
+- `.closest()`         Ancestor          For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree. Optional context.
 
-###(Selector)[http://codylindley.com/jqueryselector]
-this can be used together with other CSS selectors, or as filters. 
+###(Selector)[http://codylindley.com/jqueryselector]: Filter vs Find
+- this can be used together with other CSS selectors, or as filters. 
+- `Filter` returns `this` that satisfies the given condition (selector, function...)
+- `Find` returns descendent elements inside `this` that satisfies the condition.
+
+####Filter
+You can have selectors or functions inside some of these
+- `.first()` First Child
+- `.last()` Last Child
+- `.eq()` nth Child
+- `.filter()` Filter by selector or function that returns a boolean value
+- `.not()`
+- `.slice()`
+
+
+
 
 - `:first`, `:last`
 - `:odd`, `:even`
@@ -85,6 +100,10 @@ this can be used together with other CSS selectors, or as filters.
 `.css(prop, value)`
 `.css({prop:value})`
 `.css(prop, function(index, value) { ... })`
+
+###Delegated Event 이벤트 위임
+
+###Data `event.data` 이벤트 데이터
 
 
 ##Modernizr
