@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var navi = document.querySelector('.demo-navgation');
+		var link_list = document.querySelectorAll('a');
+
+for (var i = 0; i < link_list.length; i++) {
+    link_list[i].onclick = (function(coke){
+        var bubble = 3 * coke;
+        return function(event){
+            event.preventDefault();
+            console.log('log i : ', i);
+            console.log('log coke : ', coke);
+            console.log('log coke with bubble : ', bubble );
+        }
+    })(i);
+}
+	</script>
+</body>
+</html>

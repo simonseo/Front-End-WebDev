@@ -52,11 +52,11 @@ $(this).prop('disabled', true); //disabled
 $(this).attr('disabled', true); //diabled="disabled" XHTML 방식
 ```
 
-###play with classes
-`$jqObject.removeClass()`
-`$jqObject.addClass()`
-`$jqObject.hasClass()`
-`$jqObject.toggleClass()`
+###Play with classes
+- `$jqObject.removeClass()` Removes all classes or removes specified class.
+- `$jqObject.addClass()` Adds specified class.
+- `$jqObject.hasClass()` Takes a string with class name and returns a boolean value.
+- `$jqObject.toggleClass()` Evaluates whether the element has the specified class: adds if not, removes if so.
 
 ###Traversal
 - `.children()`     Get the children of each element in the set of matched elements, optionally filtered by a selector.
