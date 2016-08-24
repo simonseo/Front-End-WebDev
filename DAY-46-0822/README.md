@@ -1,6 +1,6 @@
 ######Front End Web Development School
 
-##jQuery
+##jQuery Basics
 ###`$ function`
 Is an alias of the jQuery() function. `jQuery` and `$` are a 'factory' function, which means it takes care of different arguments in different ways on its own and creates a jQuery object. Smart... but dangerous? Obviously, `$` is a function and `$()` is an object.
 
@@ -19,15 +19,20 @@ To avoid conflict with other libraries, you can:
 ###`global`
 IIFE에서 global를 사용하지 않으면 scope chain을 뒤져야 하기 때문에 비효율적임.
 
-###Event
+##Event
 ```js
 /* 진보 이벤트 모델 (크로스 브라우징)
  * W3C 표준 모델     .addEventListener(type, handler, capture);
  * MS 비표준 모델    .attachEvent('on'+type, handler);
+ * jQuery            .on('type', handler)
  * 
  * 구형 이벤트 모델  ['on'+type] = handler;
  */
 ```
+There are two types of event handlers
+
+- `.on()` executed everytime event happens
+- `.one()` executed once
 
 ```js
 // $button.click(function() {
@@ -36,27 +41,47 @@ $button.on('click', function() {
 			});
 ```
 ###load vs ready
-`$( document ).ready( handler )` DOM is ready
-`$( window ).load( handler )` Images and iframes as well as DOM are ready.
+- `$( document ).ready( handler )` DOM is ready
+- `$( window ).load( handler )` Images and iframes as well as DOM are ready.
 
 ```js
 function readyFn() { ... }
 
-$( document ).ready( readyFn ); //runs readyFn onces DOM is ready.
-$( readyFn );                   //does the same thing as above.
+$( document ).ready( readyFn );   //runs readyFn onces DOM is ready.
+$( readyFn );                     //does the same thing as above.
 ```
+###Delegated Event 이벤트 위임
 
-###Attribute vs Property
+###Data `event.data` 이벤트 데이터
 ```js
-$(this).prop('disabled', true); //disabled
-$(this).attr('disabled', true); //diabled="disabled" XHTML 방식
+$target.on('clicked', {'clickState': false}, function(e) {
+		if (!e.data.clickState) {
+			$target.wrap('<div style="outline: 2px solid yellow">');
+		}
+		else {
+			$target.unwrap();
+		}
+		e.data.clickState = !clickState;
+	});
 ```
 
-###Play with classes
-- `$jqObject.removeClass()` Removes all classes or removes specified class.
-- `$jqObject.addClass()` Adds specified class.
-- `$jqObject.hasClass()` Takes a string with class name and returns a boolean value.
-- `$jqObject.toggleClass()` Evaluates whether the element has the specified class: adds if not, removes if so.
+
+##[Selector](http://codylindley.com/jqueryselector): Filter vs Find
+- this can be used together with other CSS selectors, or as filters. 
+	- `:first`, `:last`
+	- `:odd`, `:even`
+	- `:text`, `:checked`, `:selected`
+- `Filter` returns `this` that satisfies the given condition (selector, function...)
+- `Find` returns descendent elements inside `this` that satisfies the condition.
+
+###Filter
+You can have selectors or functions inside some of these
+- `.first()` First Child
+- `.last()` Last Child
+- `.eq()` nth Child
+- `.filter()` Filter by selector or function that returns a boolean value
+- `.not()`
+- `.slice()`
 
 ###Traversal/Find
 - `.content()`         Descendent Nodes  Get everything inside. Including text nodes, element nodes, etc.
@@ -75,35 +100,102 @@ $(this).attr('disabled', true); //diabled="disabled" XHTML 방식
 - `.offsetParent()`    Ancestor          Get the closest ancestor element that is positioned.
 - `.closest()`         Ancestor          For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree. Optional context.
 
-###(Selector)[http://codylindley.com/jqueryselector]: Filter vs Find
-- this can be used together with other CSS selectors, or as filters. 
-- `Filter` returns `this` that satisfies the given condition (selector, function...)
-- `Find` returns descendent elements inside `this` that satisfies the condition.
-
-####Filter
-You can have selectors or functions inside some of these
-- `.first()` First Child
-- `.last()` Last Child
-- `.eq()` nth Child
-- `.filter()` Filter by selector or function that returns a boolean value
-- `.not()`
-- `.slice()`
+#####Play with the jQuery list-like object
+- `.add()` returns new jQuery object that has the new elements with specified selector, html, element.
+- `.addBack()` Adds back into the jQuery object, the elements that existed before being replaced by a traversal.
+- `.end()` Removes the current jQuery object and goes back to the state that existed before the last traversal.
+- `.reverse()`
 
 
-
-
-- `:first`, `:last`
-- `:odd`, `:even`
-- `:text`, `:checked`, `:selected`
+##Manipulation
 
 ###.css
-`.css(prop, value)`
-`.css({prop:value})`
-`.css(prop, function(index, value) { ... })`
+```js
+$smth.css(prop, value);
+$smth.css({
+	prop : value,
+	prop2 : value2
+	});
+$smth.css(prop, function(index, value) { ... })
 
-###Delegated Event 이벤트 위임
+```
+###Attribute vs Property
+```js
+$smth.prop('value')                     //gets properties that are dynamically changed by user
+$smth.prop('value', 'some string')      //sets property
+$smth.val('some string')                //shortform
+$smth.prop('disabled', true);           //disabled
 
-###Data `event.data` 이벤트 데이터
+$smth.attr('title')                     //gets attributes that are set by website
+$smth.attr('disabled', true);           //diabled="disabled" XHTML 방식
+```
+
+###Play with classes
+- `$jqObject.removeClass()` Removes all classes or removes specified class.
+- `$jqObject.addClass()` Adds specified class.
+- `$jqObject.hasClass()` Takes a string with class name and returns a boolean value.
+- `$jqObject.toggleClass()` Evaluates whether the element has the specified class: adds if not, removes if so.
+
+
+
+.html([HTML code | function(index, oldHTML)]) Gets HTML inside element, or Sets a new one.
+.text()
+.attr()
+
+
+####Simplify manipulation
+Using manipulation methods:
+
+```js
+$('<div>')
+	.addClass('division-template')
+	.attr({
+		'id' : 'custom-div',
+		'title' : 'template for reuse'
+	})
+	.text('Division elment content')
+	.on('click', function() {
+		console.log(this);
+	})
+	.appendTo('body');
+```
+Using the factory function:
+
+```js
+$('<div>', {
+	'attr' : {
+		'class' : 'division-template',
+		'id' : 'custom-div',
+		'title' : 'template for reuse'
+	},
+	'text' : 'Division element content',
+	'on' : {
+		'click': function() {
+			console.log(this);
+		}
+	}
+}).appendTo('body');
+```
+
+###Append methods
+```js
+A.append(B)           //A>C+B
+A.appendTo(B)         //B>C+A
+
+A.prepend(B)          //A>B+C
+A.prependTo(B)        //B>A+C
+
+A.insertBefore(B)     //A+B || A is inserted before B
+A.before(B)           //B+A || before A, insert B
+
+A.insertAfter(B)      //B+A
+A.after(B)            //A+B || after A, insert B
+```
+
+###Wrap
+.wrap() 
+.wrapAll()
+.unwrap()
 
 
 ##Modernizr
