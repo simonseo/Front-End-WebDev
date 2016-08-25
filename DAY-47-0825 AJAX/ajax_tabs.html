@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*header, aside, .page-content {*/
+		* {
+			border: 1px solid black;
+		}
+		body {
+			margin: 0;
+		}
+		.container {
+			max-width: 100vw;
+			min-height: 100vh;
+		}
+		header {
+			height: 10rem;
+
+		}
+		main {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: row;
+			transition: all 0.2s ease-in;
+
+		}
+		aside {
+			flex-basis: 3;
+			flex-shrink: 1;
+		}
+		aside ul {
+			padding: 0;
+		}
+		aside a {
+			display: block;
+			height: 10rem;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.page-content {
+			flex-basis: 7;
+			flex-shrink: 2;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Simon's page</h1>
+		</header>
+		<main>
+			<aside>
+				<ul class="article-list">
+					<li data-index="1"><a href="data/data_1.html">나랏말싸미 듕귁에 달아 문자와로 서로.</a></li>
+					<li data-index="2"><a href="data/data_2.html">나랏말싸미 듕귁에 달아 문자와로 서로.</a></li>
+					<li data-index="3"><a href="data/data_3.html">나랏말싸미 듕귁에 달아 문자와로 서로.</a></li>
+					<li data-index="4"><a href="data/data_4.html">나랏말싸미 듕귁에 달아 문자와로 서로.</a></li>
+				</ul>
+			</aside>
+			<div class="page-content">Loading content....</div>
+		</main>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/ajax_tabs.js"></script>
+</body>
+</html>

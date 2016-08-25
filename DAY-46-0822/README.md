@@ -51,10 +51,16 @@ $( document ).ready( readyFn );   //runs readyFn onces DOM is ready.
 $( readyFn );                     //does the same thing as above.
 ```
 ###Delegated Event 이벤트 위임
+Delegates the event to the parent element so that you don't have to assign the same event to the child elements.
+
+```js
+$test = $('div.test');
+$test.on('click', 'button', function() { ... })
+```
 
 ###Data `event.data` 이벤트 데이터
 ```js
-$target.on('clicked', {'clickState': false}, function(e) {
+$target.on('click', {'clickState': false}, function(e) {
 		if (!e.data.clickState) {
 			$target.wrap('<div style="outline: 2px solid yellow">');
 		}
