@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app> <!-- 예제들에는 data-가 없는 경우가 많지만 표준을 지키려면 붙여야 한다. 하는 일은 똑같다 -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body data-ng-init="application_titlename='my first app'">
+
+	<h2 data-ng-bind="application_titlename"></h2>
+	
+	<input type="text" data-ng-model="application_titlename">
+
+	<p data-ng-bind="application_titlename"></p>
+	
+	<script>
+		(function(global, ng) {
+			'use strict';
+			ng || document.write('<script src="url"><\/script>');
+			console.log('angular version: ', ng.version.full);
+		})(this, this.angular);
+	</script>
+</body>
+</html>
