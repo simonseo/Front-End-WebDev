@@ -55,6 +55,7 @@
 					return feature_map;
 				} else {
 					return feature_map[feature.toLowerCase()];
+					
 				}
 			}
 		})()

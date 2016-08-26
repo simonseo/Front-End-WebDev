@@ -39,5 +39,12 @@ Uses two way binding to update view from model and model from view
 
 MVC MVT MVVM? just MVWhatever
 $scope object updates view and model simultaneously. 
-The controllers don't know each other. Factory takes care of communication between them
+Controllers don't know each other. Factory takes care of communication between them
 
+Factories/SErvices - used for RESTful 서비스에 사용. Controller 사이 데이터 공유에 사용, 사용자 정의 로직에 사용, 싱글톤 객체. include $http which handles all AJAX.
+
+Controller - the brain that manipulates data(model)/view. Uses Factory/service to search and store data. Event Handling by view. Connects to view through $scope (controller-$scope-view).
+
+View - renders UI, including HTML and CSS. Uses directives to expand HTML. -> leads to new standard "web component"
+
+Routes - 연결 주소(address???, usually has hash: `#/path` because it means )에 컨트롤러와 뷰를 연결. You can add route parameters. kinda like url(???) Calls view and controller necessary for this address. 
