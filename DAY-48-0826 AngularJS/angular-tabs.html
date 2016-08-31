@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Tab Menu Controller</title>
+	<style>
+		.tab-content {
+			display: none;
+		}
+		.active {
+			background-color: #ff0;
+			display: initial;
+		}
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+
+</head>
+
+<body data-ng-app="myApp">
+	<div class="tab-menu" data-ng-controller="tabController" role="application">
+		<nav class="tab-control" role="tablist">
+			<button class="tab-handle" data-ng-class="{'active': isActiveTab(0)}" role="tab" data-ng-click="selectTab(0);">Flip-Flops</button>
+			<button class="tab-handle" data-ng-class="{'active': isActiveTab(1)}" role="tab" data-ng-click="selectTab(1);">Suitcases</button>
+			<button class="tab-handle" data-ng-class="{'active': isActiveTab(2)}" role="tab" data-ng-click="selectTab(2);">Fedoras</button>
+		</nav>
+		<div class="tab-content" data-ng-class="{'active': isActiveTab(0)}">
+			<h2>Flip-Flops</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, deserunt.</p>
+		</div>
+		<div class="tab-content" data-ng-class="{'active': isActiveTab(1)}">
+			<h2>Suitcases</h2>
+			<p>Harum, inventore nisi soluta amet repellendus corrupti modi dignissimos. Quibusdam.</p>
+		</div>
+		<div class="tab-content" data-ng-class="{'active': isActiveTab(2)}">
+			<h2>Fedoras</h2>
+			<p>Fuga hic ipsum, aut expedita facilis asperiores. Debitis officia, doloribus.</p>
+		</div>
+	</div>
+	
+	<script>
+		(function(global, ng) {
+			'use strict';
+			var app = ng.module('myApp', []);
+			console.log('hi');
+			app.controller('tabController', ['$scope', function($scope){
+				var $tab_menu = document.querySelector('.tab-menu');
+				var $tab_btn = document.querySelector('.tab-handle');
+
+				$scope.activeTabIdx = 0;
+				$scope.selectTab = function(idx) {
+					this.activeTabIdx = idx;
+				};
+				$scope.isActiveTab = function(idx) {
+					return this.activeTabIdx === idx;
+				}
+
+			}]);
+		})(this, this.angular);
+	</script>
+</body>
+</html>

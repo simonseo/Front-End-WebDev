@@ -41,7 +41,15 @@ MVC MVT MVVM? just MVWhatever
 $scope object updates view and model simultaneously. 
 Controllers don't know each other. Factory takes care of communication between them
 
-Factories/Services - used for RESTful 서비스에 사용. Controller 사이 데이터 공유에 사용, 사용자 정의 로직에 사용, 싱글톤 객체. include $http which handles all AJAX.
+###Factories/Services
+ - used for RESTful 서비스에 사용. Controller 사이 데이터 공유에 사용. Controller가 무슨 변화가 생기면 service의 model을 바꿔주고 그걸 다른 controller가 접근할 수 있음 사용자 정의 로직에 사용, 싱글톤 객체. include $http which handles all AJAX.
+
+Service is made of several factories. 
+- Provider
+- Factory
+- Service
+- Constant
+- Value
 
 ###Controller
 the brain that manipulates data(model) and view. Uses Factory/service (all service names start with $ sign) to search and store data. Event Handling by view. Connects to view through $scope (controller-$scope-view). Without the services, controller cannot manipulate view.
@@ -55,7 +63,7 @@ A service. Mediator. It is injected into controller. It takes to role of VM (Vie
 renders UI, including HTML and CSS. Uses ng-directives to extend HTML. -> leads to new standard "web component". Includes {{expression}}. Includes filter.  Template
 
 ####Directives
-try to write "data-" in the front.
+try to write "data-" in the front if you use it as attributes. You can also use directives in the form of element tags.
 
 1. DOM manipulation
 	- ngShow - shows stuff if condition evaluates to true
@@ -86,3 +94,12 @@ Filteridng data with Pipe (|)
 
 
 Routes - 연결 주소(address???, usually has hash: `#/path` because it means )에 컨트롤러와 뷰를 연결. You can add route parameters. kinda like url(???) Calls view and controller necessary for this address. 
+defines how the views are displayed in which order. 
+
+###Module - can be anything
+Define & get module
+
+```js
+var setNgApp = angular.module('ngApp', [module1, moduel2, ...]);
+var getNgApp = angular.module('ngApp');
+```

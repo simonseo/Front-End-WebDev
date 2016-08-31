@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body data-ng-app="ngApp">
+	
+	<div class="member-list" data-ng-controller="listController as lctrl" data-ng-cloak>
+		<pre>{{lctrl.members | json }}</pre>
+	</div>
+
+	<script>
+		(function(global, ng) {
+			'use strict';
+			var app = ng.module('ngApp', []);
+			app.controller('listController', ['$http', function($http){
+				console.log(this);
+				var ctrl = this;
+				ctrl.members = [];
+
+				// this is the long way. There are also $http.get() or .post etc
+				$http({
+					'method' : 'GET',
+					'url' : 'db/onepiece.json'
+				}).then(successAjaxCall, errorAjaxCall)
+				// if request made, initiate the then function which has two functions that will be initiated depending on whether the request was successful or not. the response data is passed as parameter.
+				
+				// the response object contains data as well as status, statustext, congif, etc.
+				function successAjaxCall(response) {
+					console.log(response);
+					ctrl.members = response.data;
+				}
+
+				function errorAjaxCall(response) {
+					console.log(response);
+					console.log('Ajax call failed');
+				}
+			}]);
+		})(this, this.angular);
+	</script>
+</body>
+</html>

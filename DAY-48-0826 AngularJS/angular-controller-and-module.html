@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>AngularJS Module/Controller</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+</head>
+<body data-ng-app="myAppName">
+	<div class="ng-template" data-ng-controller="moduleController as mCtrl">
+		<h1 class="ng-template-headline">AngularJS</h1>
+		<button class="set-content-btn" data-ng-click="mCtrl.setContent()">Fire content</button>
+		<!-- this means $scope -->
+		<p>{{ mCtrl.content }}</p>
+	</div>
+
+	<script>
+		(function(global, ng) {
+			'use strict';
+			global.moduleController = function($scope) {
+				console.log('this', this);
+				console.log('$scope', $scope);
+				console.log('ng.version.full', ng.version.full);
+				//jqlite is a module similar to jQuery that is lighter and supports IE8. 
+				//you have to ng-elementify a preselected DOM element.
+				console.log('ng.element', ng.element);
+				var template_headline = ng.element(document.querySelector('.ng-template-headline'));
+				var btn =  document.querySelector('.set-content-btn');
+				console.log('template_headline', template_headline);
+				template_headline.addClass('test_class').text('this is not jQuery. this is jqLite');
+				console.log('template_headline', template_headline);
+				var text = template_headline.text();
+
+				$scope.content = 'asdfasdf';
+
+				$scope.setContent = function() {
+					$scope.content = text;
+				};
+
+			};
+		})(this, this.angular);
+	</script>
+</body>
+</html>
