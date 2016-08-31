@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+</head>
+<body data-ng-init="
+app = {
+	'name'		: 'directive app',
+	'switch'	: 'first'
+
+};
+">
+<!-- ng-switch is applied to parent container -->
+<div class="demo-app-container" data-ng-switch="app.switch" data-ng-cloak>
+	<h1>{{app.name}}</h1>
+	<!-- ng-switch-when are the cases -->
+	<p data-ng-switch-when="true">Switch is true</p>
+	<p data-ng-switch-when="false">Switch is false</p>
+	<p data-ng-switch-when="default">Switch is default</p>
+	<p data-ng-switch-when="boolean">Switch is boolean value</p>
+	<p data-ng-switch-when="string">Switch is string value</p>
+	<p data-ng-switch-when="first">selected first option</p>
+	<!-- ng-switch-default is the default case -->
+	<p data-ng-switch-default>Switch is default2</p>
+</div>
+<div data-ng-switch="app.name">
+	<div class="demo-app-container" data-ng-cloak>
+		<h1>{{app.name}} 2</h1>
+		<p data-ng-switch-when="directive app">Switch is true</p>
+		<p data-ng-switch-when="false">Switch is false</p>
+		<p data-ng-switch-when="default">Switch is default</p>
+		<p data-ng-switch-default>Switch is default</p>
+	</div>
+</div>
+
+
+<!-- We need a controller to realise the "select option switch" function -->
+<div class="select-menu">
+	<select name="" id="">
+		<option value="first" data-ng-model="app.switch">Choose</option>
+		<option value="first" data-ng-model="app.switch">First option</option>
+		<option value="second" data-ng-model="app.switch">second option</option>
+	</select>
+</div>
+<div role="group">
+	<button data-ng-click="app.switch='first'">first</button>
+	<button data-ng-click="app.switch='second'">second</button>
+	<button data-ng-click="app.switch='third'">third</button>
+</div>
+
+</body>
+</html>

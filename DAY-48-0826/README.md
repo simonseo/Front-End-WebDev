@@ -41,10 +41,48 @@ MVC MVT MVVM? just MVWhatever
 $scope object updates view and model simultaneously. 
 Controllers don't know each other. Factory takes care of communication between them
 
-Factories/SErvices - used for RESTful 서비스에 사용. Controller 사이 데이터 공유에 사용, 사용자 정의 로직에 사용, 싱글톤 객체. include $http which handles all AJAX.
+Factories/Services - used for RESTful 서비스에 사용. Controller 사이 데이터 공유에 사용, 사용자 정의 로직에 사용, 싱글톤 객체. include $http which handles all AJAX.
 
-Controller - the brain that manipulates data(model)/view. Uses Factory/service to search and store data. Event Handling by view. Connects to view through $scope (controller-$scope-view).
+###Controller
+the brain that manipulates data(model) and view. Uses Factory/service (all service names start with $ sign) to search and store data. Event Handling by view. Connects to view through $scope (controller-$scope-view). Without the services, controller cannot manipulate view.
 
-View - renders UI, including HTML and CSS. Uses directives to expand HTML. -> leads to new standard "web component"
+####$scope
+A service. Mediator. It is injected into controller. It takes to role of VM (ViewModel)
+
+
+
+###View
+renders UI, including HTML and CSS. Uses ng-directives to extend HTML. -> leads to new standard "web component". Includes {{expression}}. Includes filter.  Template
+
+####Directives
+try to write "data-" in the front.
+
+1. DOM manipulation
+	- ngShow - shows stuff if condition evaluates to true
+	- ngHide
+	- ngView - inserts data into view?
+	- ngRepeat - for loop
+	- ngCloack - hides FOUC (flash of unstyled content, while loading content)
+	- ngSwitch - shows or hides according to the switch value of parent
+
+2. Modules/ Controllers
+	- ngApp - template assignment attribute
+	- ngController
+
+3. Data Binding
+	- ngInit - 잘 안씀
+	- ngModel - form validation 
+	- ngBind (also expression using double curly braces)
+
+4. Events
+	- ngClick
+	- ngMouseenter
+	- ngKeydown
+
+####Filter
+Sorting, 
+Formatting data, 
+Filteridng data with Pipe (|)
+
 
 Routes - 연결 주소(address???, usually has hash: `#/path` because it means )에 컨트롤러와 뷰를 연결. You can add route parameters. kinda like url(???) Calls view and controller necessary for this address. 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>AngularJS Demo part 3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<style>
+		pre{
+			background: #eee;
+		}
+	</style>
+</head>
+<body data-ng-init="
+	people = [
+		{
+			'name' : 'simon',
+			'age' : '20',
+			'email' : 'simon@simon.com',
+			'img' : 'http://placehold.it/600x200/000/fff/?text=Simon',
+			'money' : 2112,
+			'birthday' : '1996-08-08'
+		},
+		{
+			'name' : 'alice',
+			'age' : '43',
+			'email' : 'alice@simon.com',
+			'img' : 'http://placehold.it/600x200/D2D82F/fff/?text=Alice',
+			'money' : 960
+		},
+		{
+			'name' : 'bob',
+			'age' : 2,
+			'email' : 'bob@simon.com',
+			'img' : 'http://placehold.it/600x200/5D05A0/fff/?text=Bob',
+			'money' : 8448
+		}
+	];
+	reverse_order = false;
+">
+
+<label for="search_name">
+	Name
+	<input type="text" name="search_name" data-ng-model="search.name">
+</label>
+<!-- data saved in search.name -->
+<!-- We filter the results by the whole search object -->
+
+<!-- //search by age -->
+<label for="search_age">
+	Age
+	<input type="text" name="search_age" data-ng-model="search.age">
+</label>
+
+<!-- //search by money -->
+<label for="search_money">
+	Money
+	<input type="text" name="search_money" data-ng-model="search.money">
+</label>
+
+
+
+
+
+<!-- //오름차순/내림차순 -->
+<!-- <button type="button" data-ng-click="reverse_order = !reverse_order;">Reverse the order</button> -->
+<span>
+	<label>오름차순<input name="order" data-ng-click="reverse_order = true"  type="radio" checked></label>
+	<label>내림차순<input name="order" data-ng-click="reverse_order = false" type="radio"></label>
+</span>
+<!-- <div>
+	<label>오름차순<input name="order" data-ng-model="reverse_order" value="true" type="radio" checked></label>
+	<label>내림차순<input name="order" data-ng-model="reverse_order" value="false" type="radio"></label>
+</div> -->
+
+
+
+<!-- Shows Search query -->
+<pre>{{search | json }}</pre>
+
+
+
+
+<ol>
+	<li data-ng-repeat="person in people | filter : search | orderBy : 'name' : reverse_order | limitTo : 2">
+		<div data-ng-repeat="(key, value) in person ">
+			{{key | uppercase}} : {{value}}
+		</div>
+		<div>{{person.birthday | date : 'yy년 M월 d일'}}</div>
+		<div>{{person.money | currency}}</div>	
+		<div>{{person.money | currency : '‎د.إ' : 0}}</div>
+		<div>{{person.money | currency : '‎₩' : 0}}</div>
+		<!-- <img src="{{person.img}}" alt="{{person.name}}"> -->
+		<!-- the browser cannot read the source in the beginning. So angular provides a way to lazy load the src later with data-ng-src -->
+		<!-- this lacks accessibility -->
+		<img data-ng-src="{{person.img}}" alt="{{person.name}}">
+	</li>
+</ol>
+<pre>
+	<code>
+		{{people | json}}
+	</code>
+</pre>
+
+</body>
+</html>

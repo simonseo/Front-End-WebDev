@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Demo 1</title>
+	<style>
+		div {
+			min-width: 100vw;
+			min-height: 100vh;
+			background-color: {{view_color}};
+		}
+		div::before {
+			content: {{view_color}};
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<!-- You should declare variables with controllers later on. -->
+<body data-ng-init="
+my_color = '#5B0F9B';
+is_hidden = !true;
+view_color = '#D91491';
+$colors = {
+	'sunset'        : '#DA4B39',
+	'desert_sun'    : '#EF8B21',
+	'sunshine'      : '#F4CD30',
+	'avocdado'      : '#6F9A48',
+	'turquoise_sea' : '#7FBEC6',
+	'oasis'         : '#008DA9',
+	'sea_port '     : '#4198D3',
+	'amethyst'      : '#8967A0',
+	'nyu_violet'    : '#57068C'
+};
+my_style = {
+	'width' : '50%',
+	'height' : '500px',
+	'background-color' : view_color
+};
+">
+
+<button
+type="button"
+class="toggle-palette-btn"
+data-ng-click="is_hidden = !is_hidden;">
+	Palette
+	<!-- hide is the opposite of show	 -->
+	<!-- <span data-ng-hide="!is_hidden">IS Hidden </span>
+	<span data-ng-show="is_hidden">Still Hidden </span>
+	<span data-ng-show="!is_hidden">IS visible </span>
+	{{is_hidden ? 'I am invisible' : 'I am visible' }} -->
+	{{is_hidden}}
+	<!-- note that the button does not irectly control this element. It only controls a variable that controls everything else. -->
+	<span data-ng-bind="is_hidden ? 'Invisible' : 'visible';"></span>
+</button>
+
+<div class="color-palette" data-ng-show="!is_hidden">
+	팔레트가 보이고 있습ㄴ디ㅏ
+	<!-- value is html content, ng-model is js variable name -->
+	<!-- if a radio button is checked, the variable inside ng-model becomes the evaluated value of attr "value" -->
+	<label><input type="radio" data-ng-model="view_color" value="{{$colors.sunset}}">sunset</label>
+	<label><input type="radio" data-ng-model="view_color" value="{{$colors.desert_sun}}">desert_sun</label>
+	<label><input type="radio" data-ng-model="view_color" value="{{$colors.sunshine}}">sunshine</label>
+	<label><input type="radio" data-ng-model="view_color" value="{{$colors.turquoise_sea}}">turquoise_sea</label>
+	<label><input type="radio" data-ng-model="view_color" value="{{$colors.nyu_violet}}">nyu_violet</label>
+</div>
+
+<div data-ng-bind="view_color" style="background-color: {{view_color}}"></div>
+<!-- <div data-ng-bind="view_color" data-ng-style="my_style"></div> -->
+
+
+</body>
+</html>

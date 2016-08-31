@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <title>Angular Directives</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<!-- see this file not as a regular html file but as a template -->
+
+<body data-ng-app data-ng-init="
+u_id = 'simon'; 
+heroes = ['captain america', 'ironman', 'batman'];
+times = {
+        'one' : 1,
+        'twenty' : 20
+        };
+">
+    <!-- You can use javascript in expressions -->
+    <h1>Simon {{ [3, 6, 9].join(' - ') }}</h1>
+
+    <!-- one advantage of expressions is that in ng-bind, you have to use string -->
+    <p data-ng-bind="'Simon' + [3, 6, 9].join(' - ')"></p>
+
+    <p data-ng-bind="u_id + ' is ' + times['twenty'] + ' times &gt; than ' + heroes[0] "></p>
+</body>
+
+</html>
