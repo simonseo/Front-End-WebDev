@@ -51,3 +51,70 @@ These are not super enforced on to opensource devs.
 - node: package.json, nvm
 - django: requirements.txt, pyenv, virtualenv, autoenv,
 - shell: bash - zsh - oh-my-zsh - (theme)agnoster
+
+###Git
+
+
+###REST API
+REpresentation Safe Transfer API - safe and communicable way to transfer your data.
+
+| Distinction |   |       |       |       |
+|:--------|:------|:------|:------|:------|
+|CRUD	  |Create |Read   | Update| Delete|
+|HTTP/REST|Post   |Get    | Put   | Delete|
+|SQL	  |INSERT |SELECT | UPDATE| DELETE|
+
+
+
+- 버전관리 https://api.foo.com/v1/bar
+- 명사형 사용 https://foo.com/showid/ --> https://foo.com/user/
+	- A page should be named with a noun. Sign up page should not be named `create user`, but `new user`
+- 반응형 https://foo.com/m/user/, https://m.foo.com/user/ (x)
+	- Continuity is important
+- 언어코드 https://foo.com/kr/, https://kr.foo.com/ (x)
+	- don't create separate pages for different languages. Make the page detect it.
+- 응답상태 코드 (200, 400, 500)
+	- Separate page for each error codes. This gets higher scores for CEO
+
+#### Dashboard
+
+- **Admin**: Built-in or 3rd party
+- **Google Analytics**: general
+- **Firebase Analytics**: **hot**
+
+###PRocess
+
+`AWS` (lot of service. eg. Solution Architect at each branch giving advice) or `.NET`+`Azure` (.NET Used to be favored for games, but now they moved to AWS. Azure is trying to bring them back.)
+1. EC2 node server. You can increase or decrease instance
+1. S3 static files (like naver cloud) web server
+1. Cloud directs work to servers?
+
+
+### First Node application
+
+```sh
+$ touch app.js
+$ npm init
+$ vi app.js
+$ git init
+$ git add .
+$ git commit
+$ git push -u origin
+```
+
+```js
+var http = require("http");
+//http Status(200): OK, send response "hello world"
+http.createServer(function(request, response){
+    response.writeHead(200,{"Content-Type":"text/plain"});
+    response.write("hello world \n");
+    response.end();
+}).listen(3030);
+
+//3030 -> process.env.PORT (c9.io)
+console.log("Server is running at localhost:3030");
+```
+
+###Routing
+Giving response to whatever request given.
+You should name paths with meaningful English, using hyphens for spaces.
