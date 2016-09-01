@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "I'll explain what I learned during my first 12 weeks with Front End.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://simonseo@github.com/simonseo/Front-End-WebDev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonseo/Front-End-WebDev/issues"
+  },
+  "homepage": "https://github.com/simonseo/Front-End-WebDev#readme"
+}
