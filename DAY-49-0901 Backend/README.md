@@ -116,5 +116,9 @@ console.log("Server is running at localhost:3030");
 ```
 
 ###Routing
+Takes request and routes them to suitable handlers.
 Giving response to whatever request given.
 You should name paths with meaningful English, using hyphens for spaces.
+
+###Renderer
+takes a template an
