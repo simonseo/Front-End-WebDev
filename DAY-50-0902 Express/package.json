@@ -10,6 +10,7 @@
   "author": "Simon Seo",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~4.14.0"
+    "express": "~4.14.0",
+    "ejs": "~2.5.1"
   }
 }

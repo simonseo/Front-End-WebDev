@@ -121,8 +121,24 @@ Giving response to whatever request given.
 You should name paths with meaningful English, using hyphens for spaces.
 
 ###Renderer
-takes a template an
+takes a template and provides the page
 
 ###gulp
---save-dev : saves dependency only as a package required for development.
---save : saves dependency as a package required for running the app.
+- --save-dev : saves dependency only as a package required for development.
+- --save : saves dependency as a package required for running the app.
+- gulp task
+
+###Package
+`npm init`
+
+### RDB vs NoSQL
+RDB: Relational DataBase
+NoSQL: Not Only SQL
+
+| RDB | vs | NoSQL|
+|:----|:--:|-----:|
+|column+row==>Table|구조|column, key-value,document,graph|
+|회계,고객,제품 등 핵심정보(튼튼함)|정보|데이터양이 많고 급격히 늘어나는 시스템|
+|MySQL(오픈소스였는데 오라클이 삼), MariaDB(Go랑 어울림, MySQL사람들이 빡쳐서 만듬), postgresql(장고랑 좋음, 일본, 90년대 개인 개발자)|제품|MongoDB(~1억개), casandra(수억개, 데이터분석에 인기 좋음, 빅데이터), couchbase|
+|단일시스템 성능 좋음|이점|대용량 처리에따른 성능 저하 적음(동적 수평 확장)|
+|확장하기 까다로움|확장성|확장성 매우 좋음|
