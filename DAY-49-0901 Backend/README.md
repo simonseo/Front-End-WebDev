@@ -122,3 +122,7 @@ You should name paths with meaningful English, using hyphens for spaces.
 
 ###Renderer
 takes a template an
+
+###gulp
+--save-dev : saves dependency only as a package required for development.
+--save : saves dependency as a package required for running the app.

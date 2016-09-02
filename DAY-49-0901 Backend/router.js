@@ -31,4 +31,5 @@ function detail(req, res) {
 }
 
 module.exports.home = home;
+module.exports.contact = contact;
 module.exports.detail = detail;
